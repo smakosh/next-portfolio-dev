@@ -1,7 +1,9 @@
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { AppProps } from 'next/app';
+import { DefaultSeo } from 'next-seo';
 import ThemeProvider from 'providers/ThemeProvider';
+import SEO from 'data/next-seo.config';
 import 'components/ui/fonts.css';
 
 const MyApp = ({ Component, pageProps, err }: AppProps & { err: any }) => {
@@ -20,6 +22,19 @@ const MyApp = ({ Component, pageProps, err }: AppProps & { err: any }) => {
 
   return (
     <ThemeProvider>
+      <DefaultSeo
+        {...SEO}
+        additionalMetaTags={[
+          {
+            property: 'twitter:image',
+            content: `${process.env.NEXT_PUBLIC_HOMEPAGE_URL}/twitter-cover.png`,
+          },
+          {
+            property: 'og:type',
+            content: 'website',
+          },
+        ]}
+      />
       <Component {...pageProps} err={err} />
     </ThemeProvider>
   );

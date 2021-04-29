@@ -66,7 +66,7 @@ class MyDocument extends Document {
             name="msapplication-config"
             content="/assets/favicon/browserconfig.xml"
           />
-          <meta name="theme-color" content="#ffffff" />
+          <meta name="theme-color" content="#6b63ff" />
           <script
             dangerouslySetInnerHTML={{
               __html: `

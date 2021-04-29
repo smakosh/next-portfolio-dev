@@ -1,86 +1,59 @@
-import Helmet from 'react-helmet';
 import config from 'data/config';
+import { NextSeo } from 'next-seo';
 
-const {
-  url,
-  defaultDescription,
-  social,
-  defaultTitle,
-  socialLinks,
-  address,
-  contact,
-  legalName,
-  foundingDate,
-  logo,
-} = config;
+const { url, defaultDescription, defaultTitle } = config;
 
 const SEO = ({
+  location = url,
   title = defaultTitle,
   description = defaultDescription,
-  location = '',
-}) => {
-  const structuredDataOrganization = `{ 
-		"@context": "http://schema.org",
-		"@type": "Organization",
-		"legalName": "${legalName}",
-		"url": "${url}",
-		"logo": "${logo}",
-		"foundingDate": "${foundingDate}",
-		"founders": [{
-			"@type": "Person",
-			"name": "${legalName}"
-		}],
-		"contactPoint": [{
-			"@type": "ContactPoint",
-			"email": "${contact.email}",
-			"telephone": "${contact.phone}",
-			"contactType": "customer service"
-		}],
-		"address": {
-			"@type": "PostalAddress",
-			"addressLocality": "${address.city}",
-			"addressRegion": "${address.region}",
-			"addressCountry": "${address.country}",
-			"postalCode": "${address.zipCode}"
-		},
-		"sameAs": [
-			"${socialLinks.twitter}",
-			"${socialLinks.google}",
-			"${socialLinks.youtube}",
-			"${socialLinks.linkedin}",
-			"${socialLinks.instagram}",
-			"${socialLinks.github}"
-		]
-  	}`;
-
-  return (
-    <Helmet>
-      <meta name="description" content={description} />
-      <meta name="image" content="/assets/thumbnail/thumbnail.png" />
-
-      <meta property="og:url" content={`${url}${location}/?ref=smakosh.com`} />
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content="/assets/thumbnail/thumbnail.png" />
-      <meta property="fb:app_id" content={social.facebook} />
-
-      <meta name="twitter:card" content="summary" />
-      <meta name="twitter:creator" content={socialLinks.twitter} />
-      <meta name="twitter:site" content={social.twitter} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta
-        name="twitter:image:src"
-        content="/assets/thumbnail/thumbnail.png"
-      />
-
-      <script type="application/ld+json">{structuredDataOrganization}</script>
-      <link rel="publisher" href={socialLinks.google} />
-      <title>{title}</title>
-      <html lang="en" dir="ltr" />
-    </Helmet>
-  );
-};
+}) => (
+  <NextSeo
+    title={title}
+    description={description}
+    additionalMetaTags={[
+      {
+        name: 'image',
+        content: `${url}/assets/thumbnail/thumbnail.png`,
+      },
+      {
+        property: 'og:title',
+        content: title,
+      },
+      {
+        property: 'og:description',
+        content: description,
+      },
+      {
+        property: 'og:url',
+        content: `${url}${location}`,
+      },
+      {
+        property: 'og:image',
+        content: `${url}/assets/thumbnail/thumbnail.png`,
+      },
+      {
+        name: 'twitter:url',
+        content: `${url}${location}`,
+      },
+      {
+        name: 'twitter:title',
+        content: title,
+      },
+      {
+        name: 'twitter:description',
+        content: description,
+      },
+      {
+        name: 'twitter:image:src',
+        content: `${url}/assets/thumbnail/thumbnail.png`,
+      },
+      {
+        name: 'twitter:image',
+        content: `${url}/assets/thumbnail/thumbnail.png`,
+      },
+    ]}
+  />
+);
 
 export default SEO;
