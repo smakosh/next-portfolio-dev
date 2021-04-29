@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "Josehower",
+      "name": "José Fernando Höwer Barbosa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61600906?v=4",
+      "profile": "https://upleveled.io/",
+      "contributions": [
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "next-portfolio-dev",
+  "projectOwner": "smakosh",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
