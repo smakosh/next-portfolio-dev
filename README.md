@@ -76,4 +76,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Support
 
-If you love this Gatsby template and want to support me, you can do so through my GitHub profile.
+If you love this Next js template and want to support me, you can do so through my GitHub profile.
