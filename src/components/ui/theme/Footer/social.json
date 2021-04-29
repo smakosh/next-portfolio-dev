@@ -1,0 +1,26 @@
+[
+  {
+    "id": 0,
+    "name": "Telegram",
+    "link": "https://t.me/smakosh",
+    "icon": "/assets/icons/telegram.svg"
+  },
+  {
+    "id": 1,
+    "name": "Github",
+    "link": "https://github.com/smakosh",
+    "icon": "/assets/icons/github.svg"
+  },
+  {
+    "id": 2,
+    "name": "StackOverflow",
+    "link": "https://stackoverflow.com/users/story/7396786",
+    "icon": "/assets/icons/stackoverflow.svg"
+  },
+  {
+    "id": 3,
+    "name": "Twitter",
+    "link": "https://twitter.com/smakosh",
+    "icon": "/assets/icons/twitter.svg"
+  }
+]
