@@ -67,16 +67,17 @@ class MyDocument extends Document {
             content="/assets/favicon/browserconfig.xml"
           />
           <meta name="theme-color" content="#6b63ff" />
+	  <script async src={`https://www.googletagmanager.com/gtag/js?id=${config.googleAnalyticsID}`}></script>
           <script
             dangerouslySetInnerHTML={{
               __html: `
-								window.dataLayer = window.dataLayer || [];
-								function gtag(){dataLayer.push(arguments);}
-								gtag('js', new Date());
-								gtag('config', '${config.googleAnalyticsID}', {
-									page_path: window.location.pathname,
-								});
-							`,
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', '${config.googleAnalyticsID}', {
+				page_path: window.location.pathname,
+			});
+  		`,
             }}
           />
         </Head>
