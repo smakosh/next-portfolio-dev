@@ -13,6 +13,17 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Elbarae1921",
+      "name": "Elbarae Rguig",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44276243?v=4",
+      "profile": "https://github.com/Elbarae1921",
+      "contributions": [
+        "code",
+        "doc",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
