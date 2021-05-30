@@ -22,7 +22,7 @@ const ContactForm = () => (
         .required('Email field is required'),
       message: Yup.string().required('Message field is required'),
       recaptcha:
-        process.env.NODE_ENV === 'production'
+        process.env.NODE_ENV !== 'development'
           ? Yup.string().required('Robots are not welcome yet!')
           : Yup.string(),
     })}
@@ -100,7 +100,7 @@ const ContactForm = () => (
         {values.name &&
           values.email &&
           values.message &&
-          process.env.NODE_ENV !== 'production' && (
+          process.env.NODE_ENV !== 'development' && (
             <InputField>
               <FastField
                 component={Recaptcha}
