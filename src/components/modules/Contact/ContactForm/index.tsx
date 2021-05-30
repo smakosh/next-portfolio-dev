@@ -34,7 +34,7 @@ const ContactForm = () => (
         await axios({
           method: 'POST',
           url:
-            process.env.NODE_ENV === 'production'
+            process.env.NODE_ENV !== 'development'
               ? `${process.env.VERCEL_URL}/api/contact`
               : 'http://localhost:3040/api/contact',
           headers: {
