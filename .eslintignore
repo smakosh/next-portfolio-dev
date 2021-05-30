@@ -1,3 +1,4 @@
 node_modules
 .next
 types
+src/generated/graphql.ts

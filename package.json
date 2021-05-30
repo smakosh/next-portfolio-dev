@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev -p 3040",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "gen": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -20,6 +21,10 @@
     "yup": "^0.32.9"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "1.21.5",
+    "@graphql-codegen/typescript": "1.22.1",
+    "@graphql-codegen/typescript-operations": "^1.18.0",
+    "@octokit/graphql-schema": "^10.42.0",
     "@types/react": "^17.0.4",
     "@types/react-google-recaptcha": "^2.1.0",
     "@types/styled-components": "^5.1.9",
