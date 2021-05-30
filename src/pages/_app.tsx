@@ -27,7 +27,11 @@ const MyApp = ({ Component, pageProps, err }: AppProps & { err: any }) => {
         additionalMetaTags={[
           {
             property: 'twitter:image',
-            content: `${process.env.NEXT_PUBLIC_HOMEPAGE_URL}/twitter-cover.png`,
+            content: `${
+              process.env.NODE_ENV === 'production'
+                ? process.env.VERCEL_URL
+                : ''
+            }/twitter-cover.png`,
           },
           {
             property: 'og:type',

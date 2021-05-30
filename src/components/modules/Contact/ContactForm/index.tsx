@@ -21,7 +21,10 @@ const ContactForm = () => (
         .email('Invalid email')
         .required('Email field is required'),
       message: Yup.string().required('Message field is required'),
-      recaptcha: Yup.string().required('Robots are not welcome yet!'),
+      recaptcha:
+        process.env.NODE_ENV === 'production'
+          ? Yup.string().required('Robots are not welcome yet!')
+          : Yup.string(),
     })}
     onSubmit={async (
       { name, email, message },
@@ -30,7 +33,10 @@ const ContactForm = () => (
       try {
         await axios({
           method: 'POST',
-          url: `${process.env.NEXT_PUBLIC_FORMIK_ENDPOINT}`,
+          url:
+            process.env.NODE_ENV === 'production'
+              ? `${process.env.VERCEL_URL}/api/contact`
+              : 'http://localhost:3040/api/contact',
           headers: {
             'Content-Type': 'application/json',
           },
@@ -91,17 +97,20 @@ const ContactForm = () => (
           />
           <ErrorMessage component={Error} name="message" />
         </InputField>
-        {values.name && values.email && values.message && (
-          <InputField>
-            <FastField
-              component={Recaptcha}
-              sitekey={process.env.NEXT_PUBLIC_PORTFOLIO_RECAPTCHA_KEY}
-              name="recaptcha"
-              onChange={(value: string) => setFieldValue('recaptcha', value)}
-            />
-            <ErrorMessage component={Error} name="recaptcha" />
-          </InputField>
-        )}
+        {values.name &&
+          values.email &&
+          values.message &&
+          process.env.NODE_ENV !== 'production' && (
+            <InputField>
+              <FastField
+                component={Recaptcha}
+                sitekey={process.env.NEXT_PUBLIC_PORTFOLIO_RECAPTCHA_KEY}
+                name="recaptcha"
+                onChange={(value: string) => setFieldValue('recaptcha', value)}
+              />
+              <ErrorMessage component={Error} name="recaptcha" />
+            </InputField>
+          )}
         {values.success && (
           <InputField>
             <Center>
