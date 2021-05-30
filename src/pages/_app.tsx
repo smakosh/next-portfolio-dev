@@ -29,7 +29,7 @@ const MyApp = ({ Component, pageProps, err }: AppProps & { err: any }) => {
             property: 'twitter:image',
             content: `${
               process.env.NODE_ENV !== 'development'
-                ? process.env.NEXT_PUBLIC_VERCEL_URL
+                ? process.env.NEXT_PUBLIC_PORTFOLIO_URL
                 : ''
             }/twitter-cover.png`,
           },
