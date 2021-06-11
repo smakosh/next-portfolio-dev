@@ -38,12 +38,12 @@ Project on [Behance](https://www.behance.net/gallery/74172961/Free-Gatsby-portfo
 
 ### Online
 
-1. Create an account at [Formik](https://formik.com/?utm_source=smakosh) and grab your form endpoint url
+1. Create an account at [Formium](https://formium.com/?utm_source=smakosh) and grab your form endpoint url
 2. Grab a Google recaptcha key from [Google Recaptcha](https://www.google.com/recaptcha/admin)
 3. Grab your Github token from [GitHub](https://github.com/settings/tokens/new?scopes=repo&description=portfolio-dev)
 4. Click [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fsmakosh%2Fnext-portfolio-dev&env=GITHUB_TOKEN,FORMIUM_ENDPOINT,NEXT_PUBLIC_PORTFOLIO_RECAPTCHA_KEY,NEXT_PUBLIC_PORTFOLIO_URL&envDescription=All%20env%20variables%20are%20required%20to%20deploy%20the%20project&envLink=https%3A%2F%2Fgithub.com%2Fsmakosh%2Fnext-portfolio-dev%2Fblob%2Fmaster%2F.env.development.template&project-name=my-portfolio&repo-name=my-portfolio&demo-title=Portfolio%20demo&demo-description=A%20simple%20portfolio%20for%20developers&demo-url=https%3A%2F%2Fportfolio-next.smakosh.com&demo-image=https%3A%2F%2Fportfolio-next.smakosh.com%2Fassets%2Fthumbnail%2Fthumbnail.png) and pass in your:
 
-- Formik form endpoint
+- Formium form endpoint
 - Google recaptcha public key
 - Github token
 
@@ -56,6 +56,7 @@ To Env variables section.
 3. Grab a Google recaptcha key from [Google Recaptcha](https://www.google.com/recaptcha/admin)
 4. Grab your Github token from GitHub
 5. Run `cp .env.development.local.template .env.development.local`
+   > If you'd like to build the website locally, you will need to run `cp .env.development.local.template .env.development.local` as well and provide your env variables.
 6. Run `yarn && yarn dev`
 
    > You could run `vercel env pull` to get your env variables from Vercel.
