@@ -75,7 +75,7 @@ I highly recommend that you push to GitHub/GitLab and deploy your repository to 
 - Formium
 - Google recaptcha
 - VSCode
-- And these useful of JavaScript libraries & Gatsby plugins [package.json](package.json)
+- And these useful of JavaScript libraries [package.json](package.json)
 
 ## License
 
