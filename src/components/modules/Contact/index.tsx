@@ -1,5 +1,7 @@
+import Image from 'next/image';
 import Container from 'components/ui/Container';
 import ContactForm from './ContactForm';
+import contactIllustration from 'assets/contact.svg';
 import { Wrapper, Details, Thumbnail } from './styles';
 
 const Contact = () => (
@@ -8,8 +10,8 @@ const Contact = () => (
       <ContactForm />
     </Details>
     <Thumbnail>
-      <img
-        src="/assets/illustrations/contact.svg"
+      <Image
+        src={contactIllustration}
         alt="I’m John and I’m a Backend & Devops engineer!"
       />
     </Thumbnail>

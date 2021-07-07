@@ -6,7 +6,7 @@ type Data = {
   message: string;
 };
 
-export default async (req: NextApiRequest, res: NextApiResponse<Data>) => {
+const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
   try {
     const schema = Yup.object().shape({
       name: Yup.string().required(),
@@ -28,3 +28,5 @@ export default async (req: NextApiRequest, res: NextApiResponse<Data>) => {
     res.status(400).json({ message: 'Submission failed to be sent.' });
   }
 };
+
+export default handler;
