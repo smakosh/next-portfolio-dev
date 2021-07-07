@@ -1,4 +1,7 @@
+import Image from 'next/image';
 import { useCustomTheme, useDispatchTheme } from 'providers/ThemeProvider';
+import moonIcon from 'assets/icons/moon.svg';
+import sunIcon from 'assets/icons/sun.svg';
 import { Wrapper } from './styles';
 
 const ToggleTheme = () => {
@@ -14,12 +17,7 @@ const ToggleTheme = () => {
         }
       }}
     >
-      <img
-        src={
-          theme === 'light' ? '/assets/icons/moon.svg' : '/assets/icons/sun.svg'
-        }
-        alt={theme}
-      />
+      <Image src={theme === 'light' ? moonIcon : sunIcon} alt={theme} />
     </Wrapper>
   );
 };

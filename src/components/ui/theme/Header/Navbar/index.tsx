@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <Wrapper as={Container}>
-      <Link href="/">
+      <Link href="/" passHref>
         <Brand as="a" theme={theme}>
           John Doe
         </Brand>
