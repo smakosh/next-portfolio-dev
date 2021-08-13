@@ -1,4 +1,4 @@
-import { useTheme } from 'next-themes';
+import { useTheme } from 'providers/ThemeProvider';
 import { RepositoryEdge } from 'generated/graphql';
 import { Card, TitleWrap } from 'components/ui/Card';
 import Container from 'components/ui/Container';

@@ -14,7 +14,6 @@
     "formik": "^2.2.6",
     "next": "^11.1.0",
     "next-seo": "^4.24.0",
-    "next-themes": "^0.0.15",
     "react": "^17.0.2",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^17.0.2",

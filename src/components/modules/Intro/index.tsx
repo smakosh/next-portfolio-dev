@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { useTheme } from 'next-themes';
+import { useTheme } from 'providers/ThemeProvider';
 import Button from 'components/ui/Button';
 import Container from 'components/ui/Container';
 import Header from 'components/ui/theme/Header';

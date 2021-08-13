@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { useTheme } from 'next-themes';
+import { useTheme } from 'providers/ThemeProvider';
 import moonIcon from 'assets/icons/moon.svg';
 import sunIcon from 'assets/icons/sun.svg';
 import { Wrapper } from './styles';

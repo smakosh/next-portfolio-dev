@@ -1,4 +1,4 @@
-import { useTheme } from 'next-themes';
+import { useTheme } from 'providers/ThemeProvider';
 import { Wrapper, Bar } from './styles';
 
 type HamburgerProps = {

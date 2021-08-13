@@ -3,9 +3,9 @@ import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { AppProps } from 'next/app';
 import { DefaultSeo } from 'next-seo';
+import ThemeProvider from 'providers/ThemeProvider';
 import config from 'data/config';
 import SEO from 'data/next-seo.config';
-import { ThemeProvider } from 'next-themes';
 import 'components/ui/fonts.css';
 
 const MyApp = ({ Component, pageProps, err }: AppProps & { err: any }) => {
@@ -41,7 +41,7 @@ const MyApp = ({ Component, pageProps, err }: AppProps & { err: any }) => {
 					`,
         }}
       />
-      <ThemeProvider defaultTheme="dark" themes={['dark', 'light']} enableSystem={false}>
+      <ThemeProvider>
         <DefaultSeo
           {...SEO}
           additionalMetaTags={[

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { useTheme } from 'next-themes';
+import { useTheme } from 'providers/ThemeProvider';
 import Container from 'components/ui/Container';
 import Button from 'components/ui/Button';
 import skillsIllustration from 'assets/skills.svg';
