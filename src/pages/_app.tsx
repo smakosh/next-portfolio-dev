@@ -5,7 +5,7 @@ import { AppProps } from 'next/app';
 import { DefaultSeo } from 'next-seo';
 import config from 'data/config';
 import SEO from 'data/next-seo.config';
-import ThemeProvider from 'providers/ThemeProvider';
+import { ThemeProvider } from 'next-themes';
 import 'components/ui/fonts.css';
 
 const MyApp = ({ Component, pageProps, err }: AppProps & { err: any }) => {
@@ -32,16 +32,16 @@ const MyApp = ({ Component, pageProps, err }: AppProps & { err: any }) => {
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
-  		window.dataLayer = window.dataLayer || [];
-  		function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-			gtag('config', '${config.googleAnalyticsID}', {
-				page_path: window.location.pathname,
-			});
-  		`,
+						window.dataLayer = window.dataLayer || [];
+						function gtag(){dataLayer.push(arguments);}
+						gtag('js', new Date());
+						gtag('config', '${config.googleAnalyticsID}', {
+							page_path: window.location.pathname,
+						});
+					`,
         }}
       />
-      <ThemeProvider>
+      <ThemeProvider defaultTheme="dark" themes={['dark', 'light']} enableSystem={false}>
         <DefaultSeo
           {...SEO}
           additionalMetaTags={[

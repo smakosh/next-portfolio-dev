@@ -1,4 +1,4 @@
-import { useCustomTheme } from 'providers/ThemeProvider';
+import { useTheme } from 'next-themes';
 import { Wrapper, Bar } from './styles';
 
 type HamburgerProps = {
@@ -7,7 +7,7 @@ type HamburgerProps = {
 };
 
 const Hamburger = ({ sidebar, toggle }: HamburgerProps) => {
-  const theme = useCustomTheme();
+  const { theme } = useTheme();
 
   return (
     <Wrapper sidebar={sidebar} onClick={() => toggle(!sidebar)}>

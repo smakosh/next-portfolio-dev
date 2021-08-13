@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useCustomTheme } from 'providers/ThemeProvider';
+import { useTheme } from 'next-themes';
 import ToggleTheme from '..//ToggleTheme';
 import { Wrapper } from './styles';
 
@@ -8,7 +8,7 @@ type NavbarLinksProps = {
 };
 
 const NavbarLinks = ({ desktop }: NavbarLinksProps) => {
-  const theme = useCustomTheme();
+  const { theme } = useTheme();
 
   return (
     <Wrapper desktop={desktop} theme={theme}>

@@ -1,13 +1,13 @@
+import { useTheme } from 'next-themes';
 import { RepositoryEdge } from 'generated/graphql';
 import { Card, TitleWrap } from 'components/ui/Card';
 import Container from 'components/ui/Container';
 import Fork from 'components/ui/Icons/Fork';
 import Star from 'components/ui/Icons/Star';
-import { useCustomTheme } from 'providers/ThemeProvider';
 import { Wrapper, Grid, Item, Content, Stats, Languages } from './styles';
 
 const Projects = ({ data }: { data: RepositoryEdge[] }) => {
-  const theme = useCustomTheme();
+  const { theme } = useTheme();
 
   return (
     <Wrapper as={Container} id="projects">
@@ -17,14 +17,7 @@ const Projects = ({ data }: { data: RepositoryEdge[] }) => {
           data.map(({ node }) => {
             if (!node) return null;
             return (
-              <Item
-                key={node.id}
-                as="a"
-                href={node.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                theme={theme}
-              >
+              <Item key={node.id} as="a" href={node.url} target="_blank" rel="noopener noreferrer" theme={theme}>
                 <Card theme={theme}>
                   <Content>
                     <h3>{node.name}</h3>
