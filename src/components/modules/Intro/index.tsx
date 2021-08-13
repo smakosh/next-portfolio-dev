@@ -1,14 +1,14 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { useTheme } from 'next-themes';
 import Button from 'components/ui/Button';
 import Container from 'components/ui/Container';
 import Header from 'components/ui/theme/Header';
-import { useCustomTheme } from 'providers/ThemeProvider';
 import devIllustration from 'assets/dev.svg';
 import { Wrapper, IntroWrapper, Details, Thumbnail } from './styles';
 
 const Intro = () => {
-  const theme = useCustomTheme();
+  const { theme } = useTheme();
 
   return (
     <Wrapper>
@@ -22,10 +22,7 @@ const Intro = () => {
           </Link>
         </Details>
         <Thumbnail>
-          <Image
-            src={devIllustration}
-            alt="I’m John and I’m a JAMStack engineer!"
-          />
+          <Image src={devIllustration} alt="I’m John and I’m a JAMStack engineer!" />
         </Thumbnail>
       </IntroWrapper>
     </Wrapper>

@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import { useCustomTheme } from 'providers/ThemeProvider';
+import { useTheme } from 'next-themes';
 import Container from 'components/ui/Container';
 import NavbarLinks from '../NavbarLinks';
 import { Wrapper, Brand } from './styles';
 
 const Navbar = () => {
-  const theme = useCustomTheme();
+  const { theme } = useTheme();
 
   return (
     <Wrapper as={Container}>

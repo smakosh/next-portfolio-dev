@@ -1,4 +1,4 @@
-import { useCustomTheme } from 'providers/ThemeProvider';
+import { useTheme } from 'next-themes';
 import NavbarLinks from '../NavbarLinks';
 import { Wrapper } from './styles';
 
@@ -8,7 +8,7 @@ type SideBarProps = {
 };
 
 const Sidebar = ({ sidebar, toggle }: SideBarProps) => {
-  const theme = useCustomTheme();
+  const { theme } = useTheme();
 
   return (
     <Wrapper active={sidebar} onClick={toggle} theme={theme}>
