@@ -1,0 +1,35 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "Josehower",
+      "name": "José Fernando Höwer Barbosa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61600906?v=4",
+      "profile": "https://upleveled.io/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Elbarae1921",
+      "name": "Elbarae Rguig",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44276243?v=4",
+      "profile": "https://github.com/Elbarae1921",
+      "contributions": [
+        "code",
+        "doc",
+        "bug"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "next-portfolio-dev",
+  "projectOwner": "smakosh",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}

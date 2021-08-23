@@ -22,5 +22,5 @@
     "suppressImplicitAnyIndexErrors": true
   },
   "exclude": ["node_modules", "./types"],
-  "include": ["**/*.ts", "**/*.tsx"]
+  "include": ["**/*.ts", "**/*.tsx", "src/generated/github-schema-loader.js"]
 }

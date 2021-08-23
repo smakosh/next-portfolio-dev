@@ -17,20 +17,19 @@ const ContactForm = () => (
     }}
     validationSchema={Yup.object().shape({
       name: Yup.string().required('Full name field is required'),
-      email: Yup.string()
-        .email('Invalid email')
-        .required('Email field is required'),
+      email: Yup.string().email('Invalid email').required('Email field is required'),
       message: Yup.string().required('Message field is required'),
-      recaptcha: Yup.string().required('Robots are not welcome yet!'),
+      recaptcha:
+        process.env.NODE_ENV !== 'development' ? Yup.string().required('Robots are not welcome yet!') : Yup.string(),
     })}
-    onSubmit={async (
-      { name, email, message },
-      { setSubmitting, resetForm, setFieldValue }
-    ) => {
+    onSubmit={async ({ name, email, message }, { setSubmitting, resetForm, setFieldValue }) => {
       try {
         await axios({
           method: 'POST',
-          url: `${process.env.NEXT_PUBLIC_FORMIK_ENDPOINT}`,
+          url:
+            process.env.NODE_ENV !== 'development'
+              ? `${process.env.NEXT_PUBLIC_PORTFOLIO_URL}/api/contact`
+              : 'http://localhost:3040/api/contact',
           headers: {
             'Content-Type': 'application/json',
           },
@@ -91,7 +90,7 @@ const ContactForm = () => (
           />
           <ErrorMessage component={Error} name="message" />
         </InputField>
-        {values.name && values.email && values.message && (
+        {values.name && values.email && values.message && process.env.NODE_ENV !== 'development' && (
           <InputField>
             <FastField
               component={Recaptcha}
@@ -105,10 +104,7 @@ const ContactForm = () => (
         {values.success && (
           <InputField>
             <Center>
-              <h4>
-                Your message has been successfully sent, I will get back to you
-                ASAP!
-              </h4>
+              <h4>Your message has been successfully sent, I will get back to you ASAP!</h4>
             </Center>
           </InputField>
         )}

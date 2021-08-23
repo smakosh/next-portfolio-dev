@@ -1,12 +1,14 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import { useTheme } from 'providers/ThemeProvider';
 import Button from 'components/ui/Button';
 import Container from 'components/ui/Container';
 import Header from 'components/ui/theme/Header';
-import { useCustomTheme } from 'providers/ThemeProvider';
+import devIllustration from 'assets/dev.svg';
 import { Wrapper, IntroWrapper, Details, Thumbnail } from './styles';
 
 const Intro = () => {
-  const theme = useCustomTheme();
+  const { theme } = useTheme();
 
   return (
     <Wrapper>
@@ -14,16 +16,13 @@ const Intro = () => {
       <IntroWrapper as={Container}>
         <Details theme={theme}>
           <h1>Hi There!</h1>
-          <h4>I’m John and I’m a JAMStack engineer!</h4>
-          <Link href="#contact">
+          <h2>I’m John and I’m a JAMStack engineer!</h2>
+          <Link href="#contact" passHref>
             <Button as="a">Hire me</Button>
           </Link>
         </Details>
         <Thumbnail>
-          <img
-            src="assets/illustrations/dev.svg"
-            alt="I’m John and I’m a JAMStack engineer!"
-          />
+          <Image src={devIllustration} alt="I’m John and I’m a JAMStack engineer!" />
         </Thumbnail>
       </IntroWrapper>
     </Wrapper>

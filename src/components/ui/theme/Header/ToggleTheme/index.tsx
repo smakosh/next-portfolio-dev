@@ -1,25 +1,15 @@
-import { useCustomTheme, useDispatchTheme } from 'providers/ThemeProvider';
+import Image from 'next/image';
+import { useTheme } from 'providers/ThemeProvider';
+import moonIcon from 'assets/icons/moon.svg';
+import sunIcon from 'assets/icons/sun.svg';
 import { Wrapper } from './styles';
 
 const ToggleTheme = () => {
-  const theme = useCustomTheme();
-  const toggleTheme = useDispatchTheme();
+  const { theme, setTheme } = useTheme();
 
   return (
-    <Wrapper
-      type="button"
-      onClick={() => {
-        if (toggleTheme) {
-          toggleTheme();
-        }
-      }}
-    >
-      <img
-        src={
-          theme === 'light' ? '/assets/icons/moon.svg' : '/assets/icons/sun.svg'
-        }
-        alt={theme}
-      />
+    <Wrapper type="button" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
+      <Image src={theme === 'light' ? moonIcon : sunIcon} alt={theme} />
     </Wrapper>
   );
 };
