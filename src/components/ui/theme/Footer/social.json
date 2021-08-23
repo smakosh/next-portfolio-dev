@@ -2,25 +2,21 @@
   {
     "id": 0,
     "name": "Telegram",
-    "link": "https://t.me/smakosh",
-    "icon": "/assets/icons/telegram.svg"
+    "link": "https://t.me/smakosh"
   },
   {
     "id": 1,
     "name": "Github",
-    "link": "https://github.com/smakosh",
-    "icon": "/assets/icons/github.svg"
+    "link": "https://github.com/smakosh"
   },
   {
     "id": 2,
     "name": "StackOverflow",
-    "link": "https://stackoverflow.com/users/story/7396786",
-    "icon": "/assets/icons/stackoverflow.svg"
+    "link": "https://stackoverflow.com/users/story/7396786"
   },
   {
     "id": 3,
     "name": "Twitter",
-    "link": "https://twitter.com/smakosh",
-    "icon": "/assets/icons/twitter.svg"
+    "link": "https://twitter.com/smakosh"
   }
 ]

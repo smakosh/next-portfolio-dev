@@ -26,8 +26,9 @@ export const Item = styled.div`
   overflow: hidden;
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.11);
 
-  h4 {
+  h3 {
     color: ${({ theme }) => (theme === 'light' ? '#212121' : '#fff')};
+    font-size: 12pt;
   }
 
   p {
@@ -40,7 +41,7 @@ export const Content = styled.div`
   min-height: 160px;
 `;
 
-export const Stats = styled.div`
+export const Stats = styled.div<{ stars?: boolean }>`
   display: flex;
   align-items: center;
 
@@ -58,14 +59,22 @@ export const Stats = styled.div`
       fill: ${({ theme }) => (theme === 'light' ? '#000' : '#fff')};
     }
 
-    span {
-      color: ${({ theme }) => (theme === 'light' ? '#000' : '#fff')};
-      margin-left: 0.5rem;
-    }
+    ${({ stars, theme }) =>
+      stars &&
+      `
+			span {
+				color: ${theme === 'light' ? '#000' : '#fff'};
+				margin-left: 0.5rem;
+			}
+		`}
   }
 `;
 
 export const Languages = styled.div`
-  opacity: 0.5;
   font-size: 14px;
+
+  span {
+    color: ${({ theme }) => (theme === 'light' ? '#4d4c4c' : '#fff')};
+    margin-left: 0.5rem;
+  }
 `;
