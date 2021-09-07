@@ -56,16 +56,17 @@ To Env variables section.
 3. Grab a Google recaptcha key from [Google Recaptcha](https://www.google.com/recaptcha/admin)
 4. Grab your Github token from GitHub
 5. Run `cp .env.development.local.template .env.development.local`
+
    > If you'd like to build the website locally, you will need to run `cp .env.development.local.template .env.development.local` as well and provide your env variables.
-6. Run `yarn && yarn dev`
 
-   > You could run `vercel env pull` to get your env variables from Vercel.
+6. Paste the credentials you got in the setup step and paste it here.
 
-7. Make sure to edit the `src/data/config.ts` file
+### Deploying
 
-### Deploying locally to Vercel
+7. Create an account in [netlify](https://netlify.com).
+8. Add to netlify the variables you added in the `.env` file.
 
-I highly recommend that you push to GitHub/GitLab and deploy your repository to Vercel instead or just hit the Deploy button.
+![image](https://user-images.githubusercontent.com/61600906/132325804-e521abca-6087-46cb-85b1-1f31b0425bcf.png)
 
 ## Built with
 
