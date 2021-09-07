@@ -1,12 +1,12 @@
 import axios from 'axios';
-import { GetStaticProps } from 'next';
-import { RepositoryEdge } from 'generated/graphql';
-import Layout from 'components/ui/Layout';
-import SEO from 'components/SEO';
+import Contact from 'components/modules/Contact';
 import Intro from 'components/modules/Intro';
 import Projects from 'components/modules/Projects';
 import Skills from 'components/modules/Skills';
-import Contact from 'components/modules/Contact';
+import SEO from 'components/SEO';
+import Layout from 'components/ui/Layout';
+import { RepositoryEdge } from 'generated/graphql';
+import { GetStaticProps } from 'next';
 
 const HomePage = ({ repos }: { repos: RepositoryEdge[] }) => (
   <Layout>
@@ -26,31 +26,31 @@ export const getStaticProps: GetStaticProps = async () => {
     method: 'post',
     data: {
       query: `
-				query viewer {
-					viewer {
-						repositories(first: 8, orderBy: {field: STARGAZERS, direction: DESC}) {
-							edges {
-								node {
-									id
-									name
-									url
-									description
-									stargazers {
-										totalCount
-									}
-									forkCount
-									languages(first: 3) {
-										nodes {
-											id
-											name
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			`,
+  			query viewer {
+  				viewer {
+  					repositories(first: 8, orderBy: {field: STARGAZERS, direction: DESC}) {
+  						edges {
+  							node {
+  								id
+  								name
+  								url
+  								description
+  								stargazers {
+  									totalCount
+  								}
+  								forkCount
+  								languages(first: 3) {
+  									nodes {
+  										id
+  										name
+  									}
+  								}
+  							}
+  						}
+  					}
+  				}
+  			}
+  		`,
     },
     headers: {
       Authorization: `bearer ${process.env.GITHUB_TOKEN}`,
