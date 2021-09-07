@@ -68,6 +68,8 @@ To Env variables section.
 
 ![image](https://user-images.githubusercontent.com/61600906/132325804-e521abca-6087-46cb-85b1-1f31b0425bcf.png)
 
+> NOTE: to deploy locally env vars should be on `.env.production.local` file.
+
 ## Built with
 
 - Adobe XD
