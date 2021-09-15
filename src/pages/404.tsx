@@ -1,5 +1,5 @@
-import Layout from 'components/ui/Layout';
-import SEO from 'components/SEO';
+import SEO from '../components/SEO';
+import Layout from '../components/ui/Layout';
 
 const NotFound = () => (
   <Layout>

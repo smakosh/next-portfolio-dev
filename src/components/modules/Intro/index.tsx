@@ -1,11 +1,11 @@
-import Link from 'next/link';
 import Image from 'next/image';
-import { useTheme } from 'providers/ThemeProvider';
-import Button from 'components/ui/Button';
-import Container from 'components/ui/Container';
-import Header from 'components/ui/theme/Header';
-import devIllustration from 'assets/dev.svg';
-import { Wrapper, IntroWrapper, Details, Thumbnail } from './styles';
+import Link from 'next/link';
+import devIllustration from '../../../assets/dev.svg';
+import Button from '../../../components/ui/Button';
+import Container from '../../../components/ui/Container';
+import Header from '../../../components/ui/theme/Header';
+import { useTheme } from '../../../providers/ThemeProvider';
+import { Details, IntroWrapper, Thumbnail, Wrapper } from './styles';
 
 const Intro = () => {
   const { theme } = useTheme();

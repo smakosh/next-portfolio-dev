@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import { useTheme } from 'providers/ThemeProvider';
-import Container from 'components/ui/Container';
+import Container from '../../../../../components/ui/Container';
+import { useTheme } from '../../../../../providers/ThemeProvider';
 import NavbarLinks from '../NavbarLinks';
-import { Wrapper, Brand } from './styles';
+import { Brand, Wrapper } from './styles';
 
 const Navbar = () => {
   const { theme } = useTheme();

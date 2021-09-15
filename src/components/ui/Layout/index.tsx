@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import { useTheme } from 'providers/ThemeProvider';
-import GlobalStyle from 'components/ui/GlobalStyle';
-import Footer from 'components/ui/theme/Footer';
+import { useTheme } from '../../../providers/ThemeProvider';
+import GlobalStyle from '../GlobalStyle';
+import Footer from '../theme/Footer';
 
 const Layout: FC = ({ children }) => {
   const { theme } = useTheme();

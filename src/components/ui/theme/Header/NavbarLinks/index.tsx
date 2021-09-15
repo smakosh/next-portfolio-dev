@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { useTheme } from 'providers/ThemeProvider';
-import ToggleTheme from '..//ToggleTheme';
+import { useTheme } from '../../../../../providers/ThemeProvider';
+import ToggleTheme from '../ToggleTheme';
 import { Wrapper } from './styles';
 
 type NavbarLinksProps = {

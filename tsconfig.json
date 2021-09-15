@@ -1,26 +1,39 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "UpLeveled Node + React TSConfig",
   "compilerOptions": {
-    "allowJs": true,
-    "alwaysStrict": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "lib": ["dom", "es2017"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "module": "esnext",
+    "target": "es2015",
     "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "downlevelIteration": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "preserve",
     "noEmit": true,
     "noFallthroughCasesInSwitch": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "resolveJsonModule": true,
     "skipLibCheck": true,
-    "strict": true,
-    "target": "esnext",
-    "baseUrl": "./src",
-    "typeRoots": ["./types", "./node_modules/@types"],
-    "suppressImplicitAnyIndexErrors": true
+    "strict": true
   },
-  "exclude": ["node_modules", "./types"],
-  "include": ["**/*.ts", "**/*.tsx", "src/generated/github-schema-loader.js"]
+  "include": [
+    ".eslintrc.cjs",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.cjs",
+    "**/*.mjs"
+  ],
+  "exclude": [
+    "node_modules",
+    "build"
+  ]
 }

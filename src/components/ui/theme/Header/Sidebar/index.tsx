@@ -1,4 +1,4 @@
-import { useTheme } from 'providers/ThemeProvider';
+import { useTheme } from '../../../../../providers/ThemeProvider';
 import NavbarLinks from '../NavbarLinks';
 import { Wrapper } from './styles';
 

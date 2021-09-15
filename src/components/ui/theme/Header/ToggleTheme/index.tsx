@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import { useTheme } from 'providers/ThemeProvider';
-import moonIcon from 'assets/icons/moon.svg';
-import sunIcon from 'assets/icons/sun.svg';
+import moonIcon from '../../../../../assets/icons/moon.svg';
+import sunIcon from '../../../../../assets/icons/sun.svg';
+import { useTheme } from '../../../../../providers/ThemeProvider';
 import { Wrapper } from './styles';
 
 const ToggleTheme = () => {

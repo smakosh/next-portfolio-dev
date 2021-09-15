@@ -1,10 +1,10 @@
-import Link from 'next/link';
 import Image from 'next/image';
-import { useTheme } from 'providers/ThemeProvider';
-import Container from 'components/ui/Container';
-import Button from 'components/ui/Button';
-import skillsIllustration from 'assets/skills.svg';
-import { Wrapper, SkillsWrapper, Details, Thumbnail } from './styles';
+import Link from 'next/link';
+import skillsIllustration from '../../../assets/skills.svg';
+import Button from '../../../components/ui/Button';
+import Container from '../../../components/ui/Container';
+import { useTheme } from '../../../providers/ThemeProvider';
+import { Details, SkillsWrapper, Thumbnail, Wrapper } from './styles';
 
 const Skills = () => {
   const { theme } = useTheme();

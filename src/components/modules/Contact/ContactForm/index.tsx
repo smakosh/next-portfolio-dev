@@ -1,10 +1,10 @@
 import axios from 'axios';
-import { Formik, Form, FastField, ErrorMessage } from 'formik';
+import { ErrorMessage, FastField, Form, Formik } from 'formik';
 import Recaptcha from 'react-google-recaptcha';
 import * as Yup from 'yup';
-import Button from 'components/ui/Button';
-import Input from 'components/ui/Input';
-import { Error, Center, InputField } from './styles';
+import Button from '../../../../components/ui/Button';
+import Input from '../../../../components/ui/Input';
+import { Center, Error, InputField } from './styles';
 
 const ContactForm = () => (
   <Formik

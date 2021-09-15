@@ -1,4 +1,4 @@
-node_modules
+build
+
+# Next.js build folder
 .next
-types
-src/generated/graphql.ts

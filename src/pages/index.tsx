@@ -1,12 +1,12 @@
 import axios from 'axios';
-import Contact from 'components/modules/Contact';
-import Intro from 'components/modules/Intro';
-import Projects from 'components/modules/Projects';
-import Skills from 'components/modules/Skills';
-import SEO from 'components/SEO';
-import Layout from 'components/ui/Layout';
-import { RepositoryEdge } from 'generated/graphql';
 import { GetStaticProps } from 'next';
+import Contact from '../components/modules/Contact';
+import Intro from '../components/modules/Intro';
+import Projects from '../components/modules/Projects';
+import Skills from '../components/modules/Skills';
+import SEO from '../components/SEO';
+import Layout from '../components/ui/Layout';
+import { RepositoryEdge } from '../generated/graphql';
 
 const HomePage = ({ repos }: { repos: RepositoryEdge[] }) => (
   <Layout>

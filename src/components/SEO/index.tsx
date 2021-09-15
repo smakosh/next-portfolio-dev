@@ -1,13 +1,9 @@
-import config from 'data/config';
 import { NextSeo } from 'next-seo';
+import config from '../../data/config';
 
 const { url, defaultDescription, defaultTitle } = config;
 
-const SEO = ({
-  location = url,
-  title = defaultTitle,
-  description = defaultDescription,
-}) => (
+const SEO = ({ location = url, title = defaultTitle, description = defaultDescription }) => (
   <NextSeo
     title={title}
     description={description}

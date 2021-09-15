@@ -1,5 +1,5 @@
 import React, { createContext, useContext } from 'react';
-import useDarkMode from 'hooks/useDarkMode';
+import useDarkMode from '../hooks/useDarkMode';
 
 type ThemeState = {
   theme: string | undefined;

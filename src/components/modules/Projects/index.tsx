@@ -1,10 +1,10 @@
-import { useTheme } from 'providers/ThemeProvider';
-import { RepositoryEdge } from 'generated/graphql';
-import { Card, TitleWrap } from 'components/ui/Card';
-import Container from 'components/ui/Container';
-import Fork from 'components/ui/Icons/Fork';
-import Star from 'components/ui/Icons/Star';
-import { Wrapper, Grid, Item, Content, Stats, Languages } from './styles';
+import { Card, TitleWrap } from '../../../components/ui/Card';
+import Container from '../../../components/ui/Container';
+import Fork from '../../../components/ui/Icons/Fork';
+import Star from '../../../components/ui/Icons/Star';
+import { RepositoryEdge } from '../../../generated/graphql';
+import { useTheme } from '../../../providers/ThemeProvider';
+import { Content, Grid, Item, Languages, Stats, Wrapper } from './styles';
 
 const Projects = ({ data }: { data: RepositoryEdge[] }) => {
   const { theme } = useTheme();

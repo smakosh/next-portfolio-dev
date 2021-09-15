@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import Container from 'components/ui/Container';
+import contactIllustration from '../../../assets/contact.svg';
+import Container from '../../../components/ui/Container';
 import ContactForm from './ContactForm';
-import contactIllustration from 'assets/contact.svg';
-import { Wrapper, Details, Thumbnail } from './styles';
+import { Details, Thumbnail, Wrapper } from './styles';
 
 const Contact = () => (
   <Wrapper as={Container} id="contact">

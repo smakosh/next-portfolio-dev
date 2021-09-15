@@ -1,5 +1,5 @@
-import { useTheme } from 'providers/ThemeProvider';
-import { Wrapper, Bar } from './styles';
+import { useTheme } from '../../../../../providers/ThemeProvider';
+import { Bar, Wrapper } from './styles';
 
 type HamburgerProps = {
   sidebar?: boolean;

@@ -1,12 +1,12 @@
-import Script from 'next/script';
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
-import { AppProps } from 'next/app';
+import '../components/ui/fonts.css';
 import { DefaultSeo } from 'next-seo';
-import ThemeProvider from 'providers/ThemeProvider';
-import config from 'data/config';
-import SEO from 'data/next-seo.config';
-import 'components/ui/fonts.css';
+import { AppProps } from 'next/app';
+import { useRouter } from 'next/router';
+import Script from 'next/script';
+import { useEffect } from 'react';
+import config from '../data/config';
+import SEO from '../data/next-seo.config';
+import ThemeProvider from '../providers/ThemeProvider';
 
 const MyApp = ({ Component, pageProps, err }: AppProps & { err: any }) => {
   const router = useRouter();
@@ -27,7 +27,7 @@ const MyApp = ({ Component, pageProps, err }: AppProps & { err: any }) => {
       <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${config.googleAnalyticsID}`}
-      ></Script>
+      />
       <Script
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
