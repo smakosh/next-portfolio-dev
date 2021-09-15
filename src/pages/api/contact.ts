@@ -1,5 +1,5 @@
-import { NextApiRequest, NextApiResponse } from 'next';
 import axios from 'axios';
+import { NextApiRequest, NextApiResponse } from 'next';
 import * as Yup from 'yup';
 
 type Data = {
@@ -17,7 +17,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
     const data = await schema.validate(req.body);
     await axios({
       method: 'POST',
-      url: `${process.env.FORMIUM_ENDPOINT}`,
+      url: process.env.FORMIUM_ENDPOINT,
       headers: {
         'Content-Type': 'application/json',
       },

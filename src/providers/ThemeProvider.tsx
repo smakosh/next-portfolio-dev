@@ -8,6 +8,7 @@ type ThemeState = {
 
 type ThemeProviderProps = { children: React.ReactNode };
 
+// eslint-disable-next-line @typescript-eslint/naming-convention
 export const ThemeContext = createContext<ThemeState>({
   theme: 'light',
   setTheme: () => {},

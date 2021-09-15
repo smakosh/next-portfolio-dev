@@ -39,7 +39,7 @@ const Footer = () => (
       </Details>
       <Links>
         {social.map(({ id, name, link }) => {
-          if (`${name}` in icons) {
+          if (name in icons) {
             const src = icons[name as keyof Icons];
             return (
               <a key={id} href={link} target="_blank" rel="noopener noreferrer" aria-label={`follow me on ${name}`}>

@@ -14,13 +14,18 @@ const useDarkMode = () => {
     }
   };
 
-  const prefersDarkMode = useMedia(['(prefers-color-scheme: dark)'], [true], false);
+  const prefersDarkMode = useMedia(
+    ['(prefers-color-scheme: dark)'],
+    [true],
+    false,
+  );
 
   useEffect(() => {
     const localTheme = window.localStorage.getItem('theme');
     if (localTheme) {
       window.localStorage.setItem('theme', localTheme);
       setTheme(localTheme);
+      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
     } else if (prefersDarkMode) {
       setTheme('dark');
     } else {

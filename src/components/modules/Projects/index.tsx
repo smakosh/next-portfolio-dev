@@ -13,7 +13,7 @@ const Projects = ({ data }: { data: RepositoryEdge[] }) => {
     <Wrapper as={Container} id="projects">
       <h2>Projects</h2>
       <Grid>
-        {data &&
+        {data.length &&
           data.map(({ node }) => {
             if (!node) return null;
             return (
