@@ -4,7 +4,7 @@ on: [push]
 jobs:
   Preflight-check:
     name: UpLeveled Preflight check
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
       - name: Get UpLeveled check image
