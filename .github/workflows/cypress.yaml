@@ -11,6 +11,8 @@ jobs:
       # https://github.com/cypress-io/github-action
       - name: Cypress run
         uses: cypress-io/github-action@v2
+        env:
+          GITHUB_TOKEN: ${{secrets.DRONE_TOKEN }}
         with:
           build: yarn build
           start: yarn start
