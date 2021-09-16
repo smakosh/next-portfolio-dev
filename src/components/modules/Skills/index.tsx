@@ -13,13 +13,16 @@ const Skills = () => {
     <Wrapper id="about">
       <SkillsWrapper as={Container}>
         <Thumbnail>
-          <Image src={skillsIllustration} alt="I’m John and I’m a Backend & Devops engineer!" />
+          <Image
+            src={skillsIllustration}
+            alt="I’m John and I’m a Backend & Devops engineer!"
+          />
         </Thumbnail>
         <Details theme={theme}>
-          <h1>More about me</h1>
+          <h1 data-cy="about">More about me</h1>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry’s standard dummy.
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry’s standard dummy.
           </p>
           <Link href="#contact" passHref>
             <Button as="a">Hire me</Button>

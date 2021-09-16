@@ -11,13 +11,20 @@ const Projects = ({ data }: { data: RepositoryEdge[] }) => {
 
   return (
     <Wrapper as={Container} id="projects">
-      <h2>Projects</h2>
+      <h2 data-cy="projects">Projects</h2>
       <Grid>
         {data.length &&
           data.map(({ node }) => {
             if (!node) return null;
             return (
-              <Item key={node.id} as="a" href={node.url} target="_blank" rel="noopener noreferrer" theme={theme}>
+              <Item
+                key={node.id}
+                as="a"
+                href={node.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                theme={theme}
+              >
                 <Card theme={theme}>
                   <Content>
                     <h3>{node.name}</h3>

@@ -21,6 +21,7 @@
     "yup": "0.32.9"
   },
   "devDependencies": {
+    "cypress": "^8.3.1",
     "@babel/eslint-parser": "^7.15.4",
     "@graphql-codegen/cli": "1.21.5",
     "@next/eslint-plugin-next": "^11.0.0",
