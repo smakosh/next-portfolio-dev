@@ -12,6 +12,7 @@ jobs:
       - name: Run Get UpLeveled check image
         run: |
           MY_STRING=$(docker run ghcr.io/upleveled/preflight https://github.com/${{ github.repository}})
+          echo $MY_STRING
           MY_STRING="${MY_STRING//'%'/'%25'}"
           MY_STRING="${MY_STRING//$'\n'/'%0A'}"
           MY_STRING="${MY_STRING//$'\r'/'%0D'}"
