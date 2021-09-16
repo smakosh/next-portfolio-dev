@@ -21,7 +21,6 @@
     "yup": "0.32.9"
   },
   "devDependencies": {
-    "cypress": "^8.3.1",
     "@babel/eslint-parser": "^7.15.4",
     "@graphql-codegen/cli": "1.21.5",
     "@next/eslint-plugin-next": "^11.0.0",
@@ -34,9 +33,10 @@
     "@types/yup": "0.29.11",
     "@typescript-eslint/eslint-plugin": "^4.21.0",
     "@typescript-eslint/parser": "^4.21.0",
-    "@upleveled/eslint-config-upleveled": "1.17.0",
+    "@upleveled/eslint-config-upleveled": "1.17.1",
     "@upleveled/eslint-plugin-upleveled": "^1.1.0",
     "babel-plugin-styled-components": "1.12.0",
+    "cypress": "^8.3.1",
     "eslint": "^7.23.0",
     "eslint-config-next": "11.1.0",
     "eslint-config-react-app": "^6.0.0",
