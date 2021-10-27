@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GetStaticProps } from 'next';
+import { InferGetStaticPropsType } from 'next';
 import { RepositoryEdge } from 'generated/graphql';
 import Layout from 'components/ui/Layout';
 import SEO from 'components/SEO';
@@ -8,7 +8,7 @@ import Projects from 'components/modules/Projects';
 import Skills from 'components/modules/Skills';
 import Contact from 'components/modules/Contact';
 
-const HomePage = ({ repos }: { repos: RepositoryEdge[] }) => (
+const HomePage = ({ repos }: InferGetStaticPropsType<typeof getStaticProps>) => (
   <Layout>
     <SEO />
     <Intro />
@@ -18,10 +18,8 @@ const HomePage = ({ repos }: { repos: RepositoryEdge[] }) => (
   </Layout>
 );
 
-export const getStaticProps: GetStaticProps = async () => {
-  const {
-    data: { data },
-  } = await axios({
+export const getStaticProps = async () => {
+  const res = await axios({
     url: 'https://api.github.com/graphql',
     method: 'post',
     data: {
@@ -57,9 +55,11 @@ export const getStaticProps: GetStaticProps = async () => {
     },
   });
 
+  const repos: RepositoryEdge[] = res.data.data.viewer.repositories.edges;
+
   return {
     props: {
-      repos: data.viewer.repositories.edges,
+      repos,
     },
     revalidate: 10,
   };
