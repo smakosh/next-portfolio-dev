@@ -8,8 +8,7 @@ type ThemeState = {
 
 type ThemeProviderProps = { children: React.ReactNode };
 
-// eslint-disable-next-line @typescript-eslint/naming-convention
-export const ThemeContext = createContext<ThemeState>({
+export const themeContext = createContext<ThemeState>({
   theme: 'light',
   setTheme: () => {},
 });
@@ -18,17 +17,17 @@ const ThemeProvider = ({ children }: ThemeProviderProps) => {
   const { theme, toggleTheme } = useDarkMode();
 
   return (
-    <ThemeContext.Provider
+    <themeContext.Provider
       value={{
         theme,
         setTheme: toggleTheme,
       }}
     >
       {children}
-    </ThemeContext.Provider>
+    </themeContext.Provider>
   );
 };
 
-export const useTheme = () => useContext(ThemeContext);
+export const useTheme = () => useContext(themeContext);
 
 export default ThemeProvider;

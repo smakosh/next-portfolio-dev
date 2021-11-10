@@ -2,3 +2,6 @@ build
 
 # Next.js build folder
 .next
+
+# ignore file with graphql types
+graphql.ts

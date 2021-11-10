@@ -25,7 +25,6 @@ const useDarkMode = () => {
     if (localTheme) {
       window.localStorage.setItem('theme', localTheme);
       setTheme(localTheme);
-      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
     } else if (prefersDarkMode) {
       setTheme('dark');
     } else {
