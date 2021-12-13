@@ -10,6 +10,7 @@
     "gen": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
+    "@graphql-codegen/cli": "^2.3.0",
     "axios": "0.24.0",
     "formik": "2.2.9",
     "next": "12.0.7",
