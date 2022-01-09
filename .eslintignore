@@ -1,5 +1,5 @@
 build
-/src/generated/graphql.ts
 
 # Next.js build folder
 .next
+src/generated/graphql.ts
