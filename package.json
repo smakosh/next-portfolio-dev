@@ -10,7 +10,7 @@
     "gen": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
-    "@graphql-codegen/cli": "^2.3.0",
+    "@graphql-codegen/cli": "2.3.1",
     "axios": "0.24.0",
     "formik": "2.2.9",
     "next": "12.0.7",
@@ -29,14 +29,14 @@
     "@types/react": "17.0.38",
     "@types/react-dom": "17.0.11",
     "@types/react-google-recaptcha": "2.1.2",
-    "@types/styled-components": "5.1.17",
+    "@types/styled-components": "5.1.19",
     "@types/yup": "0.29.13",
     "@typescript-eslint/eslint-plugin": "5.9.0",
     "@typescript-eslint/parser": "5.9.0",
     "@upleveled/eslint-config-upleveled": "2.1.8",
     "@upleveled/eslint-plugin-upleveled": "2.0.1",
     "babel-plugin-styled-components": "2.0.2",
-    "cypress": "9.1.1",
+    "cypress": "9.2.0",
     "eslint": "8.6.0",
     "eslint-config-next": "12.0.7",
     "eslint-config-react-app": "7.0.0",
@@ -48,9 +48,9 @@
     "eslint-plugin-jsx-a11y": "6.5.1",
     "eslint-plugin-react": "7.28.0",
     "eslint-plugin-react-hooks": "4.3.0",
-    "eslint-plugin-testing-library": "5.0.1",
+    "eslint-plugin-testing-library": "5.0.2",
     "eslint-plugin-unicorn": "40.0.0",
-    "lint-staged": "12.1.2",
+    "lint-staged": "12.1.7",
     "typescript": "4.5.4"
   },
   "lint-staged": {
@@ -60,7 +60,7 @@
   },
   "resolutions": {
     "eslint-plugin-react": "7.28.0",
-    "eslint-plugin-testing-library": "5.0.1",
+    "eslint-plugin-testing-library": "5.0.2",
     "@typescript-eslint/eslint-plugin": "5.9.0",
     "@typescript-eslint/parser": "5.9.0",
     "eslint-plugin-import": "2.25.4"
