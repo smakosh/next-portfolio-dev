@@ -2,4 +2,3 @@ build
 
 # Next.js build folder
 .next
-src/generated/graphql.ts
