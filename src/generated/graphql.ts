@@ -532,7 +532,7 @@ export type AuditLogOrder = {
 /** Properties by which Audit Log connections can be ordered. */
 export enum AuditLogOrderField {
   /** Order audit log entries by timestamp */
-  CreatedAt = 'CREATED_AT',
+  createdAt = 'CREATED_AT',
 }
 
 /** Represents a 'auto_merge_disabled' event on a given pull request. */
@@ -1056,11 +1056,11 @@ export type CheckAnnotationEdge = {
 /** Represents an annotation's information level. */
 export enum CheckAnnotationLevel {
   /** An annotation indicating an inescapable error. */
-  Failure = 'FAILURE',
+  failure = 'FAILURE',
   /** An annotation indicating some information. */
-  Notice = 'NOTICE',
+  notice = 'NOTICE',
   /** An annotation indicating an ignorable error. */
-  Warning = 'WARNING',
+  warning = 'WARNING',
 }
 
 /** A character position in a check annotation. */
@@ -1096,23 +1096,23 @@ export type CheckAnnotationSpan = {
 /** The possible states for a check suite or run conclusion. */
 export enum CheckConclusionState {
   /** The check suite or run requires action. */
-  ActionRequired = 'ACTION_REQUIRED',
+  actionRequired = 'ACTION_REQUIRED',
   /** The check suite or run has timed out. */
-  TimedOut = 'TIMED_OUT',
+  timedOut = 'TIMED_OUT',
   /** The check suite or run has been cancelled. */
-  Cancelled = 'CANCELLED',
+  cancelled = 'CANCELLED',
   /** The check suite or run has failed. */
-  Failure = 'FAILURE',
+  failure = 'FAILURE',
   /** The check suite or run has succeeded. */
-  Success = 'SUCCESS',
+  success = 'SUCCESS',
   /** The check suite or run was neutral. */
-  Neutral = 'NEUTRAL',
+  neutral = 'NEUTRAL',
   /** The check suite or run was skipped. */
-  Skipped = 'SKIPPED',
+  skipped = 'SKIPPED',
   /** The check suite or run has failed at startup. */
-  StartupFailure = 'STARTUP_FAILURE',
+  startupFailure = 'STARTUP_FAILURE',
   /** The check suite or run was marked stale by GitHub. Only GitHub can use this conclusion. */
-  Stale = 'STALE',
+  stale = 'STALE',
 }
 
 /** A check run. */
@@ -1244,23 +1244,23 @@ export type CheckRunOutputImage = {
 /** The possible types of check runs. */
 export enum CheckRunType {
   /** Every check run available. */
-  All = 'ALL',
+  all = 'ALL',
   /** The latest check run. */
-  Latest = 'LATEST',
+  latest = 'LATEST',
 }
 
 /** The possible states for a check suite or run status. */
 export enum CheckStatusState {
   /** The check suite or run has been queued. */
-  Queued = 'QUEUED',
+  queued = 'QUEUED',
   /** The check suite or run is in progress. */
-  InProgress = 'IN_PROGRESS',
+  inProgress = 'IN_PROGRESS',
   /** The check suite or run has been completed. */
-  Completed = 'COMPLETED',
+  completed = 'COMPLETED',
   /** The check suite or run is in waiting state. */
-  Waiting = 'WAITING',
+  waiting = 'WAITING',
   /** The check suite or run has been requested. */
-  Requested = 'REQUESTED',
+  requested = 'REQUESTED',
 }
 
 /** A check suite. */
@@ -1513,11 +1513,11 @@ export type CodeOfConduct = Node & {
 /** Collaborators affiliation level with a subject. */
 export enum CollaboratorAffiliation {
   /** All outside collaborators of an organization-owned subject. */
-  Outside = 'OUTSIDE',
+  outside = 'OUTSIDE',
   /** All collaborators with permissions to an organization-owned subject, regardless of organization membership status. */
-  Direct = 'DIRECT',
+  direct = 'DIRECT',
   /** All collaborators the authenticated user can see. */
-  All = 'ALL',
+  all = 'ALL',
 }
 
 /** Represents a comment. */
@@ -1564,39 +1564,39 @@ export type CommentUserContentEditsArgs = {
 /** A comment author association with repository. */
 export enum CommentAuthorAssociation {
   /** Author is a member of the organization that owns the repository. */
-  Member = 'MEMBER',
+  member = 'MEMBER',
   /** Author is the owner of the repository. */
-  Owner = 'OWNER',
+  owner = 'OWNER',
   /** Author is a placeholder for an unclaimed user. */
-  Mannequin = 'MANNEQUIN',
+  mannequin = 'MANNEQUIN',
   /** Author has been invited to collaborate on the repository. */
-  Collaborator = 'COLLABORATOR',
+  collaborator = 'COLLABORATOR',
   /** Author has previously committed to the repository. */
-  Contributor = 'CONTRIBUTOR',
+  contributor = 'CONTRIBUTOR',
   /** Author has not previously committed to the repository. */
-  FirstTimeContributor = 'FIRST_TIME_CONTRIBUTOR',
+  firstTimeContributor = 'FIRST_TIME_CONTRIBUTOR',
   /** Author has not previously committed to GitHub. */
-  FirstTimer = 'FIRST_TIMER',
+  firstTimer = 'FIRST_TIMER',
   /** Author has no association with the repository. */
-  None = 'NONE',
+  none = 'NONE',
 }
 
 /** The possible errors that will prevent a user from updating a comment. */
 export enum CommentCannotUpdateReason {
   /** Unable to create comment because repository is archived. */
-  Archived = 'ARCHIVED',
+  archived = 'ARCHIVED',
   /** You must be the author or have write access to this repository to update this comment. */
-  InsufficientAccess = 'INSUFFICIENT_ACCESS',
+  insufficientAccess = 'INSUFFICIENT_ACCESS',
   /** Unable to create comment because issue is locked. */
-  Locked = 'LOCKED',
+  locked = 'LOCKED',
   /** You must be logged in to update this comment. */
-  LoginRequired = 'LOGIN_REQUIRED',
+  loginRequired = 'LOGIN_REQUIRED',
   /** Repository is under maintenance. */
-  Maintenance = 'MAINTENANCE',
+  maintenance = 'MAINTENANCE',
   /** At least one email address must be verified to update this comment. */
-  VerifiedEmailRequired = 'VERIFIED_EMAIL_REQUIRED',
+  verifiedEmailRequest = 'VERIFIED_EMAIL_REQUIRED',
   /** You cannot update this comment */
-  Denied = 'DENIED',
+  denied = 'DENIED',
 }
 
 /** Represents a 'comment_deleted' event on a given issue or pull request. */
@@ -1969,9 +1969,9 @@ export type CommitContributionOrder = {
 /** Properties by which commit contribution connections can be ordered. */
 export enum CommitContributionOrderField {
   /** Order commit contributions by when they were made. */
-  OccurredAt = 'OCCURRED_AT',
+  occurredAt = 'OCCURRED_AT',
   /** Order commit contributions by how many commits they represent. */
-  CommitCount = 'COMMIT_COUNT',
+  commitCount = 'COMMIT_COUNT',
 }
 
 /** This aggregates commits made by a user within one repository. */
@@ -2107,15 +2107,15 @@ export type ContributionCalendarWeek = {
 /** Varying levels of contributions from none to many. */
 export enum ContributionLevel {
   /** No contributions occurred. */
-  None = 'NONE',
+  none = 'NONE',
   /** Lowest 25% of days of contributions. */
-  FirstQuartile = 'FIRST_QUARTILE',
+  firstQuartile = 'FIRST_QUARTILE',
   /** Second lowest 25% of days of contributions. More contributions than the first quartile. */
-  SecondQuartile = 'SECOND_QUARTILE',
+  secondQuartile = 'SECOND_QUARTILE',
   /** Second highest 25% of days of contributions. More contributions than second quartile, less than the fourth quartile. */
-  ThirdQuartile = 'THIRD_QUARTILE',
+  thirdQuartile = 'THIRD_QUARTILE',
   /** Highest 25% of days of contributions. More contributions than the third quartile. */
-  FourthQuartile = 'FOURTH_QUARTILE',
+  fourthQuartile = 'FOURTH_QUARTILE',
 }
 
 /** Ordering options for contribution connections. */
@@ -3013,13 +3013,13 @@ export type DeclineTopicSuggestionPayload = {
 /** The possible default permissions for repositories. */
 export enum DefaultRepositoryPermissionField {
   /** No access */
-  None = 'NONE',
+  none = 'NONE',
   /** Can read repos by default */
-  Read = 'READ',
+  read = 'READ',
   /** Can read and write repos by default */
-  Write = 'WRITE',
+  write = 'WRITE',
   /** Can read, write, and administrate repos by default */
-  Admin = 'ADMIN',
+  admin = 'ADMIN',
 }
 
 /** Entities that can be deleted. */
@@ -3423,31 +3423,31 @@ export type DeploymentOrder = {
 /** Properties by which deployment connections can be ordered. */
 export enum DeploymentOrderField {
   /** Order collection by creation time */
-  CreatedAt = 'CREATED_AT',
+  createdAt = 'CREATED_AT',
 }
 
 /** The possible states in which a deployment can be. */
 export enum DeploymentState {
   /** The pending deployment was not updated after 30 minutes. */
-  Abandoned = 'ABANDONED',
+  abandoned = 'ABANDONED',
   /** The deployment is currently active. */
-  Active = 'ACTIVE',
+  active = 'ACTIVE',
   /** An inactive transient deployment. */
-  Destroyed = 'DESTROYED',
+  destroyed = 'DESTROYED',
   /** The deployment experienced an error. */
-  Error = 'ERROR',
+  error = 'ERROR',
   /** The deployment has failed. */
-  Failure = 'FAILURE',
+  failure = 'FAILURE',
   /** The deployment is inactive. */
-  Inactive = 'INACTIVE',
+  inactive = 'INACTIVE',
   /** The deployment is pending. */
-  Pending = 'PENDING',
+  pending = 'PENDING',
   /** The deployment has queued */
-  Queued = 'QUEUED',
+  queued = 'QUEUED',
   /** The deployment is in progress. */
-  InProgress = 'IN_PROGRESS',
+  inProgress = 'IN_PROGRESS',
   /** The deployment is waiting. */
-  Waiting = 'WAITING',
+  waiting = 'WAITING',
 }
 
 /** Describes the status of a given deployment attempt. */
@@ -3497,29 +3497,29 @@ export type DeploymentStatusEdge = {
 /** The possible states for a deployment status. */
 export enum DeploymentStatusState {
   /** The deployment is pending. */
-  Pending = 'PENDING',
+  pending = 'PENDING',
   /** The deployment was successful. */
-  Success = 'SUCCESS',
+  success = 'SUCCESS',
   /** The deployment has failed. */
-  Failure = 'FAILURE',
+  failure = 'FAILURE',
   /** The deployment is inactive. */
-  Inactive = 'INACTIVE',
+  inactive = 'INACTIVE',
   /** The deployment experienced an error. */
-  Error = 'ERROR',
+  error = 'ERROR',
   /** The deployment is queued */
-  Queued = 'QUEUED',
+  queued = 'QUEUED',
   /** The deployment is in progress. */
-  InProgress = 'IN_PROGRESS',
+  inProgress = 'IN_PROGRESS',
   /** The deployment is waiting. */
-  Waiting = 'WAITING',
+  waiting = 'WAITING',
 }
 
 /** The possible sides of a diff. */
 export enum DiffSide {
   /** The left side of the diff. */
-  Left = 'LEFT',
+  left = 'LEFT',
   /** The right side of the diff. */
-  Right = 'RIGHT',
+  right = 'RIGHT',
 }
 
 /** Autogenerated input type of DisablePullRequestAutoMerge */
@@ -3780,15 +3780,15 @@ export type EnterpriseAdministratorInvitationOrder = {
 /** Properties by which enterprise administrator invitation connections can be ordered. */
 export enum EnterpriseAdministratorInvitationOrderField {
   /** Order enterprise administrator member invitations by creation time */
-  CreatedAt = 'CREATED_AT',
+  createdAt = 'CREATED_AT',
 }
 
 /** The possible administrator roles in an enterprise account. */
 export enum EnterpriseAdministratorRole {
   /** Represents an owner of the enterprise account. */
-  Owner = 'OWNER',
+  owner = 'OWNER',
   /** Represents a billing manager of the enterprise account. */
-  BillingManager = 'BILLING_MANAGER',
+  billingManager = 'BILLING_MANAGER',
 }
 
 /** Metadata for an audit entry containing enterprise account information. */
@@ -3839,33 +3839,33 @@ export type EnterpriseBillingInfo = {
 /** The possible values for the enterprise default repository permission setting. */
 export enum EnterpriseDefaultRepositoryPermissionSettingValue {
   /** Organizations in the enterprise choose default repository permissions for their members. */
-  NoPolicy = 'NO_POLICY',
+  noPolicy = 'NO_POLICY',
   /** Organization members will be able to clone, pull, push, and add new collaborators to all organization repositories. */
-  Admin = 'ADMIN',
+  admin = 'ADMIN',
   /** Organization members will be able to clone, pull, and push all organization repositories. */
-  Write = 'WRITE',
+  write = 'WRITE',
   /** Organization members will be able to clone and pull all organization repositories. */
-  Read = 'READ',
+  read = 'READ',
   /** Organization members will only be able to clone and pull public repositories. */
-  None = 'NONE',
+  none = 'NONE',
 }
 
 /** The possible values for an enabled/disabled enterprise setting. */
 export enum EnterpriseEnabledDisabledSettingValue {
   /** The setting is enabled for organizations in the enterprise. */
-  Enabled = 'ENABLED',
+  enabled = 'ENABLED',
   /** The setting is disabled for organizations in the enterprise. */
-  Disabled = 'DISABLED',
+  disabled = 'DISABLED',
   /** There is no policy set for organizations in the enterprise. */
-  NoPolicy = 'NO_POLICY',
+  noPolicy = 'NO_POLICY',
 }
 
 /** The possible values for an enabled/no policy enterprise setting. */
 export enum EnterpriseEnabledSettingValue {
   /** The setting is enabled for organizations in the enterprise. */
-  Enabled = 'ENABLED',
+  enabled = 'ENABLED',
   /** There is no policy set for organizations in the enterprise. */
-  NoPolicy = 'NO_POLICY',
+  noPolicy = 'NO_POLICY',
 }
 
 /** An identity provider configured to provision identities for an enterprise. */
@@ -3939,31 +3939,31 @@ export type EnterpriseMemberOrder = {
 /** Properties by which enterprise member connections can be ordered. */
 export enum EnterpriseMemberOrderField {
   /** Order enterprise members by login */
-  Login = 'LOGIN',
+  login = 'LOGIN',
   /** Order enterprise members by creation time */
-  CreatedAt = 'CREATED_AT',
+  createdAt = 'CREATED_AT',
 }
 
 /** The possible values for the enterprise members can create repositories setting. */
 export enum EnterpriseMembersCanCreateRepositoriesSettingValue {
   /** Organization administrators choose whether to allow members to create repositories. */
-  NoPolicy = 'NO_POLICY',
+  noPolicy = 'NO_POLICY',
   /** Members will be able to create public and private repositories. */
-  All = 'ALL',
+  all = 'ALL',
   /** Members will be able to create only public repositories. */
-  Public = 'PUBLIC',
+  public = 'PUBLIC',
   /** Members will be able to create only private repositories. */
-  Private = 'PRIVATE',
+  private = 'PRIVATE',
   /** Members will not be able to create public or private repositories. */
-  Disabled = 'DISABLED',
+  disabled = 'DISABLED',
 }
 
 /** The possible values for the members can make purchases setting. */
 export enum EnterpriseMembersCanMakePurchasesSettingValue {
   /** The setting is enabled for organizations in the enterprise. */
-  Enabled = 'ENABLED',
+  enabled = 'ENABLED',
   /** The setting is disabled for organizations in the enterprise. */
-  Disabled = 'DISABLED',
+  disabled = 'DISABLED',
 }
 
 /** The connection type for Organization. */
@@ -4563,11 +4563,11 @@ export type EnterpriseServerInstallationOrder = {
 /** Properties by which Enterprise Server installation connections can be ordered. */
 export enum EnterpriseServerInstallationOrderField {
   /** Order Enterprise Server installations by host name */
-  HostName = 'HOST_NAME',
+  hostName = 'HOST_NAME',
   /** Order Enterprise Server installations by customer name */
-  CustomerName = 'CUSTOMER_NAME',
+  customerName = 'CUSTOMER_NAME',
   /** Order Enterprise Server installations by creation time */
-  CreatedAt = 'CREATED_AT',
+  createdAt = 'CREATED_AT',
 }
 
 /** A user account on an Enterprise Server installation. */
@@ -4674,7 +4674,7 @@ export type EnterpriseServerUserAccountEmailOrder = {
 /** Properties by which Enterprise Server user account email connections can be ordered. */
 export enum EnterpriseServerUserAccountEmailOrderField {
   /** Order emails by email */
-  Email = 'EMAIL',
+  email = 'EMAIL',
 }
 
 /** Ordering options for Enterprise Server user account connections. */
@@ -4688,9 +4688,9 @@ export type EnterpriseServerUserAccountOrder = {
 /** Properties by which Enterprise Server user account connections can be ordered. */
 export enum EnterpriseServerUserAccountOrderField {
   /** Order user accounts by login */
-  Login = 'LOGIN',
+  login = 'LOGIN',
   /** Order user accounts by creation time on the Enterprise Server installation */
-  RemoteCreatedAt = 'REMOTE_CREATED_AT',
+  remoteCreatedAt = 'REMOTE_CREATED_AT',
 }
 
 /** A user accounts upload from an Enterprise Server installation. */
@@ -4744,17 +4744,17 @@ export type EnterpriseServerUserAccountsUploadOrder = {
 /** Properties by which Enterprise Server user accounts upload connections can be ordered. */
 export enum EnterpriseServerUserAccountsUploadOrderField {
   /** Order user accounts uploads by creation time */
-  CreatedAt = 'CREATED_AT',
+  createdAt = 'CREATED_AT',
 }
 
 /** Synchronization state of the Enterprise Server user accounts upload */
 export enum EnterpriseServerUserAccountsUploadSyncState {
   /** The synchronization of the upload is pending. */
-  Pending = 'PENDING',
+  pending = 'PENDING',
   /** The synchronization of the upload succeeded. */
-  Success = 'SUCCESS',
+  success = 'SUCCESS',
   /** The synchronization of the upload failed. */
-  Failure = 'FAILURE',
+  failure = 'FAILURE',
 }
 
 /** An account for a user who is an admin of an enterprise or a member of an enterprise through one or more organizations. */
@@ -4825,17 +4825,17 @@ export type EnterpriseUserAccountEdge = {
 /** The possible roles for enterprise membership. */
 export enum EnterpriseUserAccountMembershipRole {
   /** The user is a member of the enterprise membership. */
-  Member = 'MEMBER',
+  member = 'MEMBER',
   /** The user is an owner of the enterprise membership. */
-  Owner = 'OWNER',
+  owner = 'OWNER',
 }
 
 /** The possible GitHub Enterprise deployments where this user can exist. */
 export enum EnterpriseUserDeployment {
   /** The user is part of a GitHub Enterprise Cloud deployment. */
-  Cloud = 'CLOUD',
+  cloud = 'CLOUD',
   /** The user is part of a GitHub Enterprise Server deployment. */
-  Server = 'SERVER',
+  server = 'SERVER',
 }
 
 /** An external identity provisioned by SAML SSO or SCIM. */
@@ -4911,11 +4911,11 @@ export type ExternalIdentityScimAttributes = {
 /** The possible viewed states of a file . */
 export enum FileViewedState {
   /** The file has new changes since last viewed. */
-  Dismissed = 'DISMISSED',
+  dismissed = 'DISMISSED',
   /** The file has been marked as viewed. */
-  Viewed = 'VIEWED',
+  viewed = 'VIEWED',
   /** The file has not been marked as viewed. */
-  Unviewed = 'UNVIEWED',
+  unviewed = 'UNVIEWED',
 }
 
 /** Autogenerated input type of FollowUser */
@@ -4973,25 +4973,25 @@ export type FundingLink = {
 /** The possible funding platforms for repository funding links. */
 export enum FundingPlatform {
   /** GitHub funding platform. */
-  Github = 'GITHUB',
+  github = 'GITHUB',
   /** Patreon funding platform. */
-  Patreon = 'PATREON',
+  patreon = 'PATREON',
   /** Open Collective funding platform. */
-  OpenCollective = 'OPEN_COLLECTIVE',
+  openCollective = 'OPEN_COLLECTIVE',
   /** Ko-fi funding platform. */
-  KoFi = 'KO_FI',
+  koFi = 'KO_FI',
   /** Tidelift funding platform. */
-  Tidelift = 'TIDELIFT',
+  tidelift = 'TIDELIFT',
   /** Community Bridge funding platform. */
-  CommunityBridge = 'COMMUNITY_BRIDGE',
+  communityBridge = 'COMMUNITY_BRIDGE',
   /** Liberapay funding platform. */
-  Liberapay = 'LIBERAPAY',
+  liberapay = 'LIBERAPAY',
   /** IssueHunt funding platform. */
-  Issuehunt = 'ISSUEHUNT',
+  issuehunt = 'ISSUEHUNT',
   /** Otechie funding platform. */
-  Otechie = 'OTECHIE',
+  otechie = 'OTECHIE',
   /** Custom funding platform. */
-  Custom = 'CUSTOM',
+  custom = 'CUSTOM',
 }
 
 /** A generic hovercard context with a message and icon */
@@ -5221,21 +5221,21 @@ export type GistOrder = {
 /** Properties by which gist connections can be ordered. */
 export enum GistOrderField {
   /** Order gists by creation time */
-  CreatedAt = 'CREATED_AT',
+  createdAt = 'CREATED_AT',
   /** Order gists by update time */
-  UpdatedAt = 'UPDATED_AT',
+  updatedAt = 'UPDATED_AT',
   /** Order gists by push time */
-  PushedAt = 'PUSHED_AT',
+  pushedAt = 'PUSHED_AT',
 }
 
 /** The privacy of a Gist */
 export enum GistPrivacy {
   /** Public */
-  Public = 'PUBLIC',
+  public = 'PUBLIC',
   /** Secret */
-  Secret = 'SECRET',
+  secret = 'SECRET',
   /** Gists that are public and secret */
-  All = 'ALL',
+  all = 'ALL',
 }
 
 /** Represents an actor in a Git commit (ie. an author or committer). */
@@ -5333,39 +5333,39 @@ export type GitSignature = {
 /** The state of a Git signature. */
 export enum GitSignatureState {
   /** Valid signature and verified by GitHub */
-  Valid = 'VALID',
+  valid = 'VALID',
   /** Invalid signature */
-  Invalid = 'INVALID',
+  invalid = 'INVALID',
   /** Malformed signature */
-  MalformedSig = 'MALFORMED_SIG',
+  malformedSig = 'MALFORMED_SIG',
   /** Key used for signing not known to GitHub */
-  UnknownKey = 'UNKNOWN_KEY',
+  unknownKey = 'UNKNOWN_KEY',
   /** Invalid email used for signing */
-  BadEmail = 'BAD_EMAIL',
+  badEmail = 'BAD_EMAIL',
   /** Email used for signing unverified on GitHub */
-  UnverifiedEmail = 'UNVERIFIED_EMAIL',
+  unverifiedEmail = 'UNVERIFIED_EMAIL',
   /** Email used for signing not known to GitHub */
-  NoUser = 'NO_USER',
+  noUser = 'NO_USER',
   /** Unknown signature type */
-  UnknownSigType = 'UNKNOWN_SIG_TYPE',
+  unknownSigType = 'UNKNOWN_SIG_TYPE',
   /** Unsigned */
-  Unsigned = 'UNSIGNED',
+  unsigned = 'UNSIGNED',
   /** Internal error - the GPG verification service is unavailable at the moment */
-  GpgverifyUnavailable = 'GPGVERIFY_UNAVAILABLE',
+  gpgverifyUnavailable = 'GPGVERIFY_UNAVAILABLE',
   /** Internal error - the GPG verification service misbehaved */
-  GpgverifyError = 'GPGVERIFY_ERROR',
+  gpgverifyError = 'GPGVERIFY_ERROR',
   /** The usage flags for the key that signed this don't allow signing */
-  NotSigningKey = 'NOT_SIGNING_KEY',
+  notSigningKey = 'NOT_SIGNING_KEY',
   /** Signing key expired */
-  ExpiredKey = 'EXPIRED_KEY',
+  expiredKey = 'EXPIRED_KEY',
   /** Valid signature, pending certificate revocation checking */
-  OcspPending = 'OCSP_PENDING',
+  ocspPending = 'OCSP_PENDING',
   /** Valid signature, though certificate revocation check failed */
-  OcspError = 'OCSP_ERROR',
+  ocspError = 'OCSP_ERROR',
   /** The signing certificate or its chain could not be verified */
-  BadCert = 'BAD_CERT',
+  badCert = 'BAD_CERT',
   /** One or more certificates in chain has been revoked */
-  OcspRevoked = 'OCSP_REVOKED',
+  ocspRevoked = 'OCSP_REVOKED',
 }
 
 /** Represents a GPG signature on a Commit or Tag. */
@@ -5453,11 +5453,11 @@ export type HovercardContext = {
 /** The possible states in which authentication can be configured with an identity provider. */
 export enum IdentityProviderConfigurationState {
   /** Authentication with an identity provider is configured and enforced. */
-  Enforced = 'ENFORCED',
+  enforced = 'ENFORCED',
   /** Authentication with an identity provider is configured but not enforced. */
-  Configured = 'CONFIGURED',
+  configured = 'CONFIGURED',
   /** Authentication with an identity provider is not configured. */
-  Unconfigured = 'UNCONFIGURED',
+  unconfigured = 'UNCONFIGURED',
 }
 
 /** Autogenerated input type of InviteEnterpriseAdmin */
@@ -5486,9 +5486,9 @@ export type InviteEnterpriseAdminPayload = {
 /** The possible values for the IP allow list enabled setting. */
 export enum IpAllowListEnabledSettingValue {
   /** The setting is enabled for the owner. */
-  Enabled = 'ENABLED',
+  enabled = 'ENABLED',
   /** The setting is disabled for the owner. */
-  Disabled = 'DISABLED',
+  disabled = 'DISABLED',
 }
 
 /** An IP address or range of addresses that is allowed to access an owner's resources. */
@@ -5542,9 +5542,9 @@ export type IpAllowListEntryOrder = {
 /** Properties by which IP allow list entry connections can be ordered. */
 export enum IpAllowListEntryOrderField {
   /** Order IP allow list entries by creation time. */
-  CreatedAt = 'CREATED_AT',
+  createdAt = 'CREATED_AT',
   /** Order IP allow list entries by the allow list value. */
-  AllowListValue = 'ALLOW_LIST_VALUE',
+  allowListValue = 'ALLOW_LIST_VALUE',
 }
 
 /** Types that can own an IP allow list. */
@@ -5871,7 +5871,7 @@ export type IssueCommentOrder = {
 /** Properties by which issue comment connections can be ordered. */
 export enum IssueCommentOrderField {
   /** Order issue comments by update time */
-  UpdatedAt = 'UPDATED_AT',
+  updatedAt = 'UPDATED_AT',
 }
 
 /** The connection type for Issue. */
@@ -5948,19 +5948,19 @@ export type IssueOrder = {
 /** Properties by which issue connections can be ordered. */
 export enum IssueOrderField {
   /** Order issues by creation time */
-  CreatedAt = 'CREATED_AT',
+  createdAt = 'CREATED_AT',
   /** Order issues by update time */
-  UpdatedAt = 'UPDATED_AT',
+  updatedAt = 'UPDATED_AT',
   /** Order issues by comment count */
-  Comments = 'COMMENTS',
+  comments = 'COMMENTS',
 }
 
 /** The possible states of an issue. */
 export enum IssueState {
   /** An issue that is still open */
-  Open = 'OPEN',
+  open = 'OPEN',
   /** An issue that has been closed */
-  Closed = 'CLOSED',
+  closed = 'CLOSED',
 }
 
 /** A repository issue template. */
@@ -6084,65 +6084,65 @@ export type IssueTimelineItemsEdge = {
 /** The possible item types found in a timeline. */
 export enum IssueTimelineItemsItemType {
   /** Represents a comment on an Issue. */
-  IssueComment = 'ISSUE_COMMENT',
+  issueComment = 'ISSUE_COMMENT',
   /** Represents a mention made by one issue or pull request to another. */
-  CrossReferencedEvent = 'CROSS_REFERENCED_EVENT',
+  crossReferencedEvent = 'CROSS_REFERENCED_EVENT',
   /** Represents a 'added_to_project' event on a given issue or pull request. */
-  AddedToProjectEvent = 'ADDED_TO_PROJECT_EVENT',
+  addedToProjectEvent = 'ADDED_TO_PROJECT_EVENT',
   /** Represents an 'assigned' event on any assignable object. */
-  AssignedEvent = 'ASSIGNED_EVENT',
+  assignedEvent = 'ASSIGNED_EVENT',
   /** Represents a 'closed' event on any `Closable`. */
-  ClosedEvent = 'CLOSED_EVENT',
+  closedEvent = 'CLOSED_EVENT',
   /** Represents a 'comment_deleted' event on a given issue or pull request. */
-  CommentDeletedEvent = 'COMMENT_DELETED_EVENT',
+  commentDeletedEvent = 'COMMENT_DELETED_EVENT',
   /** Represents a 'connected' event on a given issue or pull request. */
-  ConnectedEvent = 'CONNECTED_EVENT',
+  connectedEvent = 'CONNECTED_EVENT',
   /** Represents a 'converted_note_to_issue' event on a given issue or pull request. */
-  ConvertedNoteToIssueEvent = 'CONVERTED_NOTE_TO_ISSUE_EVENT',
+  convertedNoteToIssueEvent = 'CONVERTED_NOTE_TO_ISSUE_EVENT',
   /** Represents a 'demilestoned' event on a given issue or pull request. */
-  DemilestonedEvent = 'DEMILESTONED_EVENT',
+  demilestonedEvent = 'DEMILESTONED_EVENT',
   /** Represents a 'disconnected' event on a given issue or pull request. */
-  DisconnectedEvent = 'DISCONNECTED_EVENT',
+  disconnectedEvent = 'DISCONNECTED_EVENT',
   /** Represents a 'labeled' event on a given issue or pull request. */
-  LabeledEvent = 'LABELED_EVENT',
+  labeledEvent = 'LABELED_EVENT',
   /** Represents a 'locked' event on a given issue or pull request. */
-  LockedEvent = 'LOCKED_EVENT',
+  lockedEvent = 'LOCKED_EVENT',
   /** Represents a 'marked_as_duplicate' event on a given issue or pull request. */
-  MarkedAsDuplicateEvent = 'MARKED_AS_DUPLICATE_EVENT',
+  markedAsDuplicateEvent = 'MARKED_AS_DUPLICATE_EVENT',
   /** Represents a 'mentioned' event on a given issue or pull request. */
-  MentionedEvent = 'MENTIONED_EVENT',
+  mentionedEvent = 'MENTIONED_EVENT',
   /** Represents a 'milestoned' event on a given issue or pull request. */
-  MilestonedEvent = 'MILESTONED_EVENT',
+  milestonedEvent = 'MILESTONED_EVENT',
   /** Represents a 'moved_columns_in_project' event on a given issue or pull request. */
-  MovedColumnsInProjectEvent = 'MOVED_COLUMNS_IN_PROJECT_EVENT',
+  movedColumnsInProjectEvent = 'MOVED_COLUMNS_IN_PROJECT_EVENT',
   /** Represents a 'pinned' event on a given issue or pull request. */
-  PinnedEvent = 'PINNED_EVENT',
+  pinnedEvent = 'PINNED_EVENT',
   /** Represents a 'referenced' event on a given `ReferencedSubject`. */
-  ReferencedEvent = 'REFERENCED_EVENT',
+  referencedEvent = 'REFERENCED_EVENT',
   /** Represents a 'removed_from_project' event on a given issue or pull request. */
-  RemovedFromProjectEvent = 'REMOVED_FROM_PROJECT_EVENT',
+  removedFromProjectEvent = 'REMOVED_FROM_PROJECT_EVENT',
   /** Represents a 'renamed' event on a given issue or pull request */
-  RenamedTitleEvent = 'RENAMED_TITLE_EVENT',
+  renamedTitleEvent = 'RENAMED_TITLE_EVENT',
   /** Represents a 'reopened' event on any `Closable`. */
-  ReopenedEvent = 'REOPENED_EVENT',
+  reopenedEvent = 'REOPENED_EVENT',
   /** Represents a 'subscribed' event on a given `Subscribable`. */
-  SubscribedEvent = 'SUBSCRIBED_EVENT',
+  subscribedEvent = 'SUBSCRIBED_EVENT',
   /** Represents a 'transferred' event on a given issue or pull request. */
-  TransferredEvent = 'TRANSFERRED_EVENT',
+  transferredEvent = 'TRANSFERRED_EVENT',
   /** Represents an 'unassigned' event on any assignable object. */
-  UnassignedEvent = 'UNASSIGNED_EVENT',
+  unassignedEvent = 'UNASSIGNED_EVENT',
   /** Represents an 'unlabeled' event on a given issue or pull request. */
-  UnlabeledEvent = 'UNLABELED_EVENT',
+  unlabeledEvent = 'UNLABELED_EVENT',
   /** Represents an 'unlocked' event on a given issue or pull request. */
-  UnlockedEvent = 'UNLOCKED_EVENT',
+  unlockedEvent = 'UNLOCKED_EVENT',
   /** Represents a 'user_blocked' event on a given user. */
-  UserBlockedEvent = 'USER_BLOCKED_EVENT',
+  userBlockedEvent = 'USER_BLOCKED_EVENT',
   /** Represents an 'unmarked_as_duplicate' event on a given issue or pull request. */
-  UnmarkedAsDuplicateEvent = 'UNMARKED_AS_DUPLICATE_EVENT',
+  unmarkedAsDuplicateEvent = 'UNMARKED_AS_DUPLICATE_EVENT',
   /** Represents an 'unpinned' event on a given issue or pull request. */
-  UnpinnedEvent = 'UNPINNED_EVENT',
+  unpinnedEvent = 'UNPINNED_EVENT',
   /** Represents an 'unsubscribed' event on a given `Subscribable`. */
-  UnsubscribedEvent = 'UNSUBSCRIBED_EVENT',
+  unsubscribedEvent = 'UNSUBSCRIBED_EVENT',
 }
 
 /** Represents a user signing up for a GitHub account. */
@@ -6250,9 +6250,9 @@ export type LabelOrder = {
 /** Properties by which label connections can be ordered. */
 export enum LabelOrderField {
   /** Order labels by name  */
-  Name = 'NAME',
+  name = 'NAME',
   /** Order labels by creation time */
-  CreatedAt = 'CREATED_AT',
+  createdAt = 'CREATED_AT',
 }
 
 /** An object that can have labels assigned to it. */
@@ -6329,7 +6329,7 @@ export type LanguageOrder = {
 /** Properties by which language connections can be ordered. */
 export enum LanguageOrderField {
   /** Order languages by the size of all files containing the language */
-  Size = 'SIZE',
+  size = 'SIZE',
 }
 
 /** A repository's open source license */
@@ -6422,13 +6422,13 @@ export type LockLockablePayload = {
 /** The possible reasons that an issue or pull request was locked. */
 export enum LockReason {
   /** The issue or pull request was locked because the conversation was off-topic. */
-  OffTopic = 'OFF_TOPIC',
+  offTopic = 'OFF_TOPIC',
   /** The issue or pull request was locked because the conversation was too heated. */
-  TooHeated = 'TOO_HEATED',
+  tooHeated = 'TOO_HEATED',
   /** The issue or pull request was locked because the conversation was resolved. */
-  Resolved = 'RESOLVED',
+  resolved = 'RESOLVED',
   /** The issue or pull request was locked because the conversation was spam. */
-  Spam = 'SPAM',
+  spam = 'SPAM',
 }
 
 /** An object that can be locked. */
@@ -6947,11 +6947,11 @@ export type MergePullRequestPayload = {
 /** Whether or not a PullRequest can be merged. */
 export enum MergeableState {
   /** The pull request can be merged. */
-  Mergeable = 'MERGEABLE',
+  mergeable = 'MERGEABLE',
   /** The pull request cannot be merged due to merge conflicts. */
-  Conflicting = 'CONFLICTING',
+  conflicting = 'CONFLICTING',
   /** The mergeability of the pull request is still being calculated. */
-  Unknown = 'UNKNOWN',
+  unknown = 'UNKNOWN',
 }
 
 /** Represents a 'merged' event on a given pull request. */
@@ -7078,21 +7078,21 @@ export type MilestoneOrder = {
 /** Properties by which milestone connections can be ordered. */
 export enum MilestoneOrderField {
   /** Order milestones by when they are due. */
-  DueDate = 'DUE_DATE',
+  dueDate = 'DUE_DATE',
   /** Order milestones by when they were created. */
-  CreatedAt = 'CREATED_AT',
+  createdAt = 'CREATED_AT',
   /** Order milestones by when they were last updated. */
-  UpdatedAt = 'UPDATED_AT',
+  updatedAt = 'UPDATED_AT',
   /** Order milestones by their number. */
-  Number = 'NUMBER',
+  number = 'NUMBER',
 }
 
 /** The possible states of a milestone. */
 export enum MilestoneState {
   /** A milestone that is still open. */
-  Open = 'OPEN',
+  open = 'OPEN',
   /** A milestone that has been closed. */
-  Closed = 'CLOSED',
+  closed = 'CLOSED',
 }
 
 /** Represents a 'milestoned' event on a given issue or pull request. */
@@ -8153,9 +8153,9 @@ export type Node = {
 /** The possible values for the notification restriction setting. */
 export enum NotificationRestrictionSettingValue {
   /** The setting is enabled for the owner. */
-  Enabled = 'ENABLED',
+  enabled = 'ENABLED',
   /** The setting is disabled for the owner. */
-  Disabled = 'DISABLED',
+  disabled = 'DISABLED',
 }
 
 /** Metadata for an audit entry with action oauth_application.* */
@@ -8228,37 +8228,37 @@ export type OauthApplicationCreateAuditEntry = Node &
 /** The state of an OAuth Application when it was created. */
 export enum OauthApplicationCreateAuditEntryState {
   /** The OAuth Application was active and allowed to have OAuth Accesses. */
-  Active = 'ACTIVE',
+  active = 'ACTIVE',
   /** The OAuth Application was suspended from generating OAuth Accesses due to abuse or security concerns. */
-  Suspended = 'SUSPENDED',
+  suspended = 'SUSPENDED',
   /** The OAuth Application was in the process of being deleted. */
-  PendingDeletion = 'PENDING_DELETION',
+  pendingDeletion = 'PENDING_DELETION',
 }
 
 /** The corresponding operation type for the action */
 export enum OperationType {
   /** An existing resource was accessed */
-  Access = 'ACCESS',
+  access = 'ACCESS',
   /** A resource performed an authentication event */
-  Authentication = 'AUTHENTICATION',
+  authentication = 'AUTHENTICATION',
   /** A new resource was created */
-  Create = 'CREATE',
+  create = 'CREATE',
   /** An existing resource was modified */
-  Modify = 'MODIFY',
+  modify = 'MODIFY',
   /** An existing resource was removed */
-  Remove = 'REMOVE',
+  remove = 'REMOVE',
   /** An existing resource was restored */
-  Restore = 'RESTORE',
+  restore = 'RESTORE',
   /** An existing resource was transferred between multiple resources */
-  Transfer = 'TRANSFER',
+  transfer = 'TRANSFER',
 }
 
 /** Possible directions in which to order a list of items when provided an `orderBy` argument. */
 export enum OrderDirection {
   /** Specifies an ascending order for a given `orderBy` argument. */
-  Asc = 'ASC',
+  asc = 'ASC',
   /** Specifies a descending order for a given `orderBy` argument. */
-  Desc = 'DESC',
+  desc = 'DESC',
 }
 
 /** Audit log entry for a org.add_billing_manager */
@@ -8352,9 +8352,9 @@ export type OrgAddMemberAuditEntry = Node &
 /** The permissions available to members on an Organization. */
 export enum OrgAddMemberAuditEntryPermission {
   /** Can read and clone repositories. */
-  Read = 'READ',
+  read = 'READ',
   /** Can read, clone, push, and add collaborators to repositories. */
-  Admin = 'ADMIN',
+  admin = 'ADMIN',
 }
 
 /** Audit log entry for a org.block_user */
@@ -8538,15 +8538,15 @@ export type OrgCreateAuditEntry = Node &
 /** The billing plans available for organizations. */
 export enum OrgCreateAuditEntryBillingPlan {
   /** Free Plan */
-  Free = 'FREE',
+  free = 'FREE',
   /** Team Plan */
-  Business = 'BUSINESS',
+  business = 'BUSINESS',
   /** Enterprise Cloud Plan */
-  BusinessPlus = 'BUSINESS_PLUS',
+  businessPlus = 'BUSINESS_PLUS',
   /** Legacy Unlimited Plan */
-  Unlimited = 'UNLIMITED',
+  unlimited = 'UNLIMITED',
   /** Tiered Per Seat Plan */
-  TieredPerSeat = 'TIERED_PER_SEAT',
+  tieredPerSeat = 'TIERED_PER_SEAT',
 }
 
 /** Audit log entry for a org.disable_oauth_app_restrictions event. */
@@ -9106,11 +9106,11 @@ export type OrgRemoveBillingManagerAuditEntry = Node &
 /** The reason a billing manager was removed from an Organization. */
 export enum OrgRemoveBillingManagerAuditEntryReason {
   /** The organization required 2FA of its billing managers and this user did not have 2FA enabled. */
-  TwoFactorRequirementNonCompliance = 'TWO_FACTOR_REQUIREMENT_NON_COMPLIANCE',
+  twoFactorRequirementNonCompliance = 'TWO_FACTOR_REQUIREMENT_NON_COMPLIANCE',
   /** SAML external identity missing */
-  SamlExternalIdentityMissing = 'SAML_EXTERNAL_IDENTITY_MISSING',
+  samlExternalIdentityMissing = 'SAML_EXTERNAL_IDENTITY_MISSING',
   /** SAML SSO enforcement requires an external identity */
-  SamlSsoEnforcementRequiresExternalIdentity = 'SAML_SSO_ENFORCEMENT_REQUIRES_EXTERNAL_IDENTITY',
+  samlSsoEnforcementRequiresExternalIdentity = 'SAML_SSO_ENFORCEMENT_REQUIRES_EXTERNAL_IDENTITY',
 }
 
 /** Audit log entry for a org.remove_member event. */
@@ -9162,29 +9162,29 @@ export type OrgRemoveMemberAuditEntry = Node &
 /** The type of membership a user has with an Organization. */
 export enum OrgRemoveMemberAuditEntryMembershipType {
   /** A direct member is a user that is a member of the Organization. */
-  DirectMember = 'DIRECT_MEMBER',
+  directMember = 'DIRECT_MEMBER',
   /** Organization administrators have full access and can change several settings, including the names of repositories that belong to the Organization and Owners team membership. In addition, organization admins can delete the organization and all of its repositories. */
-  Admin = 'ADMIN',
+  admin = 'ADMIN',
   /** A billing manager is a user who manages the billing settings for the Organization, such as updating payment information. */
-  BillingManager = 'BILLING_MANAGER',
+  billingManager = 'BILLING_MANAGER',
   /** An unaffiliated collaborator is a person who is not a member of the Organization and does not have access to any repositories in the Organization. */
-  Unaffiliated = 'UNAFFILIATED',
+  unaffiliated = 'UNAFFILIATED',
   /** An outside collaborator is a person who isn't explicitly a member of the Organization, but who has Read, Write, or Admin permissions to one or more repositories in the organization. */
-  OutsideCollaborator = 'OUTSIDE_COLLABORATOR',
+  outsideCollaborator = 'OUTSIDE_COLLABORATOR',
 }
 
 /** The reason a member was removed from an Organization. */
 export enum OrgRemoveMemberAuditEntryReason {
   /** The organization required 2FA of its billing managers and this user did not have 2FA enabled. */
-  TwoFactorRequirementNonCompliance = 'TWO_FACTOR_REQUIREMENT_NON_COMPLIANCE',
+  twoFactorRequirementNonCompliance = 'TWO_FACTOR_REQUIREMENT_NON_COMPLIANCE',
   /** SAML external identity missing */
-  SamlExternalIdentityMissing = 'SAML_EXTERNAL_IDENTITY_MISSING',
+  samlExternalIdentityMissing = 'SAML_EXTERNAL_IDENTITY_MISSING',
   /** SAML SSO enforcement requires an external identity */
-  SamlSsoEnforcementRequiresExternalIdentity = 'SAML_SSO_ENFORCEMENT_REQUIRES_EXTERNAL_IDENTITY',
+  samlSsoEnforcementRequiresExternalIdentity = 'SAML_SSO_ENFORCEMENT_REQUIRES_EXTERNAL_IDENTITY',
   /** User account has been deleted */
-  UserAccountDeleted = 'USER_ACCOUNT_DELETED',
+  userAccountDeleted = 'USER_ACCOUNT_DELETED',
   /** User was removed from organization during account recovery */
-  TwoFactorAccountRecovery = 'TWO_FACTOR_ACCOUNT_RECOVERY',
+  twoFactorAccountRecovery = 'TWO_FACTOR_ACCOUNT_RECOVERY',
 }
 
 /** Audit log entry for a org.remove_outside_collaborator event. */
@@ -9238,19 +9238,19 @@ export type OrgRemoveOutsideCollaboratorAuditEntry = Node &
 /** The type of membership a user has with an Organization. */
 export enum OrgRemoveOutsideCollaboratorAuditEntryMembershipType {
   /** An outside collaborator is a person who isn't explicitly a member of the Organization, but who has Read, Write, or Admin permissions to one or more repositories in the organization. */
-  OutsideCollaborator = 'OUTSIDE_COLLABORATOR',
+  outsideCollaborator = 'OUTSIDE_COLLABORATOR',
   /** An unaffiliated collaborator is a person who is not a member of the Organization and does not have access to any repositories in the organization. */
-  Unaffiliated = 'UNAFFILIATED',
+  unaffiliated = 'UNAFFILIATED',
   /** A billing manager is a user who manages the billing settings for the Organization, such as updating payment information. */
-  BillingManager = 'BILLING_MANAGER',
+  billingManager = 'BILLING_MANAGER',
 }
 
 /** The reason an outside collaborator was removed from an Organization. */
 export enum OrgRemoveOutsideCollaboratorAuditEntryReason {
   /** The organization required 2FA of its billing managers and this user did not have 2FA enabled. */
-  TwoFactorRequirementNonCompliance = 'TWO_FACTOR_REQUIREMENT_NON_COMPLIANCE',
+  twoFactorRequirementNonCompliance = 'TWO_FACTOR_REQUIREMENT_NON_COMPLIANCE',
   /** SAML external identity missing */
-  SamlExternalIdentityMissing = 'SAML_EXTERNAL_IDENTITY_MISSING',
+  samlExternalIdentityMissing = 'SAML_EXTERNAL_IDENTITY_MISSING',
 }
 
 /** Audit log entry for a org.restore_member event. */
@@ -9456,13 +9456,13 @@ export type OrgUpdateDefaultRepositoryPermissionAuditEntry = Node &
 /** The default permission a repository can have in an Organization. */
 export enum OrgUpdateDefaultRepositoryPermissionAuditEntryPermission {
   /** Can read and clone repositories. */
-  Read = 'READ',
+  read = 'READ',
   /** Can read, clone and push to repositories. */
-  Write = 'WRITE',
+  write = 'WRITE',
   /** Can read, clone, push, and add collaborators to repositories. */
-  Admin = 'ADMIN',
+  admin = 'ADMIN',
   /** No default permission value. */
-  None = 'NONE',
+  none = 'NONE',
 }
 
 /** Audit log entry for a org.update_member event. */
@@ -9514,9 +9514,9 @@ export type OrgUpdateMemberAuditEntry = Node &
 /** The permissions available to members on an Organization. */
 export enum OrgUpdateMemberAuditEntryPermission {
   /** Can read and clone repositories. */
-  Read = 'READ',
+  read = 'READ',
   /** Can read, clone, push, and add collaborators to repositories. */
-  Admin = 'ADMIN',
+  admin = 'ADMIN',
 }
 
 /** Audit log entry for a org.update_member_repository_creation_permission event. */
@@ -9568,21 +9568,21 @@ export type OrgUpdateMemberRepositoryCreationPermissionAuditEntry = Node &
 /** The permissions available for repository creation on an Organization. */
 export enum OrgUpdateMemberRepositoryCreationPermissionAuditEntryVisibility {
   /** All organization members are restricted from creating any repositories. */
-  All = 'ALL',
+  all = 'ALL',
   /** All organization members are restricted from creating public repositories. */
-  Public = 'PUBLIC',
+  public = 'PUBLIC',
   /** All organization members are allowed to create any repositories. */
-  None = 'NONE',
+  none = 'NONE',
   /** All organization members are restricted from creating private repositories. */
-  Private = 'PRIVATE',
+  private = 'PRIVATE',
   /** All organization members are restricted from creating internal repositories. */
-  Internal = 'INTERNAL',
+  internal = 'INTERNAL',
   /** All organization members are restricted from creating public or internal repositories. */
-  PublicInternal = 'PUBLIC_INTERNAL',
+  publicInternal = 'PUBLIC_INTERNAL',
   /** All organization members are restricted from creating private or internal repositories. */
-  PrivateInternal = 'PRIVATE_INTERNAL',
+  privateInternal = 'PRIVATE_INTERNAL',
   /** All organization members are restricted from creating public or private repositories. */
-  PublicPrivate = 'PUBLIC_PRIVATE',
+  publicPrivate = 'PUBLIC_PRIVATE',
 }
 
 /** Audit log entry for a org.update_member_repository_invitation_permission event. */
@@ -10127,21 +10127,21 @@ export type OrganizationInvitationEdge = {
 /** The possible organization invitation roles. */
 export enum OrganizationInvitationRole {
   /** The user is invited to be a direct member of the organization. */
-  DirectMember = 'DIRECT_MEMBER',
+  directMember = 'DIRECT_MEMBER',
   /** The user is invited to be an admin of the organization. */
-  Admin = 'ADMIN',
+  admin = 'ADMIN',
   /** The user is invited to be a billing manager of the organization. */
-  BillingManager = 'BILLING_MANAGER',
+  billingManager = 'BILLING_MANAGER',
   /** The user's previous role will be reinstated. */
-  Reinstate = 'REINSTATE',
+  reinstate = 'REINSTATE',
 }
 
 /** The possible organization invitation types. */
 export enum OrganizationInvitationType {
   /** The invitation was to an existing user. */
-  User = 'USER',
+  user = 'USER',
   /** The invitation was to an email address. */
-  Email = 'EMAIL',
+  email = 'EMAIL',
 }
 
 /** The connection type for User. */
@@ -10173,19 +10173,19 @@ export type OrganizationMemberEdge = {
 /** The possible roles within an organization for its members. */
 export enum OrganizationMemberRole {
   /** The user is a member of the organization. */
-  Member = 'MEMBER',
+  member = 'MEMBER',
   /** The user is an administrator of the organization. */
-  Admin = 'ADMIN',
+  admin = 'ADMIN',
 }
 
 /** The possible values for the members can create repositories setting on an organization. */
 export enum OrganizationMembersCanCreateRepositoriesSettingValue {
   /** Members will be able to create public and private repositories. */
-  All = 'ALL',
+  all = 'ALL',
   /** Members will be able to create only private repositories. */
-  Private = 'PRIVATE',
+  private = 'PRIVATE',
   /** Members will not be able to create public or private repositories. */
-  Disabled = 'DISABLED',
+  disabled = 'DISABLED',
 }
 
 /** Ordering options for organization connections. */
@@ -10199,9 +10199,9 @@ export type OrganizationOrder = {
 /** Properties by which organization connections can be ordered. */
 export enum OrganizationOrderField {
   /** Order organizations by creation time */
-  CreatedAt = 'CREATED_AT',
+  createdAt = 'CREATED_AT',
   /** Order organizations by login */
-  Login = 'LOGIN',
+  login = 'LOGIN',
 }
 
 /** An organization teams hovercard context */
@@ -10361,7 +10361,7 @@ export type PackageFileOrder = {
 /** Properties by which package file connections can be ordered. */
 export enum PackageFileOrderField {
   /** Order package files by creation time */
-  CreatedAt = 'CREATED_AT',
+  createdAt = 'CREATED_AT',
 }
 
 /** Ways in which lists of packages can be ordered upon return. */
@@ -10375,7 +10375,7 @@ export type PackageOrder = {
 /** Properties by which package connections can be ordered. */
 export enum PackageOrderField {
   /** Order packages by creation time */
-  CreatedAt = 'CREATED_AT',
+  createdAt = 'CREATED_AT',
 }
 
 /** Represents an owner of a package. */
@@ -10417,19 +10417,19 @@ export type PackageTag = Node & {
 /** The possible types of a package. */
 export enum PackageType {
   /** An npm package. */
-  Npm = 'NPM',
+  npm = 'NPM',
   /** A rubygems package. */
-  Rubygems = 'RUBYGEMS',
+  rubygems = 'RUBYGEMS',
   /** A maven package. */
-  Maven = 'MAVEN',
+  maven = 'MAVEN',
   /** A docker image. */
-  Docker = 'DOCKER',
+  docker = 'DOCKER',
   /** A debian package. */
-  Debian = 'DEBIAN',
+  debian = 'DEBIAN',
   /** A nuget package. */
-  Nuget = 'NUGET',
+  nuget = 'NUGET',
   /** A python package. */
-  Pypi = 'PYPI',
+  pypi = 'PYPI',
 }
 
 /** Information about a specific package version. */
@@ -10498,7 +10498,7 @@ export type PackageVersionOrder = {
 /** Properties by which package version connections can be ordered. */
 export enum PackageVersionOrderField {
   /** Order package versions by creation time */
-  CreatedAt = 'CREATED_AT',
+  createdAt = 'CREATED_AT',
 }
 
 /** Represents a object that contains package version activity statistics such as downloads. */
@@ -10580,21 +10580,21 @@ export type PinnableItemEdge = {
 /** Represents items that can be pinned to a profile page or dashboard. */
 export enum PinnableItemType {
   /** A repository. */
-  Repository = 'REPOSITORY',
+  repository = 'REPOSITORY',
   /** A gist. */
-  Gist = 'GIST',
+  gist = 'GIST',
   /** An issue. */
-  Issue = 'ISSUE',
+  issue = 'ISSUE',
   /** A project. */
-  Project = 'PROJECT',
+  project = 'PROJECT',
   /** A pull request. */
-  PullRequest = 'PULL_REQUEST',
+  pullRequest = 'PULL_REQUEST',
   /** A user. */
-  User = 'USER',
+  user = 'USER',
   /** An organization. */
-  Organization = 'ORGANIZATION',
+  organization = 'ORGANIZATION',
   /** A team. */
-  Team = 'TEAM',
+  team = 'TEAM',
 }
 
 /** Represents a 'pinned' event on a given issue or pull request. */
@@ -10927,9 +10927,9 @@ export type ProjectCard = Node & {
 /** The possible archived states of a project card. */
 export enum ProjectCardArchivedState {
   /** A project card that is archived */
-  Archived = 'ARCHIVED',
+  archived = 'ARCHIVED',
   /** A project card that is not archived */
-  NotArchived = 'NOT_ARCHIVED',
+  notArchived = 'NOT_ARCHIVED',
 }
 
 /** The connection type for ProjectCard. */
@@ -10960,11 +10960,11 @@ export type ProjectCardItem = Issue | PullRequest;
 /** Various content states of a ProjectCard */
 export enum ProjectCardState {
   /** The card has content only. */
-  ContentOnly = 'CONTENT_ONLY',
+  contentOnly = 'CONTENT_ONLY',
   /** The card has a note only. */
-  NoteOnly = 'NOTE_ONLY',
+  noteOnly = 'NOTE_ONLY',
   /** The card is redacted. */
-  Redacted = 'REDACTED',
+  redacted = 'REDACTED',
 }
 
 /** A column inside a project. */
@@ -11025,11 +11025,11 @@ export type ProjectColumnEdge = {
 /** The semantic purpose of the column - todo, in progress, or done. */
 export enum ProjectColumnPurpose {
   /** The column contains cards still to be worked on */
-  Todo = 'TODO',
+  todo = 'TODO',
   /** The column contains cards which are currently being worked on */
-  InProgress = 'IN_PROGRESS',
+  inProgress = 'IN_PROGRESS',
   /** The column contains cards which are complete */
-  Done = 'DONE',
+  done = 'DONE',
 }
 
 /** A list of projects associated with the owner. */
@@ -11065,11 +11065,11 @@ export type ProjectOrder = {
 /** Properties by which project connections can be ordered. */
 export enum ProjectOrderField {
   /** Order projects by creation time */
-  CreatedAt = 'CREATED_AT',
+  createdAt = 'CREATED_AT',
   /** Order projects by update time */
-  UpdatedAt = 'UPDATED_AT',
+  updatedAt = 'UPDATED_AT',
   /** Order projects by name */
-  Name = 'NAME',
+  name = 'NAME',
 }
 
 /** Represents an owner of a Project. */
@@ -11125,21 +11125,21 @@ export type ProjectProgress = {
 /** State of the project; either 'open' or 'closed' */
 export enum ProjectState {
   /** The project is open. */
-  Open = 'OPEN',
+  open = 'OPEN',
   /** The project is closed. */
-  Closed = 'CLOSED',
+  closed = 'CLOSED',
 }
 
 /** GitHub-provided templates for Projects */
 export enum ProjectTemplate {
   /** Create a board with columns for To do, In progress and Done. */
-  BasicKanban = 'BASIC_KANBAN',
+  basicKanban = 'BASIC_KANBAN',
   /** Create a board with v2 triggers to automatically move cards across To do, In progress and Done columns. */
-  AutomatedKanbanV2 = 'AUTOMATED_KANBAN_V2',
+  automatedKanbanV2 = 'AUTOMATED_KANBAN_V2',
   /** Create a board with triggers to automatically move cards across columns with review automation. */
-  AutomatedReviewsKanban = 'AUTOMATED_REVIEWS_KANBAN',
+  automatedReviewsKanban = 'AUTOMATED_REVIEWS_KANBAN',
   /** Create a board to triage and prioritize bugs with To do, priority, and Done columns. */
-  BugTriage = 'BUG_TRIAGE',
+  bugTriage = 'BUG_TRIAGE',
 }
 
 /** A user's public key. */
@@ -11671,11 +11671,11 @@ export type PullRequestEdge = {
 /** Represents available types of methods to use when merging a pull request. */
 export enum PullRequestMergeMethod {
   /** Add all commits from the head branch to the base branch with a merge commit. */
-  Merge = 'MERGE',
+  merge = 'MERGE',
   /** Combine all commits from the head branch into a single commit in the base branch. */
-  Squash = 'SQUASH',
+  squash = 'SQUASH',
   /** Add all commits from the head branch onto the base branch individually. */
-  Rebase = 'REBASE',
+  rebase = 'REBASE',
 }
 
 /** Ways in which lists of issues can be ordered upon return. */
@@ -11689,9 +11689,9 @@ export type PullRequestOrder = {
 /** Properties by which pull_requests connections can be ordered. */
 export enum PullRequestOrderField {
   /** Order pull_requests by creation time */
-  CreatedAt = 'CREATED_AT',
+  createdAt = 'CREATED_AT',
   /** Order pull_requests by update time */
-  UpdatedAt = 'UPDATED_AT',
+  updatedAt = 'UPDATED_AT',
 }
 
 /** A review object for a given pull request. */
@@ -11936,9 +11936,9 @@ export type PullRequestReviewCommentEdge = {
 /** The possible states of a pull request review comment. */
 export enum PullRequestReviewCommentState {
   /** A comment that is part of a pending review */
-  Pending = 'PENDING',
+  pending = 'PENDING',
   /** A comment that is part of a submitted review */
-  Submitted = 'SUBMITTED',
+  submitted = 'SUBMITTED',
 }
 
 /** The connection type for PullRequestReview. */
@@ -11975,11 +11975,11 @@ export type PullRequestReviewContributionsByRepositoryContributionsArgs = {
 /** The review status of a pull request. */
 export enum PullRequestReviewDecision {
   /** Changes have been requested on the pull request. */
-  ChangesRequested = 'CHANGES_REQUESTED',
+  changesRequested = 'CHANGES_REQUESTED',
   /** The pull request has received an approving review. */
-  Approved = 'APPROVED',
+  approved = 'APPROVED',
   /** A review is required before the pull request can be merged. */
-  ReviewRequired = 'REVIEW_REQUIRED',
+  reviewRequired = 'REVIEW_REQUIRED',
 }
 
 /** An edge in a connection. */
@@ -11994,27 +11994,27 @@ export type PullRequestReviewEdge = {
 /** The possible events to perform on a pull request review. */
 export enum PullRequestReviewEvent {
   /** Submit general feedback without explicit approval. */
-  Comment = 'COMMENT',
+  comment = 'COMMENT',
   /** Submit feedback and approve merging these changes. */
-  Approve = 'APPROVE',
+  approve = 'APPROVE',
   /** Submit feedback that must be addressed before merging. */
-  RequestChanges = 'REQUEST_CHANGES',
+  requestChanges = 'REQUEST_CHANGES',
   /** Dismiss review so it now longer effects merging. */
-  Dismiss = 'DISMISS',
+  dismiss = 'DISMISS',
 }
 
 /** The possible states of a pull request review. */
 export enum PullRequestReviewState {
   /** A review that has not yet been submitted. */
-  Pending = 'PENDING',
+  pending = 'PENDING',
   /** An informational review. */
-  Commented = 'COMMENTED',
+  commented = 'COMMENTED',
   /** A review allowing the pull request to merge. */
-  Approved = 'APPROVED',
+  approved = 'APPROVED',
   /** A review blocking the pull request from merging. */
-  ChangesRequested = 'CHANGES_REQUESTED',
+  changesRequested = 'CHANGES_REQUESTED',
   /** A review that has been dismissed. */
-  Dismissed = 'DISMISSED',
+  dismissed = 'DISMISSED',
 }
 
 /** A threaded list of comments for a given pull request. */
@@ -12102,11 +12102,11 @@ export type PullRequestRevisionMarker = {
 /** The possible states of a pull request. */
 export enum PullRequestState {
   /** A pull request that is still open. */
-  Open = 'OPEN',
+  open = 'OPEN',
   /** A pull request that has been closed without being merged. */
-  Closed = 'CLOSED',
+  closed = 'CLOSED',
   /** A pull request that has been closed by being merged. */
-  Merged = 'MERGED',
+  merged = 'MERGED',
 }
 
 /** A repository pull request template. */
@@ -12267,123 +12267,123 @@ export type PullRequestTimelineItemsEdge = {
 /** The possible item types found in a timeline. */
 export enum PullRequestTimelineItemsItemType {
   /** Represents a Git commit part of a pull request. */
-  PullRequestCommit = 'PULL_REQUEST_COMMIT',
+  pullRequestCommit = 'PULL_REQUEST_COMMIT',
   /** Represents a commit comment thread part of a pull request. */
-  PullRequestCommitCommentThread = 'PULL_REQUEST_COMMIT_COMMENT_THREAD',
+  pullRequestCommitCommentThread = 'PULL_REQUEST_COMMIT_COMMENT_THREAD',
   /** A review object for a given pull request. */
-  PullRequestReview = 'PULL_REQUEST_REVIEW',
+  pullRequestReview = 'PULL_REQUEST_REVIEW',
   /** A threaded list of comments for a given pull request. */
-  PullRequestReviewThread = 'PULL_REQUEST_REVIEW_THREAD',
+  pullRequestReviewThread = 'PULL_REQUEST_REVIEW_THREAD',
   /** Represents the latest point in the pull request timeline for which the viewer has seen the pull request's commits. */
-  PullRequestRevisionMarker = 'PULL_REQUEST_REVISION_MARKER',
+  pullRequestRevisionMarker = 'PULL_REQUEST_REVISION_MARKER',
   /** Represents a 'automatic_base_change_failed' event on a given pull request. */
-  AutomaticBaseChangeFailedEvent = 'AUTOMATIC_BASE_CHANGE_FAILED_EVENT',
+  automaticBaseChangeFailedEvent = 'AUTOMATIC_BASE_CHANGE_FAILED_EVENT',
   /** Represents a 'automatic_base_change_succeeded' event on a given pull request. */
-  AutomaticBaseChangeSucceededEvent = 'AUTOMATIC_BASE_CHANGE_SUCCEEDED_EVENT',
+  automaticBaseChangeSucceededEvent = 'AUTOMATIC_BASE_CHANGE_SUCCEEDED_EVENT',
   /** Represents a 'auto_merge_disabled' event on a given pull request. */
-  AutoMergeDisabledEvent = 'AUTO_MERGE_DISABLED_EVENT',
+  autoMergeDisabledEvent = 'AUTO_MERGE_DISABLED_EVENT',
   /** Represents a 'auto_merge_enabled' event on a given pull request. */
-  AutoMergeEnabledEvent = 'AUTO_MERGE_ENABLED_EVENT',
+  autoMergeEnabledEvent = 'AUTO_MERGE_ENABLED_EVENT',
   /** Represents a 'auto_rebase_enabled' event on a given pull request. */
-  AutoRebaseEnabledEvent = 'AUTO_REBASE_ENABLED_EVENT',
+  autoRebaseEnabledEvent = 'AUTO_REBASE_ENABLED_EVENT',
   /** Represents a 'auto_squash_enabled' event on a given pull request. */
-  AutoSquashEnabledEvent = 'AUTO_SQUASH_ENABLED_EVENT',
+  autoSquashEnabledEvent = 'AUTO_SQUASH_ENABLED_EVENT',
   /** Represents a 'base_ref_changed' event on a given issue or pull request. */
-  BaseRefChangedEvent = 'BASE_REF_CHANGED_EVENT',
+  baseRefChangedEvent = 'BASE_REF_CHANGED_EVENT',
   /** Represents a 'base_ref_force_pushed' event on a given pull request. */
-  BaseRefForcePushedEvent = 'BASE_REF_FORCE_PUSHED_EVENT',
+  baseRefForcePushedEvent = 'BASE_REF_FORCE_PUSHED_EVENT',
   /** Represents a 'base_ref_deleted' event on a given pull request. */
-  BaseRefDeletedEvent = 'BASE_REF_DELETED_EVENT',
+  baseRefDeletedEvent = 'BASE_REF_DELETED_EVENT',
   /** Represents a 'deployed' event on a given pull request. */
-  DeployedEvent = 'DEPLOYED_EVENT',
+  deployedEvent = 'DEPLOYED_EVENT',
   /** Represents a 'deployment_environment_changed' event on a given pull request. */
-  DeploymentEnvironmentChangedEvent = 'DEPLOYMENT_ENVIRONMENT_CHANGED_EVENT',
+  deploymentEnvironmentChangedEvent = 'DEPLOYMENT_ENVIRONMENT_CHANGED_EVENT',
   /** Represents a 'head_ref_deleted' event on a given pull request. */
-  HeadRefDeletedEvent = 'HEAD_REF_DELETED_EVENT',
+  headRefDeletedEvent = 'HEAD_REF_DELETED_EVENT',
   /** Represents a 'head_ref_force_pushed' event on a given pull request. */
-  HeadRefForcePushedEvent = 'HEAD_REF_FORCE_PUSHED_EVENT',
+  headRefForcePushedEvent = 'HEAD_REF_FORCE_PUSHED_EVENT',
   /** Represents a 'head_ref_restored' event on a given pull request. */
-  HeadRefRestoredEvent = 'HEAD_REF_RESTORED_EVENT',
+  headRefRestoredEvent = 'HEAD_REF_RESTORED_EVENT',
   /** Represents a 'merged' event on a given pull request. */
-  MergedEvent = 'MERGED_EVENT',
+  mergedEvent = 'MERGED_EVENT',
   /** Represents a 'review_dismissed' event on a given issue or pull request. */
-  ReviewDismissedEvent = 'REVIEW_DISMISSED_EVENT',
+  reviewDismissedEvent = 'REVIEW_DISMISSED_EVENT',
   /** Represents an 'review_requested' event on a given pull request. */
-  ReviewRequestedEvent = 'REVIEW_REQUESTED_EVENT',
+  reviewRequestedEvent = 'REVIEW_REQUESTED_EVENT',
   /** Represents an 'review_request_removed' event on a given pull request. */
-  ReviewRequestRemovedEvent = 'REVIEW_REQUEST_REMOVED_EVENT',
+  reviewRequestRemovedEvent = 'REVIEW_REQUEST_REMOVED_EVENT',
   /** Represents a 'ready_for_review' event on a given pull request. */
-  ReadyForReviewEvent = 'READY_FOR_REVIEW_EVENT',
+  readyForReviewEvent = 'READY_FOR_REVIEW_EVENT',
   /** Represents a 'convert_to_draft' event on a given pull request. */
-  ConvertToDraftEvent = 'CONVERT_TO_DRAFT_EVENT',
+  convertToDraftEvent = 'CONVERT_TO_DRAFT_EVENT',
   /** Represents a comment on an Issue. */
-  IssueComment = 'ISSUE_COMMENT',
+  issueComment = 'ISSUE_COMMENT',
   /** Represents a mention made by one issue or pull request to another. */
-  CrossReferencedEvent = 'CROSS_REFERENCED_EVENT',
+  crossReferencedEvent = 'CROSS_REFERENCED_EVENT',
   /** Represents a 'added_to_project' event on a given issue or pull request. */
-  AddedToProjectEvent = 'ADDED_TO_PROJECT_EVENT',
+  addedToProjectEvent = 'ADDED_TO_PROJECT_EVENT',
   /** Represents an 'assigned' event on any assignable object. */
-  AssignedEvent = 'ASSIGNED_EVENT',
+  assignedEvent = 'ASSIGNED_EVENT',
   /** Represents a 'closed' event on any `Closable`. */
-  ClosedEvent = 'CLOSED_EVENT',
+  closedEvent = 'CLOSED_EVENT',
   /** Represents a 'comment_deleted' event on a given issue or pull request. */
-  CommentDeletedEvent = 'COMMENT_DELETED_EVENT',
+  commentDeletedEvent = 'COMMENT_DELETED_EVENT',
   /** Represents a 'connected' event on a given issue or pull request. */
-  ConnectedEvent = 'CONNECTED_EVENT',
+  connectedEvent = 'CONNECTED_EVENT',
   /** Represents a 'converted_note_to_issue' event on a given issue or pull request. */
-  ConvertedNoteToIssueEvent = 'CONVERTED_NOTE_TO_ISSUE_EVENT',
+  convertedNoteToIssueEvent = 'CONVERTED_NOTE_TO_ISSUE_EVENT',
   /** Represents a 'demilestoned' event on a given issue or pull request. */
-  DemilestonedEvent = 'DEMILESTONED_EVENT',
+  demilestonedEvent = 'DEMILESTONED_EVENT',
   /** Represents a 'disconnected' event on a given issue or pull request. */
-  DisconnectedEvent = 'DISCONNECTED_EVENT',
+  disconnectedEvent = 'DISCONNECTED_EVENT',
   /** Represents a 'labeled' event on a given issue or pull request. */
-  LabeledEvent = 'LABELED_EVENT',
+  labeledEvent = 'LABELED_EVENT',
   /** Represents a 'locked' event on a given issue or pull request. */
-  LockedEvent = 'LOCKED_EVENT',
+  lockedEvent = 'LOCKED_EVENT',
   /** Represents a 'marked_as_duplicate' event on a given issue or pull request. */
-  MarkedAsDuplicateEvent = 'MARKED_AS_DUPLICATE_EVENT',
+  markedAsDuplicateEvent = 'MARKED_AS_DUPLICATE_EVENT',
   /** Represents a 'mentioned' event on a given issue or pull request. */
-  MentionedEvent = 'MENTIONED_EVENT',
+  mentionedEvent = 'MENTIONED_EVENT',
   /** Represents a 'milestoned' event on a given issue or pull request. */
-  MilestonedEvent = 'MILESTONED_EVENT',
+  milestonedEvent = 'MILESTONED_EVENT',
   /** Represents a 'moved_columns_in_project' event on a given issue or pull request. */
-  MovedColumnsInProjectEvent = 'MOVED_COLUMNS_IN_PROJECT_EVENT',
+  movedColumnsInProjectEvent = 'MOVED_COLUMNS_IN_PROJECT_EVENT',
   /** Represents a 'pinned' event on a given issue or pull request. */
-  PinnedEvent = 'PINNED_EVENT',
+  pinnedEvent = 'PINNED_EVENT',
   /** Represents a 'referenced' event on a given `ReferencedSubject`. */
-  ReferencedEvent = 'REFERENCED_EVENT',
+  referencedEvent = 'REFERENCED_EVENT',
   /** Represents a 'removed_from_project' event on a given issue or pull request. */
-  RemovedFromProjectEvent = 'REMOVED_FROM_PROJECT_EVENT',
+  removedFromProjectEvent = 'REMOVED_FROM_PROJECT_EVENT',
   /** Represents a 'renamed' event on a given issue or pull request */
-  RenamedTitleEvent = 'RENAMED_TITLE_EVENT',
+  renamedTitleEvent = 'RENAMED_TITLE_EVENT',
   /** Represents a 'reopened' event on any `Closable`. */
-  ReopenedEvent = 'REOPENED_EVENT',
+  reopenedEvent = 'REOPENED_EVENT',
   /** Represents a 'subscribed' event on a given `Subscribable`. */
-  SubscribedEvent = 'SUBSCRIBED_EVENT',
+  subscribedEvent = 'SUBSCRIBED_EVENT',
   /** Represents a 'transferred' event on a given issue or pull request. */
-  TransferredEvent = 'TRANSFERRED_EVENT',
+  transferredEvent = 'TRANSFERRED_EVENT',
   /** Represents an 'unassigned' event on any assignable object. */
-  UnassignedEvent = 'UNASSIGNED_EVENT',
+  unassignedEvent = 'UNASSIGNED_EVENT',
   /** Represents an 'unlabeled' event on a given issue or pull request. */
-  UnlabeledEvent = 'UNLABELED_EVENT',
+  unlabeledEvent = 'UNLABELED_EVENT',
   /** Represents an 'unlocked' event on a given issue or pull request. */
-  UnlockedEvent = 'UNLOCKED_EVENT',
+  unlockedEvent = 'UNLOCKED_EVENT',
   /** Represents a 'user_blocked' event on a given user. */
-  UserBlockedEvent = 'USER_BLOCKED_EVENT',
+  userBlockedEvent = 'USER_BLOCKED_EVENT',
   /** Represents an 'unmarked_as_duplicate' event on a given issue or pull request. */
-  UnmarkedAsDuplicateEvent = 'UNMARKED_AS_DUPLICATE_EVENT',
+  unmarkedAsDuplicateEvent = 'UNMARKED_AS_DUPLICATE_EVENT',
   /** Represents an 'unpinned' event on a given issue or pull request. */
-  UnpinnedEvent = 'UNPINNED_EVENT',
+  unpinnedEvent = 'UNPINNED_EVENT',
   /** Represents an 'unsubscribed' event on a given `Subscribable`. */
-  UnsubscribedEvent = 'UNSUBSCRIBED_EVENT',
+  unsubscribedEvent = 'UNSUBSCRIBED_EVENT',
 }
 
 /** The possible target states when updating a pull request. */
 export enum PullRequestUpdateState {
   /** A pull request that is still open. */
-  Open = 'OPEN',
+  open = 'OPEN',
   /** A pull request that has been closed without being merged. */
-  Closed = 'CLOSED',
+  closed = 'CLOSED',
 }
 
 /** A Git push. */
@@ -12765,21 +12765,21 @@ export type ReactionConnection = {
 /** Emojis that can be attached to Issues, Pull Requests and Comments. */
 export enum ReactionContent {
   /** Represents the `:+1:` emoji. */
-  ThumbsUp = 'THUMBS_UP',
+  thumbsUp = 'THUMBS_UP',
   /** Represents the `:-1:` emoji. */
-  ThumbsDown = 'THUMBS_DOWN',
+  thumbsDown = 'THUMBS_DOWN',
   /** Represents the `:laugh:` emoji. */
-  Laugh = 'LAUGH',
+  laugh = 'LAUGH',
   /** Represents the `:hooray:` emoji. */
-  Hooray = 'HOORAY',
+  hooray = 'HOORAY',
   /** Represents the `:confused:` emoji. */
-  Confused = 'CONFUSED',
+  confused = 'CONFUSED',
   /** Represents the `:heart:` emoji. */
-  Heart = 'HEART',
+  heart = 'HEART',
   /** Represents the `:rocket:` emoji. */
-  Rocket = 'ROCKET',
+  rocket = 'ROCKET',
   /** Represents the `:eyes:` emoji. */
-  Eyes = 'EYES',
+  eyes = 'EYES',
 }
 
 /** An edge in a connection. */
@@ -12825,7 +12825,7 @@ export type ReactionOrder = {
 /** A list of fields that reactions can be ordered by. */
 export enum ReactionOrderField {
   /** Allows ordering a list of reactions by when they were created. */
-  CreatedAt = 'CREATED_AT',
+  createdAt = 'CREATED_AT',
 }
 
 /** Represents a 'ready_for_review' event on a given pull request. */
@@ -12911,9 +12911,9 @@ export type RefOrder = {
 /** Properties by which ref connections can be ordered. */
 export enum RefOrderField {
   /** Order refs by underlying commit date if the ref prefix is refs/tags/ */
-  TagCommitDate = 'TAG_COMMIT_DATE',
+  tagCommitDate = 'TAG_COMMIT_DATE',
   /** Order refs by their alphanumeric name */
-  Alphabetical = 'ALPHABETICAL',
+  alphabetical = 'ALPHABETICAL',
 }
 
 /** A ref update rules for a viewer. */
@@ -13155,9 +13155,9 @@ export type ReleaseOrder = {
 /** Properties by which release connections can be ordered. */
 export enum ReleaseOrderField {
   /** Order releases by creation time */
-  CreatedAt = 'CREATED_AT',
+  createdAt = 'CREATED_AT',
   /** Order releases alphabetically by name */
-  Name = 'NAME',
+  name = 'NAME',
 }
 
 /** Autogenerated input type of RemoveAssigneesFromAssignable */
@@ -13472,11 +13472,11 @@ export type RepoAccessAuditEntry = Node &
 /** The privacy of a repository */
 export enum RepoAccessAuditEntryVisibility {
   /** The repository is visible only to users in the same business. */
-  Internal = 'INTERNAL',
+  internal = 'INTERNAL',
   /** The repository is visible only to those with explicit access. */
-  Private = 'PRIVATE',
+  private = 'PRIVATE',
   /** The repository is visible to everyone. */
-  Public = 'PUBLIC',
+  public = 'PUBLIC',
 }
 
 /** Audit log entry for a repo.add_member event. */
@@ -13535,11 +13535,11 @@ export type RepoAddMemberAuditEntry = Node &
 /** The privacy of a repository */
 export enum RepoAddMemberAuditEntryVisibility {
   /** The repository is visible only to users in the same business. */
-  Internal = 'INTERNAL',
+  internal = 'INTERNAL',
   /** The repository is visible only to those with explicit access. */
-  Private = 'PRIVATE',
+  private = 'PRIVATE',
   /** The repository is visible to everyone. */
-  Public = 'PUBLIC',
+  public = 'PUBLIC',
 }
 
 /** Audit log entry for a repo.add_topic event. */
@@ -13654,11 +13654,11 @@ export type RepoArchivedAuditEntry = Node &
 /** The privacy of a repository */
 export enum RepoArchivedAuditEntryVisibility {
   /** The repository is visible only to users in the same business. */
-  Internal = 'INTERNAL',
+  internal = 'INTERNAL',
   /** The repository is visible only to those with explicit access. */
-  Private = 'PRIVATE',
+  private = 'PRIVATE',
   /** The repository is visible to everyone. */
-  Public = 'PUBLIC',
+  public = 'PUBLIC',
 }
 
 /** Audit log entry for a repo.change_merge_setting event. */
@@ -13719,11 +13719,11 @@ export type RepoChangeMergeSettingAuditEntry = Node &
 /** The merge options available for pull requests to this repository. */
 export enum RepoChangeMergeSettingAuditEntryMergeType {
   /** The pull request is added to the base branch in a merge commit. */
-  Merge = 'MERGE',
+  merge = 'MERGE',
   /** Commits from the pull request are added onto the base branch individually without a merge commit. */
-  Rebase = 'REBASE',
+  rebase = 'REBASE',
   /** The pull request's commits are squashed into a single commit before they are merged to the base branch. */
-  Squash = 'SQUASH',
+  squash = 'SQUASH',
 }
 
 /** Audit log entry for a repo.config.disable_anonymous_git_access event. */
@@ -14296,11 +14296,11 @@ export type RepoCreateAuditEntry = Node &
 /** The privacy of a repository */
 export enum RepoCreateAuditEntryVisibility {
   /** The repository is visible only to users in the same business. */
-  Internal = 'INTERNAL',
+  internal = 'INTERNAL',
   /** The repository is visible only to those with explicit access. */
-  Private = 'PRIVATE',
+  private = 'PRIVATE',
   /** The repository is visible to everyone. */
-  Public = 'PUBLIC',
+  public = 'PUBLIC',
 }
 
 /** Audit log entry for a repo.destroy event. */
@@ -14359,11 +14359,11 @@ export type RepoDestroyAuditEntry = Node &
 /** The privacy of a repository */
 export enum RepoDestroyAuditEntryVisibility {
   /** The repository is visible only to users in the same business. */
-  Internal = 'INTERNAL',
+  internal = 'INTERNAL',
   /** The repository is visible only to those with explicit access. */
-  Private = 'PRIVATE',
+  private = 'PRIVATE',
   /** The repository is visible to everyone. */
-  Public = 'PUBLIC',
+  public = 'PUBLIC',
 }
 
 /** Audit log entry for a repo.remove_member event. */
@@ -14422,11 +14422,11 @@ export type RepoRemoveMemberAuditEntry = Node &
 /** The privacy of a repository */
 export enum RepoRemoveMemberAuditEntryVisibility {
   /** The repository is visible only to users in the same business. */
-  Internal = 'INTERNAL',
+  internal = 'INTERNAL',
   /** The repository is visible only to those with explicit access. */
-  Private = 'PRIVATE',
+  private = 'PRIVATE',
   /** The repository is visible to everyone. */
-  Public = 'PUBLIC',
+  public = 'PUBLIC',
 }
 
 /** Audit log entry for a repo.remove_topic event. */
@@ -14488,17 +14488,17 @@ export type RepoRemoveTopicAuditEntry = Node &
 /** The reasons a piece of content can be reported or minimized. */
 export enum ReportedContentClassifiers {
   /** A spammy piece of content */
-  Spam = 'SPAM',
+  spam = 'SPAM',
   /** An abusive or harassing piece of content */
-  Abuse = 'ABUSE',
+  abuse = 'ABUSE',
   /** An irrelevant piece of content */
-  OffTopic = 'OFF_TOPIC',
+  offTopic = 'OFF_TOPIC',
   /** An outdated piece of content */
-  Outdated = 'OUTDATED',
+  outdated = 'OUTDATED',
   /** A duplicated piece of content */
-  Duplicate = 'DUPLICATE',
+  duplicate = 'DUPLICATE',
   /** The content has been resolved */
-  Resolved = 'RESOLVED',
+  resolved = 'RESOLVED',
 }
 
 /** A repository contains the content for a project. */
@@ -14986,11 +14986,11 @@ export type RepositoryWatchersArgs = {
 /** The affiliation of a user to a repository */
 export enum RepositoryAffiliation {
   /** Repositories that are owned by the authenticated user. */
-  Owner = 'OWNER',
+  owner = 'OWNER',
   /** Repositories that the user has been added to as a collaborator. */
-  Collaborator = 'COLLABORATOR',
+  collaborator = 'COLLABORATOR',
   /** Repositories that the user has access to through being a member of an organization. This includes every repository on every team that the user is on. */
-  OrganizationMember = 'ORGANIZATION_MEMBER',
+  organizationMember = 'ORGANIZATION_MEMBER',
 }
 
 /** Metadata for an audit entry with action repo.* */
@@ -15059,15 +15059,15 @@ export type RepositoryContactLink = {
 /** The reason a repository is listed as 'contributed'. */
 export enum RepositoryContributionType {
   /** Created a commit */
-  Commit = 'COMMIT',
+  commit = 'COMMIT',
   /** Created an issue */
-  Issue = 'ISSUE',
+  issue = 'ISSUE',
   /** Created a pull request */
-  PullRequest = 'PULL_REQUEST',
+  pullRequest = 'PULL_REQUEST',
   /** Created the repository */
-  Repository = 'REPOSITORY',
+  repository = 'REPOSITORY',
   /** Reviewed a pull request */
-  PullRequestReview = 'PULL_REQUEST_REVIEW',
+  pullRequestReview = 'PULL_REQUEST_REVIEW',
 }
 
 /** An edge in a connection. */
@@ -15158,37 +15158,37 @@ export type RepositoryInteractionAbility = {
 /** A repository interaction limit. */
 export enum RepositoryInteractionLimit {
   /** Users that have recently created their account will be unable to interact with the repository. */
-  ExistingUsers = 'EXISTING_USERS',
+  existingUsers = 'EXISTING_USERS',
   /** Users that have not previously committed to a repository’s default branch will be unable to interact with the repository. */
-  ContributorsOnly = 'CONTRIBUTORS_ONLY',
+  contributorsOnly = 'CONTRIBUTORS_ONLY',
   /** Users that are not collaborators will not be able to interact with the repository. */
-  CollaboratorsOnly = 'COLLABORATORS_ONLY',
+  collaboratorsOnly = 'COLLABORATORS_ONLY',
   /** No interaction limits are enabled. */
-  NoLimit = 'NO_LIMIT',
+  noLimit = 'NO_LIMIT',
 }
 
 /** The length for a repository interaction limit to be enabled for. */
 export enum RepositoryInteractionLimitExpiry {
   /** The interaction limit will expire after 1 day. */
-  OneDay = 'ONE_DAY',
+  oneDay = 'ONE_DAY',
   /** The interaction limit will expire after 3 days. */
-  ThreeDays = 'THREE_DAYS',
+  threeDays = 'THREE_DAYS',
   /** The interaction limit will expire after 1 week. */
-  OneWeek = 'ONE_WEEK',
+  oneWeek = 'ONE_WEEK',
   /** The interaction limit will expire after 1 month. */
-  OneMonth = 'ONE_MONTH',
+  oneMonth = 'ONE_MONTH',
   /** The interaction limit will expire after 6 months. */
-  SixMonths = 'SIX_MONTHS',
+  sixMonths = 'SIX_MONTHS',
 }
 
 /** Indicates where an interaction limit is configured. */
 export enum RepositoryInteractionLimitOrigin {
   /** A limit that is configured at the repository level. */
-  Repository = 'REPOSITORY',
+  repository = 'REPOSITORY',
   /** A limit that is configured at the organization level. */
-  Organization = 'ORGANIZATION',
+  organization = 'ORGANIZATION',
   /** A limit that is configured at the user-wide level. */
-  User = 'USER',
+  user = 'USER',
 }
 
 /** An invitation for a user to be added to a repository. */
@@ -15242,21 +15242,21 @@ export type RepositoryInvitationOrder = {
 /** Properties by which repository invitation connections can be ordered. */
 export enum RepositoryInvitationOrderField {
   /** Order repository invitations by creation time */
-  CreatedAt = 'CREATED_AT',
+  createdAt = 'CREATED_AT',
   /** Order repository invitations by invitee login */
-  InviteeLogin = 'INVITEE_LOGIN',
+  inviteeLogin = 'INVITEE_LOGIN',
 }
 
 /** The possible reasons a given repository could be in a locked state. */
 export enum RepositoryLockReason {
   /** The repository is locked due to a move. */
-  Moving = 'MOVING',
+  moving = 'MOVING',
   /** The repository is locked due to a billing related reason. */
-  Billing = 'BILLING',
+  billing = 'BILLING',
   /** The repository is locked due to a rename. */
-  Rename = 'RENAME',
+  rename = 'RENAME',
   /** The repository is locked due to a migration. */
-  Migrating = 'MIGRATING',
+  migrating = 'MIGRATING',
 }
 
 /** Represents a object that belongs to a repository. */
@@ -15276,15 +15276,15 @@ export type RepositoryOrder = {
 /** Properties by which repository connections can be ordered. */
 export enum RepositoryOrderField {
   /** Order repositories by creation time */
-  CreatedAt = 'CREATED_AT',
+  createdAt = 'CREATED_AT',
   /** Order repositories by update time */
-  UpdatedAt = 'UPDATED_AT',
+  updatedAt = 'UPDATED_AT',
   /** Order repositories by push time */
-  PushedAt = 'PUSHED_AT',
+  pushedAt = 'PUSHED_AT',
   /** Order repositories by name */
-  Name = 'NAME',
+  name = 'NAME',
   /** Order repositories by number of stargazers */
-  Stargazers = 'STARGAZERS',
+  stargazers = 'STARGAZERS',
 }
 
 /** Represents an owner of a Repository. */
@@ -15331,23 +15331,23 @@ export type RepositoryOwnerRepositoryArgs = {
 /** The access level to a repository */
 export enum RepositoryPermission {
   /** Can read, clone, and push to this repository. Can also manage issues, pull requests, and repository settings, including adding collaborators */
-  Admin = 'ADMIN',
+  admin = 'ADMIN',
   /** Can read, clone, and push to this repository. They can also manage issues, pull requests, and some repository settings */
-  Maintain = 'MAINTAIN',
+  maintain = 'MAINTAIN',
   /** Can read, clone, and push to this repository. Can also manage issues and pull requests */
-  Write = 'WRITE',
+  write = 'WRITE',
   /** Can read and clone this repository. Can also manage issues and pull requests */
-  Triage = 'TRIAGE',
+  triage = 'TRIAGE',
   /** Can read and clone this repository. Can also open and comment on issues and pull requests */
-  Read = 'READ',
+  read = 'READ',
 }
 
 /** The privacy of a repository */
 export enum RepositoryPrivacy {
   /** Public */
-  Public = 'PUBLIC',
+  public = 'PUBLIC',
   /** Private */
-  Private = 'PRIVATE',
+  private = 'PRIVATE',
 }
 
 /** A repository-topic connects a repository to a topic. */
@@ -15388,11 +15388,11 @@ export type RepositoryTopicEdge = {
 /** The repository's visibility level. */
 export enum RepositoryVisibility {
   /** The repository is visible only to those with explicit access. */
-  Private = 'PRIVATE',
+  private = 'PRIVATE',
   /** The repository is visible to everyone. */
-  Public = 'PUBLIC',
+  public = 'PUBLIC',
   /** The repository is visible only to users in the same business. */
-  Internal = 'INTERNAL',
+  internal = 'INTERNAL',
 }
 
 /** Audit log entry for a repository_visibility_change.disable event. */
@@ -15572,13 +15572,13 @@ export type RequestReviewsPayload = {
 /** The possible states that can be requested when creating a check run. */
 export enum RequestableCheckStatusState {
   /** The check suite or run has been queued. */
-  Queued = 'QUEUED',
+  queued = 'QUEUED',
   /** The check suite or run is in progress. */
-  InProgress = 'IN_PROGRESS',
+  inProgress = 'IN_PROGRESS',
   /** The check suite or run has been completed. */
-  Completed = 'COMPLETED',
+  completed = 'COMPLETED',
   /** The check suite or run is in waiting state. */
-  Waiting = 'WAITING',
+  waiting = 'WAITING',
 }
 
 /** Types that can be requested reviewers. */
@@ -15796,25 +15796,25 @@ export type ReviewStatusHovercardContext = HovercardContext & {
 /** The possible digest algorithms used to sign SAML requests for an identity provider. */
 export enum SamlDigestAlgorithm {
   /** SHA1 */
-  Sha1 = 'SHA1',
+  sha1 = 'SHA1',
   /** SHA256 */
-  Sha256 = 'SHA256',
+  sha256 = 'SHA256',
   /** SHA384 */
-  Sha384 = 'SHA384',
+  sha384 = 'SHA384',
   /** SHA512 */
-  Sha512 = 'SHA512',
+  sha512 = 'SHA512',
 }
 
 /** The possible signature algorithms used to sign SAML requests for a Identity Provider. */
 export enum SamlSignatureAlgorithm {
   /** RSA-SHA1 */
-  RsaSha1 = 'RSA_SHA1',
+  rsaSha1 = 'RSA_SHA1',
   /** RSA-SHA256 */
-  RsaSha256 = 'RSA_SHA256',
+  rsaSha256 = 'RSA_SHA256',
   /** RSA-SHA384 */
-  RsaSha384 = 'RSA_SHA384',
+  rsaSha384 = 'RSA_SHA384',
   /** RSA-SHA512 */
-  RsaSha512 = 'RSA_SHA512',
+  rsaSha512 = 'RSA_SHA512',
 }
 
 /** A Saved Reply is text a user can use to reply quickly. */
@@ -15866,7 +15866,7 @@ export type SavedReplyOrder = {
 /** Properties by which saved reply connections can be ordered. */
 export enum SavedReplyOrderField {
   /** Order saved reply by when they were updated. */
-  UpdatedAt = 'UPDATED_AT',
+  updatedAt = 'UPDATED_AT',
 }
 
 /** The results of a search. */
@@ -15914,11 +15914,11 @@ export type SearchResultItemEdge = {
 /** Represents the individual results of a search. */
 export enum SearchType {
   /** Returns results matching issues in repositories. */
-  Issue = 'ISSUE',
+  issue = 'ISSUE',
   /** Returns results matching repositories. */
-  Repository = 'REPOSITORY',
+  repository = 'REPOSITORY',
   /** Returns results matching users and organizations on GitHub. */
-  User = 'USER',
+  user = 'USER',
 }
 
 /** A GitHub Security Advisory */
@@ -15995,19 +15995,19 @@ export type SecurityAdvisoryConnection = {
 /** The possible ecosystems of a security vulnerability's package. */
 export enum SecurityAdvisoryEcosystem {
   /** Ruby gems hosted at RubyGems.org */
-  Rubygems = 'RUBYGEMS',
+  rubygems = 'RUBYGEMS',
   /** JavaScript packages hosted at npmjs.com */
-  Npm = 'NPM',
+  npm = 'NPM',
   /** Python packages hosted at PyPI.org */
-  Pip = 'PIP',
+  pip = 'PIP',
   /** Java artifacts hosted at the Maven central repository */
-  Maven = 'MAVEN',
+  maven = 'MAVEN',
   /** .NET packages hosted at the NuGet Gallery */
-  Nuget = 'NUGET',
+  nuget = 'NUGET',
   /** PHP packages hosted at packagist.org */
-  Composer = 'COMPOSER',
+  composer = 'COMPOSER',
   /** Go modules */
-  Go = 'GO',
+  go = 'GO',
 }
 
 /** An edge in a connection. */
@@ -16039,9 +16039,9 @@ export type SecurityAdvisoryIdentifierFilter = {
 /** Identifier formats available for advisories. */
 export enum SecurityAdvisoryIdentifierType {
   /** Common Vulnerabilities and Exposures Identifier. */
-  Cve = 'CVE',
+  cve = 'CVE',
   /** GitHub Security Advisory ID. */
-  Ghsa = 'GHSA',
+  ghsa = 'GHSA',
 }
 
 /** Ordering options for security advisory connections */
@@ -16055,9 +16055,9 @@ export type SecurityAdvisoryOrder = {
 /** Properties by which security advisory connections can be ordered. */
 export enum SecurityAdvisoryOrderField {
   /** Order advisories by publication time */
-  PublishedAt = 'PUBLISHED_AT',
+  publishedAt = 'PUBLISHED_AT',
   /** Order advisories by update time */
-  UpdatedAt = 'UPDATED_AT',
+  updatedAt = 'UPDATED_AT',
 }
 
 /** An individual package */
@@ -16086,13 +16086,13 @@ export type SecurityAdvisoryReference = {
 /** Severity of the vulnerability. */
 export enum SecurityAdvisorySeverity {
   /** Low. */
-  Low = 'LOW',
+  low = 'LOW',
   /** Moderate. */
-  Moderate = 'MODERATE',
+  moderate = 'MODERATE',
   /** High. */
-  High = 'HIGH',
+  high = 'HIGH',
   /** Critical. */
-  Critical = 'CRITICAL',
+  critical = 'CRITICAL',
 }
 
 /** An individual vulnerability within an Advisory */
@@ -16153,7 +16153,7 @@ export type SecurityVulnerabilityOrder = {
 /** Properties by which security vulnerability connections can be ordered. */
 export enum SecurityVulnerabilityOrderField {
   /** Order vulnerability by update time */
-  UpdatedAt = 'UPDATED_AT',
+  updatedAt = 'UPDATED_AT',
 }
 
 /** Autogenerated input type of SetEnterpriseIdentityProvider */
@@ -16350,7 +16350,7 @@ export type SponsorableOrder = {
 /** Properties by which sponsorable connections can be ordered. */
 export enum SponsorableOrderField {
   /** Order sponsorable entities by login (username). */
-  Login = 'LOGIN',
+  login = 'LOGIN',
 }
 
 /** A goal associated with a GitHub Sponsors listing, representing a target the sponsored maintainer would like to attain. */
@@ -16371,9 +16371,9 @@ export type SponsorsGoal = {
 /** The different kinds of goals a GitHub Sponsors member can have. */
 export enum SponsorsGoalKind {
   /** The goal is about reaching a certain number of sponsors. */
-  TotalSponsorsCount = 'TOTAL_SPONSORS_COUNT',
+  totalSponsorsCount = 'TOTAL_SPONSORS_COUNT',
   /** The goal is about getting a certain dollar amount from sponsorships each month. */
-  MonthlySponsorshipAmount = 'MONTHLY_SPONSORSHIP_AMOUNT',
+  monthlySponsorshipAmount = 'MONTHLY_SPONSORSHIP_AMOUNT',
 }
 
 /** A GitHub Sponsors listing. */
@@ -16487,9 +16487,9 @@ export type SponsorsTierOrder = {
 /** Properties by which Sponsors tiers connections can be ordered. */
 export enum SponsorsTierOrderField {
   /** Order tiers by creation time. */
-  CreatedAt = 'CREATED_AT',
+  createdAt = 'CREATED_AT',
   /** Order tiers by their monthly price in cents */
-  MonthlyPriceInCents = 'MONTHLY_PRICE_IN_CENTS',
+  monthlyPriceInCents = 'MONTHLY_PRICE_IN_CENTS',
 }
 
 /** A sponsorship relationship between a sponsor and a maintainer */
@@ -16559,15 +16559,15 @@ export type SponsorshipOrder = {
 /** Properties by which sponsorship connections can be ordered. */
 export enum SponsorshipOrderField {
   /** Order sponsorship by creation time. */
-  CreatedAt = 'CREATED_AT',
+  createdAt = 'CREATED_AT',
 }
 
 /** The privacy of a sponsorship */
 export enum SponsorshipPrivacy {
   /** Public */
-  Public = 'PUBLIC',
+  public = 'PUBLIC',
   /** Private */
-  Private = 'PRIVATE',
+  private = 'PRIVATE',
 }
 
 /** Ways in which star connections can be ordered. */
@@ -16581,7 +16581,7 @@ export type StarOrder = {
 /** Properties by which star connections can be ordered. */
 export enum StarOrderField {
   /** Allows ordering a list of stars by when they were created. */
-  StarredAt = 'STARRED_AT',
+  starredAt = 'STARRED_AT',
 }
 
 /** The connection type for User. */
@@ -16765,15 +16765,15 @@ export type StatusContextIsRequiredArgs = {
 /** The possible commit status states. */
 export enum StatusState {
   /** Status is expected. */
-  Expected = 'EXPECTED',
+  expected = 'EXPECTED',
   /** Status is errored. */
-  Error = 'ERROR',
+  error = 'ERROR',
   /** Status is failing. */
-  Failure = 'FAILURE',
+  failure = 'FAILURE',
   /** Status is pending. */
-  Pending = 'PENDING',
+  pending = 'PENDING',
   /** Status is successful. */
-  Success = 'SUCCESS',
+  success = 'SUCCESS',
 }
 
 /** Autogenerated input type of SubmitPullRequestReview */
@@ -16860,11 +16860,11 @@ export type SubscribedEvent = Node & {
 /** The possible states of a subscription. */
 export enum SubscriptionState {
   /** The User is only notified when participating or @mentioned. */
-  Unsubscribed = 'UNSUBSCRIBED',
+  unsubscribed = 'UNSUBSCRIBED',
   /** The User is notified of all conversations. */
-  Subscribed = 'SUBSCRIBED',
+  subscribed = 'SUBSCRIBED',
   /** The User is never notified. */
-  Ignored = 'IGNORED',
+  ignored = 'IGNORED',
 }
 
 /** A suggestion to review a pull request based on a user's commit history and review comments. */
@@ -17496,7 +17496,7 @@ export type TeamDiscussionCommentOrder = {
 /** Properties by which team discussion comment connections can be ordered. */
 export enum TeamDiscussionCommentOrderField {
   /** Allows sequential ordering of team discussion comments (which is equivalent to chronological ordering). */
-  Number = 'NUMBER',
+  number = 'NUMBER',
 }
 
 /** The connection type for TeamDiscussion. */
@@ -17532,7 +17532,7 @@ export type TeamDiscussionOrder = {
 /** Properties by which team discussion connections can be ordered. */
 export enum TeamDiscussionOrderField {
   /** Allows chronological ordering of team discussions. */
-  CreatedAt = 'CREATED_AT',
+  createdAt = 'CREATED_AT',
 }
 
 /** An edge in a connection. */
@@ -17582,27 +17582,27 @@ export type TeamMemberOrder = {
 /** Properties by which team member connections can be ordered. */
 export enum TeamMemberOrderField {
   /** Order team members by login */
-  Login = 'LOGIN',
+  login = 'LOGIN',
   /** Order team members by creation time */
-  CreatedAt = 'CREATED_AT',
+  createdAt = 'CREATED_AT',
 }
 
 /** The possible team member roles; either 'maintainer' or 'member'. */
 export enum TeamMemberRole {
   /** A team maintainer has permission to add and remove team members. */
-  Maintainer = 'MAINTAINER',
+  maintainer = 'MAINTAINER',
   /** A team member has no administrative permissions on the team. */
-  Member = 'MEMBER',
+  member = 'MEMBER',
 }
 
 /** Defines which types of team members are included in the returned list. Can be one of IMMEDIATE, CHILD_TEAM or ALL. */
 export enum TeamMembershipType {
   /** Includes only immediate members of the team. */
-  Immediate = 'IMMEDIATE',
+  immediate = 'IMMEDIATE',
   /** Includes only child team members for the team. */
-  ChildTeam = 'CHILD_TEAM',
+  childTeam = 'CHILD_TEAM',
   /** Includes immediate and child team members for the team. */
-  All = 'ALL',
+  all = 'ALL',
 }
 
 /** Ways in which team connections can be ordered. */
@@ -17616,15 +17616,15 @@ export type TeamOrder = {
 /** Properties by which team connections can be ordered. */
 export enum TeamOrderField {
   /** Allows ordering a list of teams by name. */
-  Name = 'NAME',
+  name = 'NAME',
 }
 
 /** The possible team privacy values. */
 export enum TeamPrivacy {
   /** A secret team can only be seen by its members. */
-  Secret = 'SECRET',
+  secret = 'SECRET',
   /** A visible team can be seen and @mentioned by every member of the organization. */
-  Visible = 'VISIBLE',
+  visible = 'VISIBLE',
 }
 
 /** Audit log entry for a team.remove_member event. */
@@ -17776,25 +17776,25 @@ export type TeamRepositoryOrder = {
 /** Properties by which team repository connections can be ordered. */
 export enum TeamRepositoryOrderField {
   /** Order repositories by creation time */
-  CreatedAt = 'CREATED_AT',
+  createdAt = 'CREATED_AT',
   /** Order repositories by update time */
-  UpdatedAt = 'UPDATED_AT',
+  updatedAt = 'UPDATED_AT',
   /** Order repositories by push time */
-  PushedAt = 'PUSHED_AT',
+  pushedAt = 'PUSHED_AT',
   /** Order repositories by name */
-  Name = 'NAME',
+  name = 'NAME',
   /** Order repositories by permission */
-  Permission = 'PERMISSION',
+  permission = 'PERMISSION',
   /** Order repositories by number of stargazers */
-  Stargazers = 'STARGAZERS',
+  stargazers = 'STARGAZERS',
 }
 
 /** The role of a user on a team. */
 export enum TeamRole {
   /** User has admin rights on the team. */
-  Admin = 'ADMIN',
+  admin = 'ADMIN',
   /** User is a member of the team. */
-  Member = 'MEMBER',
+  member = 'MEMBER',
 }
 
 /** A text match within a search result. */
@@ -17864,13 +17864,13 @@ export type TopicAuditEntryData = {
 /** Reason that the suggested topic is declined. */
 export enum TopicSuggestionDeclineReason {
   /** The suggested topic is not relevant to the repository. */
-  NotRelevant = 'NOT_RELEVANT',
+  notRelevant = 'NOT_RELEVANT',
   /** The suggested topic is too specific for the repository (e.g. #ruby-on-rails-version-4-2-1). */
-  TooSpecific = 'TOO_SPECIFIC',
+  tooSpecific = 'TOO_SPECIFIC',
   /** The viewer does not like the suggested topic. */
-  PersonalPreference = 'PERSONAL_PREFERENCE',
+  personalPreference = 'PERSONAL_PREFERENCE',
   /** The suggested topic is too general for the repository. */
-  TooGeneral = 'TOO_GENERAL',
+  tooGeneral = 'TOO_GENERAL',
 }
 
 /** Autogenerated input type of TransferIssue */
@@ -19525,15 +19525,15 @@ export type UserWatchingArgs = {
 /** The possible durations that a user can be blocked for. */
 export enum UserBlockDuration {
   /** The user was blocked for 1 day */
-  OneDay = 'ONE_DAY',
+  oneDay = 'ONE_DAY',
   /** The user was blocked for 3 days */
-  ThreeDays = 'THREE_DAYS',
+  threeDays = 'THREE_DAYS',
   /** The user was blocked for 7 days */
-  OneWeek = 'ONE_WEEK',
+  oneWeek = 'ONE_WEEK',
   /** The user was blocked for 30 days */
-  OneMonth = 'ONE_MONTH',
+  oneMonth = 'ONE_MONTH',
   /** The user was blocked permanently */
-  Permanent = 'PERMANENT',
+  permanent = 'PERMANENT',
 }
 
 /** Represents a 'user_blocked' event on a given user. */
@@ -19683,7 +19683,7 @@ export type UserStatusOrder = {
 /** Properties by which user status connections can be ordered. */
 export enum UserStatusOrderField {
   /** Order user statuses by when they were updated. */
-  UpdatedAt = 'UPDATED_AT',
+  updatedAt = 'UPDATED_AT',
 }
 
 /** A domain that can be verified or approved for an organization or an enterprise. */
@@ -19753,9 +19753,9 @@ export type VerifiableDomainOrder = {
 /** Properties by which verifiable domain connections can be ordered. */
 export enum VerifiableDomainOrderField {
   /** Order verifiable domains by the domain name. */
-  Domain = 'DOMAIN',
+  domain = 'DOMAIN',
   /** Order verifiable domains by their creation date. */
-  CreatedAt = 'CREATED_AT',
+  createdAt = 'CREATED_AT',
 }
 
 /** Types that can own a verifiable domain. */
