@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
-import Navbar from './Navbar';
 import Hamburger from './Hamburger';
+import Navbar from './Navbar';
 import Sidebar from './Sidebar';
-import { Wrapper, Overlay } from './styles';
+import { Overlay, Wrapper } from './styles';
 
 const Header = () => {
-  const [sidebar, toggle] = useState(false);
+  const [sidebar, setSidebar] = useState(false);
 
   return (
     <Wrapper>
-      <Overlay sidebar={sidebar} onClick={() => toggle(!sidebar)} />
+      <Overlay sidebar={sidebar} onClick={() => setSidebar(!sidebar)} />
       <Navbar />
-      <Hamburger sidebar={sidebar} toggle={toggle} />
-      <Sidebar sidebar={sidebar} toggle={() => toggle(!sidebar)} />
+      <Hamburger sidebar={sidebar} toggle={setSidebar} />
+      <Sidebar sidebar={sidebar} toggle={() => setSidebar(!sidebar)} />
     </Wrapper>
   );
 };
