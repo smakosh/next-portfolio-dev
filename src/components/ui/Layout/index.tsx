@@ -1,9 +1,8 @@
-import { FC } from 'react';
 import { useTheme } from '../../../providers/ThemeProvider';
 import GlobalStyle from '../GlobalStyle';
 import Footer from '../theme/Footer';
 
-const Layout: FC = ({ children }) => {
+const Layout = ({ children }: { children?: React.ReactNode }) => {
   const { theme } = useTheme();
 
   return (
