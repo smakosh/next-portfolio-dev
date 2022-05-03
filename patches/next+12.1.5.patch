@@ -1,0 +1,21 @@
+diff --git a/node_modules/next/dist/shared/lib/utils.d.ts b/node_modules/next/dist/shared/lib/utils.d.ts
+index b691c80..ae9e452 100644
+--- a/node_modules/next/dist/shared/lib/utils.d.ts
++++ b/node_modules/next/dist/shared/lib/utils.d.ts
+@@ -7,6 +7,7 @@ import type { IncomingMessage, ServerResponse } from 'http';
+ import type { NextRouter } from './router/router';
+ import type { ParsedUrlQuery } from 'querystring';
+ import type { PreviewData } from 'next/types';
++import React from 'react';
+ export declare type NextComponentType<C extends BaseContext = NextPageContext, IP = {}, P = {}> = ComponentType<P> & {
+     /**
+      * Used for initial page load data population. Data returned from `getInitialProps` is serialized when server rendered.
+@@ -147,7 +148,7 @@ export declare type DocumentContext = NextPageContext & {
+     defaultGetInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps>;
+ };
+ export declare type DocumentInitialProps = RenderPageResult & {
+-    styles?: React.ReactElement[] | React.ReactFragment;
++    styles?: JSX.Element | React.ReactElement[] | React.ReactFragment;
+ };
+ export declare type DocumentProps = DocumentInitialProps & HtmlProps;
+ /**

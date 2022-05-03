@@ -17,11 +17,15 @@ class MyDocument extends Document {
           enhanceApp: (App) => (props) =>
             sheet.collectStyles(<App {...props} />),
         });
-      const initialProps = { ...(await Document.getInitialProps(ctx)) };
-      initialProps.styles = initialProps.styles || sheet.getStyleElement();
-
+      const initialProps = await Document.getInitialProps(ctx);
       return {
         ...initialProps,
+        styles: (
+          <>
+            {initialProps.styles}
+            {sheet.getStyleElement()}
+          </>
+        ),
       };
     } finally {
       sheet.seal();

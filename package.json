@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "gen": "graphql-codegen --config codegen.yml"
+    "gen": "graphql-codegen --config codegen.yml",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@graphql-codegen/cli": "2.6.2",
@@ -17,6 +18,8 @@
     "formik": "^2.2.9",
     "next": "12.1.5",
     "next-seo": "5.4.0",
+    "patch-package": "^6.4.7",
+    "postinstall-postinstall": "^2.1.0",
     "react": "^18.1.0",
     "react-dom": "^16.8",
     "react-google-recaptcha": "2.1.0",
@@ -70,6 +73,7 @@
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-jest": "26.1.5",
     "@types/react": "18.0.8",
+    "@types/react-dom": "18.0.3",
     "eslint-plugin-react-hooks": "4.5.0",
     "@typescript-eslint/utils": "5.22.0"
   }
