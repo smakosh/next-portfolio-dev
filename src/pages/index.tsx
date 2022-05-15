@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { InferGetStaticPropsType } from 'next';
+import { InferGetStaticPropsType, NextPage } from 'next';
 import { RepositoryEdge } from 'generated/graphql';
 import Layout from 'components/ui/Layout';
 import SEO from 'components/SEO';
@@ -8,7 +8,7 @@ import Projects from 'components/modules/Projects';
 import Skills from 'components/modules/Skills';
 import Contact from 'components/modules/Contact';
 
-const HomePage = ({ repos }: InferGetStaticPropsType<typeof getStaticProps>) => (
+const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ repos }) => (
   <Layout>
     <SEO />
     <Intro />
