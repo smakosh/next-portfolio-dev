@@ -1,16 +1,22 @@
-import Image from 'next/image';
-import { useTheme } from 'providers/ThemeProvider';
-import moonIcon from 'assets/icons/moon.svg';
-import sunIcon from 'assets/icons/sun.svg';
-import { Wrapper } from './styles';
+import { useTheme } from 'next-themes';
+import Sun from 'components/ui/Icons/Sun';
+import Moon from 'components/ui/Icons/Moon';
 
 const ToggleTheme = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <Wrapper type="button" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
-      <Image src={theme === 'light' ? moonIcon : sunIcon} alt={theme} />
-    </Wrapper>
+    <button
+      className="text-left lg:text-center bg-none border-none cursor-pointer transition-all duration-300 focus:transition-all focus:duration-300"
+      type="button"
+      onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+    >
+      {theme === 'dark' ? (
+        <Sun className="text-black dark:text-white lg:dark:text-black" />
+      ) : (
+        <Moon className="text-black dark:text-white lg:dark:text-black" />
+      )}
+    </button>
   );
 };
 

@@ -1,28 +1,37 @@
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { useTheme } from 'providers/ThemeProvider';
-import ToggleTheme from '..//ToggleTheme';
-import { Wrapper } from './styles';
+import cx from 'classnames';
+import ToggleTheme from 'components/ui/theme/Header/ToggleTheme';
 
 type NavbarLinksProps = {
   desktop?: boolean;
 };
 
 const NavbarLinks = ({ desktop }: NavbarLinksProps) => {
-  const { theme } = useTheme();
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
 
   return (
-    <Wrapper desktop={desktop} theme={theme}>
+    <div
+      className={cx({
+        'items-center hidden lg:flex': desktop,
+        'p-12 flex flex-col': !desktop,
+      })}
+    >
       <Link href="#about">
-        <a>About</a>
+        <a className="text-black mb-4 lg:mb-0 mr-0 lg:mr-4 dark:text-white lg:dark:text-black">About</a>
       </Link>
       <Link href="#projects">
-        <a>Projects</a>
+        <a className="text-black mb-4 lg:mb-0 mr-0 lg:mr-4 dark:text-white lg:dark:text-black">Projects</a>
       </Link>
       <Link href="#contact">
-        <a>Contact</a>
+        <a className="text-black mb-4 lg:mb-0 mr-0 lg:mr-4 dark:text-white lg:dark:text-black">Contact</a>
       </Link>
-      <ToggleTheme />
-    </Wrapper>
+      {hasMounted && <ToggleTheme />}
+    </div>
   );
 };
 

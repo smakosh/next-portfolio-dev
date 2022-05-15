@@ -1,18 +1,15 @@
-import { FC } from 'react';
-import { useTheme } from 'providers/ThemeProvider';
-import GlobalStyle from 'components/ui/GlobalStyle';
+import { ReactNode } from 'react';
 import Footer from 'components/ui/theme/Footer';
 
-const Layout: FC = ({ children }) => {
-  const { theme } = useTheme();
-
-  return (
-    <>
-      <GlobalStyle theme={theme} />
-      {children}
-      <Footer />
-    </>
-  );
+type LayoutProps = {
+  children: ReactNode;
 };
+
+const Layout = ({ children }: LayoutProps) => (
+  <>
+    {children}
+    <Footer />
+  </>
+);
 
 export default Layout;

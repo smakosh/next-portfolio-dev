@@ -1,25 +1,12 @@
 import Image from 'next/image';
-import Container from 'components/ui/Container';
 import social from './social.json';
-import TelegramIcon from 'assets/social/telegram.svg';
-import GithubIcon from 'assets/social/github.svg';
-import StackOverflowIcon from 'assets/social/stackoverflow.svg';
-import TwitterIcon from 'assets/social/twitter.svg';
-import { Wrapper, Flex, Links, Details } from './styles';
-
-const icons = {
-  Telegram: TelegramIcon,
-  Github: GithubIcon,
-  StackOverflow: StackOverflowIcon,
-  Twitter: TwitterIcon,
-};
 
 const Footer = () => (
-  <Wrapper>
-    <Flex as={Container}>
-      <Details>
-        <h2>John Doe</h2>
-        <span>
+  <div className="pt-56 pb-16 bg-[url('/assets/illustrations/footer.svg')] bg-cover bg-top bg-no-repeat">
+    <div className="container flex items-center md:items-end text-center md:text-left justify-between flex-col md:flex-row">
+      <div className="mb-8 md:mb-0">
+        <h2 className="text-brand-primary">John Doe</h2>
+        <span className="text-brand-primary">
           © All rights are reserved | {new Date().getFullYear()} | Made with{' '}
           <span aria-label="love" role="img">
             💖
@@ -29,32 +16,28 @@ const Footer = () => (
             href="https://smakosh.com/?ref=portfolio-dev"
             rel="noopener noreferrer"
             target="_blank"
+            className="text-brand-primary"
           >
             Smakosh
           </a>
         </span>
-      </Details>
-      <Links>
-        {social.map(({ id, name, link }) => (
+      </div>
+      <div className="flex items-center">
+        {social.map(({ id, name, link, icon }) => (
           <a
             key={id}
             href={link}
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`follow me on ${name}`}
+            className="mr-2 last:mr-0"
           >
-            <Image
-              width={24}
-              height={24}
-              layout="fixed"
-              src={icons[name]}
-              alt={name}
-            />
+            <Image width={24} height={24} layout="fixed" src={icon} alt={name} />
           </a>
         ))}
-      </Links>
-    </Flex>
-  </Wrapper>
+      </div>
+    </div>
+  </div>
 );
 
 export default Footer;

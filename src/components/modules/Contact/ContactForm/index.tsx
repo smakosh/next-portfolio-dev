@@ -1,10 +1,8 @@
 import axios from 'axios';
+import cx from 'classnames';
 import { Formik, Form, FastField, ErrorMessage } from 'formik';
 import Recaptcha from 'react-google-recaptcha';
 import * as Yup from 'yup';
-import Button from 'components/ui/Button';
-import Input from 'components/ui/Input';
-import { Error, Center, InputField } from './styles';
 
 const ContactForm = () => (
   <Formik
@@ -17,19 +15,12 @@ const ContactForm = () => (
     }}
     validationSchema={Yup.object().shape({
       name: Yup.string().required('Full name field is required'),
-      email: Yup.string()
-        .email('Invalid email')
-        .required('Email field is required'),
+      email: Yup.string().email('Invalid email').required('Email field is required'),
       message: Yup.string().required('Message field is required'),
       recaptcha:
-        process.env.NODE_ENV !== 'development'
-          ? Yup.string().required('Robots are not welcome yet!')
-          : Yup.string(),
+        process.env.NODE_ENV !== 'development' ? Yup.string().required('Robots are not welcome yet!') : Yup.string(),
     })}
-    onSubmit={async (
-      { name, email, message },
-      { setSubmitting, resetForm, setFieldValue }
-    ) => {
+    onSubmit={async ({ name, email, message }, { setSubmitting, resetForm, setFieldValue }) => {
       try {
         await axios({
           method: 'POST',
@@ -37,6 +28,7 @@ const ContactForm = () => (
             process.env.NODE_ENV !== 'development'
               ? `${process.env.NEXT_PUBLIC_PORTFOLIO_URL}/api/contact`
               : 'http://localhost:3040/api/contact',
+
           headers: {
             'Content-Type': 'application/json',
           },
@@ -58,34 +50,35 @@ const ContactForm = () => (
   >
     {({ values, touched, errors, setFieldValue, isSubmitting }) => (
       <Form>
-        <InputField>
-          <Input
-            as={FastField}
+        <div className="relative mb-4">
+          <FastField
             type="text"
             name="name"
             component="input"
             aria-label="name"
             placeholder="Full name*"
-            error={touched.name && errors.name}
+            className={cx('input', {
+              'input-error': touched.name && errors.name,
+            })}
           />
-          <ErrorMessage component={Error} name="name" />
-        </InputField>
-        <InputField>
-          <Input
+          <ErrorMessage className="text-red-600 block mt-1" component="span" name="name" />
+        </div>
+        <div className="relative mb-4">
+          <FastField
             id="email"
             aria-label="email"
             component="input"
-            as={FastField}
             type="email"
             name="email"
             placeholder="Email*"
-            error={touched.email && errors.email}
+            className={cx('input', {
+              'input-error': touched.email && errors.email,
+            })}
           />
-          <ErrorMessage component={Error} name="email" />
-        </InputField>
-        <InputField>
-          <Input
-            as={FastField}
+          <ErrorMessage className="text-red-600 block mt-1" component="span" name="email" />
+        </div>
+        <div className="relative mb-4">
+          <FastField
             component="textarea"
             aria-label="message"
             id="message"
@@ -93,39 +86,35 @@ const ContactForm = () => (
             type="text"
             name="message"
             placeholder="Message*"
-            error={touched.message && errors.message}
+            className={cx('input', {
+              'input-error': touched.message && errors.message,
+            })}
           />
-          <ErrorMessage component={Error} name="message" />
-        </InputField>
-        {values.name &&
-          values.email &&
-          values.message &&
-          process.env.NODE_ENV !== 'development' && (
-            <InputField>
-              <FastField
-                component={Recaptcha}
-                sitekey={process.env.NEXT_PUBLIC_PORTFOLIO_RECAPTCHA_KEY}
-                name="recaptcha"
-                onChange={(value: string) => setFieldValue('recaptcha', value)}
-              />
-              <ErrorMessage component={Error} name="recaptcha" />
-            </InputField>
-          )}
-        {values.success && (
-          <InputField>
-            <Center>
-              <h4>
-                Your message has been successfully sent, I will get back to you
-                ASAP!
-              </h4>
-            </Center>
-          </InputField>
+          <ErrorMessage className="text-red-600 block mt-1" component="span" name="message" />
+        </div>
+        {values.name && values.email && values.message && process.env.NODE_ENV !== 'development' && (
+          <div className="relative mb-4">
+            <FastField
+              component={Recaptcha}
+              sitekey={process.env.NEXT_PUBLIC_PORTFOLIO_RECAPTCHA_KEY}
+              name="recaptcha"
+              onChange={(value: string) => setFieldValue('recaptcha', value)}
+            />
+            <ErrorMessage className="text-red-600 block mt-1" component="span" name="recaptcha" />
+          </div>
         )}
-        <Center>
-          <Button secondary type="submit" disabled={isSubmitting}>
+        {values.success && (
+          <div className="relative mb-4">
+            <div className="text-center">
+              <h4 className="font-normal">Your message has been successfully sent, I will get back to you ASAP!</h4>
+            </div>
+          </div>
+        )}
+        <div className="text-left">
+          <button type="submit" className="button button-secondary" disabled={isSubmitting}>
             Submit
-          </Button>
-        </Center>
+          </button>
+        </div>
       </Form>
     )}
   </Formik>

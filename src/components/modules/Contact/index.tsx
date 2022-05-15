@@ -1,21 +1,22 @@
 import Image from 'next/image';
-import Container from 'components/ui/Container';
 import ContactForm from './ContactForm';
-import contactIllustration from 'assets/contact.svg';
-import { Wrapper, Details, Thumbnail } from './styles';
 
 const Contact = () => (
-  <Wrapper as={Container} id="contact">
-    <Details>
+  <div className="container py-16 flex items-start justify-between flex-col lg:flex-row" id="contact">
+    <div className="flex-none lg:flex-1 pr-0 lg:pr-8 order-2 lg:order-1">
       <ContactForm />
-    </Details>
-    <Thumbnail>
+    </div>
+    <div className="flex-none lg:flex-1 order-1 lg:order-2 mb-8 lg:mb-0">
       <Image
-        src={contactIllustration}
+        src="/assets/illustrations/contact.svg"
         alt="I’m John and I’m a Backend & Devops engineer!"
+        width={498}
+        height={313}
+        layout="responsive"
+        objectFit="contain"
       />
-    </Thumbnail>
-  </Wrapper>
+    </div>
+  </div>
 );
 
 export default Contact;
