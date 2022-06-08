@@ -6,7 +6,7 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fsmakosh%2Fnext-portfolio-dev&env=GITHUB_TOKEN,FORMIUM_ENDPOINT,NEXT_PUBLIC_PORTFOLIO_RECAPTCHA_KEY,NEXT_PUBLIC_PORTFOLIO_URL&envDescription=All%20env%20variables%20are%20required%20to%20deploy%20the%20project&envLink=https%3A%2F%2Fgithub.com%2Fsmakosh%2Fnext-portfolio-dev%2Fblob%2Fmaster%2F.env.development.template&project-name=my-portfolio&repo-name=my-portfolio&demo-title=Portfolio%20demo&demo-description=A%20simple%20portfolio%20for%20developers&demo-url=https%3A%2F%2Fportfolio-next.smakosh.com&demo-image=https%3A%2F%2Fportfolio-next.smakosh.com%2Fassets%2Fthumbnail%2Fthumbnail.png)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsmakosh%2Fnext-portfolio-dev&env=GITHUB_TOKEN&envDescription=Get%20your%20GitHub%20token&envLink=https%3A%2F%2Fgithub.com%2Fsettings%2Ftokens%2Fnew%3Fscopes%3Drepo%26description%3Dportfolio-dev&project-name=my-portfolio-dev&repo-name=my-portfolio-dev&demo-title=Next%20Portfolio%20Dev&demo-description=A%20simple%20portfolio%20for%20developers&demo-url=https%3A%2F%2Fportfolio-next.smakosh.com%2F&demo-image=http%3A%2F%2Fportfolio-next.smakosh.com%2Fassets%2Fthumbnail%2Fthumbnail.png&integration-ids=oac_SOUPsixV2TP6CkvfaB91Jhri)
 
 [![Powered by Vercel](./powered-by-vercel.svg)](https://vercel.com?utm_source=smakosh&utm_campaign=oss)
 
@@ -27,7 +27,7 @@
 - Amazing illustrations by [Undraw.co](https://undraw.co)
 - Tablet & mobile friendly
 - Continuous deployment with [Vercel](https://vercel.com/?utm_source=smakosh)
-- A contact form protected by Google Recaptcha powered by Formium
+- A contact form protected by Google Recaptcha powered by Formspree
 - Can be deployed with one click
 - Fetches your Github pinned projects with most stars (You could customize this if you wish) using ISR
 - One click deployment to Vercel
@@ -40,30 +40,26 @@ Project on [Behance](https://www.behance.net/gallery/74172961/Free-Gatsby-portfo
 
 ### Online
 
-1. Create an account at [Formium](https://formium.com/?utm_source=smakosh) and grab your form endpoint url
-2. Grab a Google recaptcha key from [Google Recaptcha](https://www.google.com/recaptcha/admin)
-3. Grab your Github token from [GitHub](https://github.com/settings/tokens/new?scopes=repo&description=portfolio-dev)
-4. Click [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fsmakosh%2Fnext-portfolio-dev&env=GITHUB_TOKEN,FORMIUM_ENDPOINT,NEXT_PUBLIC_PORTFOLIO_RECAPTCHA_KEY,NEXT_PUBLIC_PORTFOLIO_URL&envDescription=All%20env%20variables%20are%20required%20to%20deploy%20the%20project&envLink=https%3A%2F%2Fgithub.com%2Fsmakosh%2Fnext-portfolio-dev%2Fblob%2Fmaster%2F.env.development.template&project-name=my-portfolio&repo-name=my-portfolio&demo-title=Portfolio%20demo&demo-description=A%20simple%20portfolio%20for%20developers&demo-url=https%3A%2F%2Fportfolio-next.smakosh.com&demo-image=https%3A%2F%2Fportfolio-next.smakosh.com%2Fassets%2Fthumbnail%2Fthumbnail.png) and pass in your:
+1. Grab a Google recaptcha key from [Google Recaptcha](https://www.google.com/recaptcha/admin)
+2. Grab your Github token from [GitHub](https://github.com/settings/tokens/new?scopes=repo&description=portfolio-dev)
+3. Click [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsmakosh%2Fnext-portfolio-dev&env=GITHUB_TOKEN&envDescription=Get%20your%20GitHub%20token&envLink=https%3A%2F%2Fgithub.com%2Fsettings%2Ftokens%2Fnew%3Fscopes%3Drepo%26description%3Dportfolio-dev&project-name=my-portfolio-dev&repo-name=my-portfolio-dev&demo-title=Next%20Portfolio%20Dev&demo-description=A%20simple%20portfolio%20for%20developers&demo-url=https%3A%2F%2Fportfolio-next.smakosh.com%2F&demo-image=http%3A%2F%2Fportfolio-next.smakosh.com%2Fassets%2Fthumbnail%2Fthumbnail.png&integration-ids=oac_SOUPsixV2TP6CkvfaB91Jhri) and pass in your:
 
-- Formium form endpoint
-- Google recaptcha public key
 - Github token
 
 To Env variables section.
 
 ### Locally
 
-1. Create an account at [Formium](https://formium.io/?utm_source=smakosh)
+1. Create an account at [Formspree](https://formspree.io/?utm_source=smakosh)
 2. Install [Yarn](https://yarnpkg.com/en/)
-3. Grab a Google recaptcha key from [Google Recaptcha](https://www.google.com/recaptcha/admin)
-4. Grab your Github token from GitHub
-5. Run `cp .env.development.local.template .env.development.local`
+3. Grab your Github token from [GitHub](https://github.com/settings/tokens/new?scopes=repo&description=portfolio-dev)
+4. Run `cp .env.development.local.template .env.development.local`
    > If you'd like to build the website locally, you will need to run `cp .env.development.local.template .env.development.local` as well and provide your env variables.
-6. Run `yarn && yarn dev`
+5. Run `yarn && yarn dev`
 
    > You could run `vercel env pull` to get your env variables from Vercel.
 
-7. Make sure to edit the `src/data/config.ts` file
+6. Make sure to edit the `src/data/config.ts` file
 
 ### Deploying locally to Vercel
 
@@ -74,8 +70,7 @@ I highly recommend that you push to GitHub/GitLab and deploy your repository to 
 - Adobe XD
 - Next js
 - TypeScript
-- Formium
-- Google recaptcha
+- Formspree
 - VSCode
 - And these useful of JavaScript libraries [package.json](package.json)
 

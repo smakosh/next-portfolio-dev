@@ -10,7 +10,8 @@
     "gen": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
-    "axios": "^0.21.1",
+    "@formspree/react": "^2.2.5",
+    "axios": "^0.27.2",
     "classnames": "^2.3.1",
     "formik": "^2.2.6",
     "next": "^12.1.6",
