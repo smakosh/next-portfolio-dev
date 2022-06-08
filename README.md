@@ -14,6 +14,8 @@
 
 [Gatsby-portfolio-portfolio](https://github.com/smakosh/gatsby-portfolio-dev)
 
+<img width="465" alt="Screenshot 2022-06-08 at 15 56 48" src="https://user-images.githubusercontent.com/20082141/172635162-258fffac-de31-446e-89b7-364b71496065.png">
+
 ## Features
 
 - TypeScript
