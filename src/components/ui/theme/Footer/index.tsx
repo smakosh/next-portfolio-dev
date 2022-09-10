@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'next/future/image';
 import social from './social.json';
 
 const Footer = () => (
@@ -32,7 +32,7 @@ const Footer = () => (
             aria-label={`follow me on ${name}`}
             className="mr-2 last:mr-0"
           >
-            <Image width={24} height={24} layout="fixed" src={icon} alt={name} />
+            <Image src={icon} alt={name} width={24} height={24} />
           </a>
         ))}
       </div>

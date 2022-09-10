@@ -51,11 +51,11 @@ To Env variables section.
 ### Locally
 
 1. Create an account at [Formspree](https://formspree.io/?utm_source=smakosh)
-2. Install [Yarn](https://yarnpkg.com/en/)
+2. Install [Pnpm](https://pnpm.io/)
 3. Grab your Github token from [GitHub](https://github.com/settings/tokens/new?scopes=repo&description=portfolio-dev)
 4. Run `cp .env.development.local.template .env.development.local`
    > If you'd like to build the website locally, you will need to run `cp .env.development.local.template .env.development.local` as well and provide your env variables.
-5. Run `yarn && yarn dev`
+5. Run `pnpm i && pnpm dev`
 
    > You could run `vercel env pull` to get your env variables from Vercel.
 
