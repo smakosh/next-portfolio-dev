@@ -1,4 +1,4 @@
-export default {
+const seoConfig = {
   title: 'John Doe',
   description: 'I’m John and I’m a Backend & Devops engineer!',
   openGraph: {
@@ -8,8 +8,7 @@ export default {
     site_name: 'Portfolio Next',
     images: [
       {
-        url:
-          'https://portfolio-next.smakosh.com/assets/thumbnail/thumbnail.png',
+        url: 'https://portfolio-next.smakosh.com/assets/thumbnail/thumbnail.png',
         width: 1200,
         height: 600,
         alt: 'I’m John and I’m a Backend & Devops engineer!',
@@ -22,3 +21,5 @@ export default {
     cardType: 'summary_large_image',
   },
 };
+
+export default seoConfig;
