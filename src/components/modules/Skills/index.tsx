@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from 'next/future/image';
 
 const Skills = () => (
   <div className="bg-[url('/assets/illustrations/details.svg')] bg-contain bg-no-repeat bg-left-top" id="about">
@@ -10,8 +10,6 @@ const Skills = () => (
           alt="I’m John and I’m a Backend & Devops engineer!"
           width={447}
           height={326}
-          layout="responsive"
-          objectFit="contain"
         />
       </div>
       <div className="flex-none lg:flex-1 pl-0 lg:pl-8">

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from 'next/future/image';
 import Header from 'components/ui/theme/Header';
 
 const Intro = () => (
@@ -21,8 +21,6 @@ const Intro = () => (
           alt="I’m John and I’m a JAMStack engineer!"
           width={463}
           height={273}
-          layout="responsive"
-          objectFit="contain"
           priority
         />
       </div>
