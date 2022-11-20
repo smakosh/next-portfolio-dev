@@ -1,3 +1,4 @@
+'use client';
 import { useForm } from '@formspree/react';
 import cx from 'classnames';
 import { Formik, Form, FastField, ErrorMessage } from 'formik';

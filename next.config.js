@@ -5,6 +5,7 @@
  **/
 const nextConfig = {
   swcMinify: true,
+  experimental: { appDir: true },
 };
 
 module.exports = nextConfig;

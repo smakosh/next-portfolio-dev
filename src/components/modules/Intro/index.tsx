@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import Header from 'components/ui/theme/Header';
 
 const Intro = () => (
@@ -11,8 +11,8 @@ const Intro = () => (
         <h2 className="mb-[2.5rem] text-2xl md:text-4xl text-brand-secondary dark:text-slate-200 typography">
           I’m John and I’m a JAMStack engineer!
         </h2>
-        <Link href="#contact" passHref>
-          <a className="button button-primary">Hire me</a>
+        <Link href="#contact" className="button button-primary">
+          Hire me
         </Link>
       </div>
       <div className="flex-1 w-full md:w-1/2">

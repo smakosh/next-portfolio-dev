@@ -9,5 +9,7 @@
     "source.fixAll.eslint": true
   },
   "editor.detectIndentation": false,
-	"editor.insertSpaces": false
+  "editor.insertSpaces": false,
+  "typescript.tsdk": "node_modules/.pnpm/typescript@4.8.4/node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }

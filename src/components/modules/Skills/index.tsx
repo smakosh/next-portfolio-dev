@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/future/image';
+import Image from 'next/image';
 
 const Skills = () => (
   <div className="bg-[url('/assets/illustrations/details.svg')] bg-contain bg-no-repeat bg-left-top" id="about">
@@ -18,8 +18,8 @@ const Skills = () => (
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s
           standard dummy.
         </p>
-        <Link href="#contact" passHref>
-          <a className="button button-primary">Hire me</a>
+        <Link href="#contact" className="button button-primary">
+          Hire me
         </Link>
       </div>
     </div>
