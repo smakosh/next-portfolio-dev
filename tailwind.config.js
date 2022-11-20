@@ -12,8 +12,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        display: ['Roboto'],
-        body: ['Roboto"'],
+        sans: ['var(--font-roboto)'],
       },
       container: {
         padding: {

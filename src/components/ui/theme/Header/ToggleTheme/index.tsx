@@ -1,3 +1,4 @@
+'use client';
 import { useTheme } from 'next-themes';
 import Sun from 'components/ui/Icons/Sun';
 import Moon from 'components/ui/Icons/Moon';

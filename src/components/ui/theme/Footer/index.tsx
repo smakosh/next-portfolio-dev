@@ -1,4 +1,4 @@
-import Image from 'next/future/image';
+import Image from 'next/image';
 import social from './social.json';
 
 const Footer = () => (

@@ -1,3 +1,4 @@
+'use client';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import cx from 'classnames';
@@ -21,14 +22,26 @@ const NavbarLinks = ({ desktop }: NavbarLinksProps) => {
         'p-12 flex flex-col': !desktop,
       })}
     >
-      <Link href="/#about" scroll={false}>
-        <a className="text-black mb-4 lg:mb-0 mr-0 lg:mr-4 dark:text-white lg:dark:text-black">About</a>
+      <Link
+        href="/#about"
+        className="text-black mb-4 lg:mb-0 mr-0 lg:mr-4 dark:text-white lg:dark:text-black"
+        scroll={false}
+      >
+        About
       </Link>
-      <Link href="/#projects" scroll={false}>
-        <a className="text-black mb-4 lg:mb-0 mr-0 lg:mr-4 dark:text-white lg:dark:text-black">Projects</a>
+      <Link
+        href="/#projects"
+        className="text-black mb-4 lg:mb-0 mr-0 lg:mr-4 dark:text-white lg:dark:text-black"
+        scroll={false}
+      >
+        Projects
       </Link>
-      <Link href="/#contact" scroll={false}>
-        <a className="text-black mb-4 lg:mb-0 mr-0 lg:mr-4 dark:text-white lg:dark:text-black">Contact</a>
+      <Link
+        href="/#contact"
+        className="text-black mb-4 lg:mb-0 mr-0 lg:mr-4 dark:text-white lg:dark:text-black"
+        scroll={false}
+      >
+        Contact
       </Link>
       {hasMounted && <ToggleTheme />}
     </div>
