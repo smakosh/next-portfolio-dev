@@ -21,7 +21,6 @@
 - TypeScript
 - Eslint/Prettier configured
 - Scores 100% on a11y / Performance / PWA / SEO
-- PWA (desktop & mobile)
 - Easy to customize
 - Nice project structure
 - Amazing illustrations by [Undraw.co](https://undraw.co)
@@ -69,6 +68,7 @@ I highly recommend that you push to GitHub/GitLab and deploy your repository to 
 
 - Adobe XD
 - Next js
+- Tailwindcss
 - TypeScript
 - Formspree
 - VSCode
