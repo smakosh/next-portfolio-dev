@@ -3,7 +3,10 @@ import Link from 'next/link';
 import Header from '../../../components/ui/theme/Header';
 
 const Intro = () => (
-  <div className="bg-[url('/assets/illustrations/overlay.svg')] bg-contain bg-right-top bg-no-repeat pb-16">
+  <div
+    data-cy="intro"
+    className="bg-[url('/assets/illustrations/overlay.svg')] bg-contain bg-right-top bg-no-repeat pb-16"
+  >
     <Header />
     <div className="container py-16 flex items-center flex-col md:flex-row justify-between">
       <div className="flex-1 w-full md:w-1/2 mb-8 md:mb-0">
