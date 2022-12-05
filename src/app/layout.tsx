@@ -1,8 +1,8 @@
-import { ReactNode } from 'react';
+import 'components/ui/globals.css';
+import { Roboto } from '@next/font/google';
 import config from 'data/config';
 import { NextSeo } from 'next-seo';
-import { Roboto } from '@next/font/google';
-import 'components/ui/globals.css';
+import { ReactNode } from 'react';
 
 const { url, defaultDescription, defaultTitle } = config;
 
@@ -41,6 +41,7 @@ const RootLayout = ({ children }: RootLayoutProps) => (
       <NextSeo
         title={defaultTitle}
         description={defaultDescription}
+        useAppDir={true}
         additionalMetaTags={[
           {
             name: 'image',
