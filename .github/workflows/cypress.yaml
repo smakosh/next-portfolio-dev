@@ -13,6 +13,7 @@ jobs:
         uses: cypress-io/github-action@v4
         env:
           GITHUB_TOKEN: ${{ secrets.USER_GITHUB_TOKEN }}
+          NEXT_PUBLIC_FORM: ${{ secrets.NEXT_PUBLIC_FORM }}
         with:
           build: yarn build
           start: yarn start
