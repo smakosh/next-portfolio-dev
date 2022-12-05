@@ -57,57 +57,6 @@ const HomePage = async () => {
 
   return (
     <>
-      <NextSeo
-        title={'defaultTitle'}
-        description={'defaultDescription'}
-        // additionalMetaTags={[
-        //   {
-        //     name: 'image',
-        //     content: `${url}/assets/thumbnail/thumbnail.png`,
-        //   },
-        //   {
-        //     property: 'og:title',
-        //     content: defaultTitle,
-        //   },
-        //   {
-        //     property: 'og:description',
-        //     content: defaultDescription,
-        //   },
-        //   {
-        //     property: 'og:url',
-        //     content: url,
-        //   },
-        //   {
-        //     property: 'og:image',
-        //     content: `${url}/assets/thumbnail/thumbnail.png`,
-        //   },
-        //   {
-        //     name: 'twitter:url',
-        //     content: url,
-        //   },
-        //   {
-        //     name: 'twitter:title',
-        //     content: defaultTitle,
-        //   },
-        //   {
-        //     name: 'twitter:description',
-        //     content: defaultDescription,
-        //   },
-        //   {
-        //     name: 'twitter:image:src',
-        //     content: `${url}/assets/thumbnail/thumbnail.png`,
-        //   },
-        //   {
-        //     name: 'twitter:image',
-        //     content: `${url}/assets/thumbnail/thumbnail.png`,
-        //   },
-        //   {
-        //     property: 'og:type',
-        //     content: 'website',
-        //   },
-        // ]}
-      />
-
       <Scripts />
       <AllProviders>
         <Intro />
