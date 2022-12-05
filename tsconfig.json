@@ -1,31 +1,6 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "useUnknownInCatchVariables": false,
-    "baseUrl": "./src",
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
-  },
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@upleveled/eslint-config-upleveled/tsconfig.base.json",
   "include": [
     "next-env.d.ts",
     "**/*.ts",
@@ -34,5 +9,13 @@
   ],
   "exclude": [
     "node_modules"
-  ]
+  ],
+  "compilerOptions": {
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  }
 }

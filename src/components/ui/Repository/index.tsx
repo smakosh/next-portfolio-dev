@@ -1,8 +1,8 @@
-import ForkIcon from 'components/ui/Icons/Fork';
-import StarIcon from 'components/ui/Icons/Star';
-import { Repository } from 'generated/graphql';
+import ForkIcon from '../../../components/ui/Icons/Fork';
+import StarIcon from '../../../components/ui/Icons/Star';
+import { Repository } from '../../../generated/graphql';
 
-const Repository = ({ name, description, stargazers, forkCount, languages, url }: Repository) => (
+const repository = ({ name, description, stargazers, forkCount, languages, url }: Repository) => (
   <a
     className="bg-white shadow-md dark:bg-zinc-900 rounded-sm p-4 h-full overflow-hidden flex flex-col justify-between"
     href={url}
@@ -39,4 +39,4 @@ const Repository = ({ name, description, stargazers, forkCount, languages, url }
   </a>
 );
 
-export default Repository;
+export default repository;

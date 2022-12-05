@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import Image from 'next/image';
-import Header from 'components/ui/theme/Header';
+import Link from 'next/link';
+import Header from '../../../components/ui/theme/Header';
 
 const Intro = () => (
   <div className="bg-[url('/assets/illustrations/overlay.svg')] bg-contain bg-right-top bg-no-repeat pb-16">
