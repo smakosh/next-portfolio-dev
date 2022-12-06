@@ -4,6 +4,7 @@
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"],
   "compilerOptions": {
+    "typeRoots": ["node_modules/yup"],
     "jsx": "preserve",
     "plugins": [
       {
