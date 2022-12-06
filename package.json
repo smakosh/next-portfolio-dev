@@ -35,6 +35,7 @@
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.9",
     "@types/react-google-recaptcha": "^2.1.5",
+    "@types/yup": "^0.32.0",
     "@typescript-eslint/eslint-plugin": "5.43.0",
     "@typescript-eslint/parser": "5.43.0",
     "@upleveled/eslint-config-upleveled": "^3.4.4",
