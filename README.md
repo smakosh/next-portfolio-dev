@@ -6,7 +6,7 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsmakosh%2Fnext-portfolio-dev&env=GITHUB_TOKEN&envDescription=Get%20your%20GitHub%20token&envLink=https%3A%2F%2Fgithub.com%2Fsettings%2Ftokens%2Fnew%3Fscopes%3Drepo%26description%3Dportfolio-dev&project-name=my-portfolio-dev&repo-name=my-portfolio-dev&demo-title=Next%20Portfolio%20Dev&demo-description=A%20simple%20portfolio%20for%20developers&demo-url=https%3A%2F%2Fportfolio-next.smakosh.com%2F&demo-image=http%3A%2F%2Fportfolio-next.smakosh.com%2Fassets%2Fthumbnail%2Fthumbnail.png&integration-ids=oac_SOUPsixV2TP6CkvfaB91Jhri)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsmakosh%2Fnext-portfolio-dev&env=GITHUB_TOKEN&envDescription=Get%20your%20GitHub%20token&envLink=https%3A%2F%2Fgithub.com%2Fsettings%2Ftokens%2Fnew%3Fscopes%3Dpublic_repo%26description%3Dportfolio-dev&project-name=my-portfolio-dev&repo-name=my-portfolio-dev&demo-title=Next%20Portfolio%20Dev&demo-description=A%20simple%20portfolio%20for%20developers&demo-url=https%3A%2F%2Fportfolio-next.smakosh.com%2F&demo-image=http%3A%2F%2Fportfolio-next.smakosh.com%2Fassets%2Fthumbnail%2Fthumbnail.png&integration-ids=oac_SOUPsixV2TP6CkvfaB91Jhri)
 
 [![Powered by Vercel](./powered-by-vercel.svg)](https://vercel.com?utm_source=smakosh&utm_campaign=oss)
 
@@ -40,8 +40,8 @@ Project on [Behance](https://www.behance.net/gallery/74172961/Free-Gatsby-portfo
 ### Online
 
 1. Grab a Google recaptcha key from [Google Recaptcha](https://www.google.com/recaptcha/admin)
-2. Grab your Github token from [GitHub](https://github.com/settings/tokens/new?scopes=repo&description=portfolio-dev)
-3. Click [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsmakosh%2Fnext-portfolio-dev&env=GITHUB_TOKEN&envDescription=Get%20your%20GitHub%20token&envLink=https%3A%2F%2Fgithub.com%2Fsettings%2Ftokens%2Fnew%3Fscopes%3Drepo%26description%3Dportfolio-dev&project-name=my-portfolio-dev&repo-name=my-portfolio-dev&demo-title=Next%20Portfolio%20Dev&demo-description=A%20simple%20portfolio%20for%20developers&demo-url=https%3A%2F%2Fportfolio-next.smakosh.com%2F&demo-image=http%3A%2F%2Fportfolio-next.smakosh.com%2Fassets%2Fthumbnail%2Fthumbnail.png&integration-ids=oac_SOUPsixV2TP6CkvfaB91Jhri) and pass in your:
+2. Grab your Github token from [GitHub](https://github.com/settings/tokens/new?scopes=public_repo&description=portfolio-dev)
+3. Click [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsmakosh%2Fnext-portfolio-dev&env=GITHUB_TOKEN&envDescription=Get%20your%20GitHub%20token&envLink=https%3A%2F%2Fgithub.com%2Fsettings%2Ftokens%2Fnew%3Fscopes%3Dpublic_repo%26description%3Dportfolio-dev&project-name=my-portfolio-dev&repo-name=my-portfolio-dev&demo-title=Next%20Portfolio%20Dev&demo-description=A%20simple%20portfolio%20for%20developers&demo-url=https%3A%2F%2Fportfolio-next.smakosh.com%2F&demo-image=http%3A%2F%2Fportfolio-next.smakosh.com%2Fassets%2Fthumbnail%2Fthumbnail.png&integration-ids=oac_SOUPsixV2TP6CkvfaB91Jhri) and pass in your:
 
 - Github token
 
@@ -51,7 +51,7 @@ To Env variables section.
 
 1. Create an account at [Formspree](https://formspree.io/?utm_source=smakosh)
 2. Install [Pnpm](https://pnpm.io/)
-3. Grab your Github token from [GitHub](https://github.com/settings/tokens/new?scopes=repo&description=portfolio-dev)
+3. Grab your Github token from [GitHub](https://github.com/settings/tokens/new?scopes=public_repo&description=portfolio-dev)
 4. Run `cp .env.development.local.template .env.development.local`
    > If you'd like to build the website locally, you will need to run `cp .env.development.local.template .env.development.local` as well and provide your env variables.
 5. Run `pnpm i && pnpm dev`
