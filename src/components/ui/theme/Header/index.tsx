@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import cx from 'classnames';
+import clsx from 'clsx';
 import Navbar from './Navbar';
 import Hamburger from './Hamburger';
 import Sidebar from './Sidebar';
@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <div className="w-full bg-transparent">
       <div
-        className={cx('bg-black/70 w-full h-full transition-all duration-300 ease-in-out', {
+        className={clsx('bg-black/70 w-full h-full transition-all duration-300 ease-in-out', {
           'block z-10': sidebar,
           hidden: !sidebar,
         })}
