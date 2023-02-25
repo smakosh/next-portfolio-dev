@@ -1,7 +1,8 @@
 'use client';
+
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import cx from 'classnames';
+import clsx from 'clsx';
 import ToggleTheme from 'components/ui/theme/Header/ToggleTheme';
 
 type NavbarLinksProps = {
@@ -17,7 +18,7 @@ const NavbarLinks = ({ desktop }: NavbarLinksProps) => {
 
   return (
     <div
-      className={cx({
+      className={clsx({
         'items-center hidden lg:flex': desktop,
         'p-12 flex flex-col': !desktop,
       })}

@@ -7,6 +7,7 @@ const config = {
   defaultDescription: 'I’m John and I’m a Backend & Devops engineer!',
   googleAnalyticsID: 'G-PE8QW0ZGTZ',
   NEXT_PUBLIC_PORTFOLIO_URL: process.env.NEXT_PUBLIC_PORTFOLIO_URL as string,
+  twitter: '@smakosh',
 };
 
 export default config;

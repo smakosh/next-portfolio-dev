@@ -1,6 +1,4 @@
-import { NextSeoProps } from 'next-seo';
-
-const seoConfig: NextSeoProps = {
+const seoConfig = {
   title: 'John Doe',
   description: 'I’m John and I’m a Backend & Devops engineer!',
   openGraph: {
