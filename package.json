@@ -10,20 +10,20 @@
     "gen": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
-    "@formspree/react": "2.4.0",
-    "@next/font": "13.0.4",
-    "classnames": "2.3.1",
-    "clsx": "1.2.1",
-    "formik": "2.2.9",
+    "@formspree/react": "^2.4.0",
+    "@next/font": "^13.0.4",
+    "classnames": "^2.3.1",
+    "clsx": "^1.2.1",
+    "formik": "^2.2.9",
     "local-cypress": "1.2.6",
-    "next": "13.0.4",
-    "next-seo": "5.14.1",
-    "next-themes": "0.2.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-google-recaptcha": "2.1.0",
-    "sharp": "0.31.3",
-    "yup": "0.32.11"
+    "next": "^13.0.4",
+    "next-seo": "^5.14.1",
+    "next-themes": "^0.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-google-recaptcha": "^2.1.0",
+    "sharp": "^0.31.3",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@babel/eslint-parser": "7.19.1",
