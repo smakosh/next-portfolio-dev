@@ -25,7 +25,7 @@ const Footer = () => (
       <div className="flex items-center">
         {social.map(({ id, name, link, icon }) => (
           <a
-            key={id}
+            key={`id-${id}`}
             href={link}
             target="_blank"
             rel="noopener noreferrer"

@@ -18,7 +18,7 @@ const repository = ({ name, description, stargazers, forkCount, languages, url }
         <div className="flex justify-between flex-row mb-3">
           <div>
             {languages.nodes.map((item) => (
-              <span className="text-gray-700 dark:text-gray-200 italic mr-2 last:mr-0 text-xs" key={item?.id}>
+              <span className="text-gray-700 dark:text-gray-200 italic mr-2 last:mr-0 text-xs" key={`item-${item?.id}`}>
                 {item?.name}
               </span>
             ))}

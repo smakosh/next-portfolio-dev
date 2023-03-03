@@ -10,7 +10,7 @@ const Projects = ({ data }: ProjectsProps) => (
       {data.length > 0 &&
         data.map(({ node }) => {
           if (!node) return null;
-          return <Repository key={node.id} {...node} />;
+          return <Repository key={`node-${node.id}`} {...node} />;
         })}
     </div>
   </div>
