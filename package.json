@@ -29,7 +29,7 @@
     "@babel/eslint-parser": "7.19.1",
     "@graphql-codegen/cli": "3.2.1",
     "@next/eslint-plugin-next": "13.2.3",
-    "@octokit/graphql-schema": "12.4.1",
+    "@octokit/graphql-schema": "13.7.0",
     "@ts-safeql/eslint-plugin": "0.0.24",
     "@types/eslint": "8.21.1",
     "@types/node": "18.14.4",

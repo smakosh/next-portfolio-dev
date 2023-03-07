@@ -1854,10 +1854,10 @@
     mkdirp "^1.0.4"
     rimraf "^3.0.2"
 
-"@octokit/graphql-schema@12.4.1":
-  version "12.4.1"
-  resolved "https://registry.yarnpkg.com/@octokit/graphql-schema/-/graphql-schema-12.4.1.tgz#63dadc2c8cddbc853b3ae5360c673151366fa611"
-  integrity sha512-H5c295OqJlAVoeCFuYayV+x7jBMrwzfQE5ovphq3Ra5u9dt1khXrNix1hrn+HVybu3dq72i6RVY03xgqgG57hQ==
+"@octokit/graphql-schema@13.7.0":
+  version "13.7.0"
+  resolved "https://registry.yarnpkg.com/@octokit/graphql-schema/-/graphql-schema-13.7.0.tgz#65e98c691e90311b04c8b5add2ebb7140f79ac8c"
+  integrity sha512-Ij8epnvFh7TfgrFg6j10317oZGAKQ48VBEfz3ebwYFtvkf471tcmULEKny0r1bHKoQ/uYhtR13i9x7O6fwSZFg==
   dependencies:
     graphql "^16.0.0"
     graphql-tag "^2.10.3"
