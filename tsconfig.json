@@ -1,7 +1,17 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@upleveled/eslint-config-upleveled/tsconfig.base.json",
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "extends": "eslint-config-upleveled/tsconfig.base.json",
+  "include": [
+    "**/.eslintrc.cjs",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.cjs",
+    "**/*.mjs",
+    ".next/types/**/*.ts",
+    "next-env.d.ts"
+  ],
   "exclude": ["node_modules"],
   "compilerOptions": {
     "typeRoots": ["node_modules/yup"],
