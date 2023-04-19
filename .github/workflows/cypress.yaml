@@ -10,7 +10,7 @@ jobs:
       # Use Cypress GitHub action to run tests
       # https://github.com/cypress-io/github-action
       - name: Cypress run
-        uses: cypress-io/github-action@v4
+        uses: cypress-io/github-action@v5
         env:
           GITHUB_TOKEN: ${{ secrets.USER_GITHUB_TOKEN }}
           NEXT_PUBLIC_FORM: ${{ secrets.NEXT_PUBLIC_FORM }}
