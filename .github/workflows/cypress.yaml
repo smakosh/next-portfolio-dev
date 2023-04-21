@@ -1,12 +1,23 @@
-name: Cypress tests
-on: [push]
+name: Lint, Check Types, Cypress Test
+on: push
 
 jobs:
-  cypress-run:
+  check-types:
+    name: Lint, Check Types, Test
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 'latest'
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 'lts/*'
+          cache: 'pnpm'
+      - run: pnpm install
+      - run: pnpm eslint . --max-warnings 0
+      - run: pnpm tsc
       # Use Cypress GitHub action to run tests
       # https://github.com/cypress-io/github-action
       - name: Cypress run
@@ -15,5 +26,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.USER_GITHUB_TOKEN }}
           NEXT_PUBLIC_FORM: ${{ secrets.NEXT_PUBLIC_FORM }}
         with:
-          build: yarn build
-          start: yarn start
+          build: pnpm build
+          start: pnpm start

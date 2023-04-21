@@ -1,6 +1,6 @@
 'use client';
 import { useForm } from '@formspree/react';
-import cx from 'classnames';
+import clsx from 'clsx';
 import { ErrorMessage, FastField, Form, Formik } from 'formik';
 import Recaptcha from 'react-google-recaptcha';
 import * as Yup from 'yup';
@@ -53,7 +53,7 @@ const ContactForm = () => {
               component="input"
               aria-label="name"
               placeholder="Full name*"
-              className={cx('input', {
+              className={clsx('input', {
                 'input-error': touched.name && errors.name,
               })}
             />
@@ -67,7 +67,7 @@ const ContactForm = () => {
               type="email"
               name="email"
               placeholder="Email*"
-              className={cx('input', {
+              className={clsx('input', {
                 'input-error': touched.email && errors.email,
               })}
             />
@@ -82,7 +82,7 @@ const ContactForm = () => {
               type="text"
               name="message"
               placeholder="Message*"
-              className={cx('input', {
+              className={clsx('input', {
                 'input-error': touched.message && errors.message,
               })}
             />

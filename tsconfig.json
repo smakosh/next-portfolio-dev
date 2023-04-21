@@ -1,6 +1,14 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "eslint-config-upleveled/tsconfig.base.json",
+  "compilerOptions": {
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "jsx": "preserve"
+  },
   "include": [
     "**/.eslintrc.cjs",
     "**/*.ts",
@@ -10,16 +18,6 @@
     "**/*.cjs",
     "**/*.mjs",
     ".next/types/**/*.ts",
-    "next-env.d.ts"
-  ],
-  "exclude": ["node_modules"],
-  "compilerOptions": {
-    "typeRoots": ["node_modules/yup"],
-    "jsx": "preserve",
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
-  }
+    "next.d.ts"
+  ]
 }
