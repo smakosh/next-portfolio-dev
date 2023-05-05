@@ -28,7 +28,7 @@
     "@babel/eslint-parser": "7.21.8",
     "@graphql-codegen/cli": "3.3.1",
     "@next/eslint-plugin-next": "13.4.0",
-    "@octokit/graphql-schema": "13.7.0",
+    "@octokit/graphql-schema": "14.4.0",
     "@types/eslint": "8.37.0",
     "@types/node": "18.15.11",
     "@types/react": "18.2.5",

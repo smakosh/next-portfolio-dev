@@ -52,8 +52,8 @@ devDependencies:
     specifier: 13.4.0
     version: 13.4.0
   '@octokit/graphql-schema':
-    specifier: 13.7.0
-    version: 13.7.0
+    specifier: 14.4.0
+    version: 14.4.0
   '@types/eslint':
     specifier: 8.37.0
     version: 8.37.0
@@ -2185,8 +2185,8 @@ packages:
       fastq: 1.13.0
     dev: true
 
-  /@octokit/graphql-schema@13.7.0:
-    resolution: {integrity: sha512-Ij8epnvFh7TfgrFg6j10317oZGAKQ48VBEfz3ebwYFtvkf471tcmULEKny0r1bHKoQ/uYhtR13i9x7O6fwSZFg==}
+  /@octokit/graphql-schema@14.4.0:
+    resolution: {integrity: sha512-+O6/dsLlR6V9gv+t1lqsN+x73TLwyQWZpd3M8/eYnuny7VaznV9TAyUxf18tX8WBBS5IqtlLDk1nG+aSTPRZzQ==}
     dependencies:
       graphql: 16.6.0
       graphql-tag: 2.12.6(graphql@16.6.0)
