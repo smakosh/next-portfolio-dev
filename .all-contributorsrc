@@ -35,6 +35,16 @@
         "doc",
         "security"
       ]
+    },
+    {
+      "login": "mohammedmoutawakkil",
+      "name": "Moutawakkil Mohammed",
+      "avatar_url": "https://avatars.githubusercontent.com/u/70536218?v=4",
+      "profile": "http://mwk.vercel.app",
+      "contributions": [
+        "code",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -43,5 +53,6 @@
   "repoType": "github",
   "repoHost": "https://github.com",
   "skipCi": true,
-  "commitConvention": "angular"
+  "commitConvention": "angular",
+  "commitType": "docs"
 }
