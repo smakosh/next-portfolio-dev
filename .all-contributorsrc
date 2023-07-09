@@ -45,6 +45,15 @@
         "code",
         "bug"
       ]
+    },
+    {
+      "login": "bharathkalyans",
+      "name": "Bharath Kalyan S",
+      "avatar_url": "https://avatars.githubusercontent.com/u/49526472?v=4",
+      "profile": "https://github.com/bharathkalyans",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
