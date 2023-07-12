@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "7.22.7",
-    "@graphql-codegen/cli": "3.3.1",
+    "@graphql-codegen/cli": "4.0.1",
     "@next/eslint-plugin-next": "13.4.9",
     "@octokit/graphql-schema": "14.21.1",
     "@types/eslint": "8.44.0",
