@@ -11,7 +11,6 @@ const HomePage = () => (
     <Scripts />
     <AllProviders>
       <Intro />
-      {/* @ts-expect-error Server Component */}
       <Projects />
       <Skills />
       <Contact />
