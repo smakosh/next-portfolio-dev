@@ -30,7 +30,7 @@
     "@next/eslint-plugin-next": "13.4.9",
     "@octokit/graphql-schema": "14.21.1",
     "@types/eslint": "8.44.0",
-    "@types/node": "18.15.11",
+    "@types/node": "20.4.1",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
     "@types/react-google-recaptcha": "2.1.5",
