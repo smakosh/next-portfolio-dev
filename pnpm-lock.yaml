@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@formspree/react': ^2.4.4
+  '@formspree/react': ^2.5.0
   '@graphql-codegen/cli': 3.2.1
   '@graphql-codegen/typescript': 3.0.1
   '@graphql-codegen/typescript-operations': ^3.0.4
@@ -30,7 +30,7 @@ specifiers:
   yup: ^1.2.0
 
 dependencies:
-  '@formspree/react': 2.4.4_biqbaboplfbrettd7655fr4n2y
+  '@formspree/react': 2.5.0_biqbaboplfbrettd7655fr4n2y
   clsx: 1.2.1
   formik: 2.4.2_react@18.2.0
   next: 13.4.9_biqbaboplfbrettd7655fr4n2y
@@ -730,19 +730,19 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@formspree/core/2.8.3:
-    resolution: {integrity: sha512-fyBWtzl3rD+SL8b7fHFDK0jUpYK5b20Pt8jIn2QRcJ8wZacEnINFFY+BaSrnHfMxHmCTLmjfJNktL1fBxmfhMg==}
+  /@formspree/core/3.0.0:
+    resolution: {integrity: sha512-bDvM8c+AtIZOmgZq+Buk3DEmspEJU7kdpUrQTWZdyEjM4KRgNPYTd+LWVMchNX4q73F+DaY1mBG0hO0ioB6MjQ==}
     dependencies:
       '@stripe/stripe-js': 1.54.1
     dev: false
 
-  /@formspree/react/2.4.4_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-jHvrEGQyt+jTPWCBl/alhI9MkzOqazMLLF3IoXN33D4WHiii4PJUoH0d68LsS1oSaVJNTMKebthhrL3MseLYAQ==}
+  /@formspree/react/2.5.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-R2UyaKXAEaaV5lRnE7fUw1xr+Cp+TEzfIyT1r2iH4/hUdcg2od35kU33LOOZo4CPEk2KEuF2RPblnJWSPOvBCw==}
     peerDependencies:
       react: ^16.8 || ^17.0 || ^18.0
       react-dom: ^16.8 || ^17.0 || ^18.0
     dependencies:
-      '@formspree/core': 2.8.3
+      '@formspree/core': 3.0.0
       '@stripe/react-stripe-js': 1.16.5_l52agfnny5gsgnugli43vfmq5m
       '@stripe/stripe-js': 1.54.1
       react: 18.2.0

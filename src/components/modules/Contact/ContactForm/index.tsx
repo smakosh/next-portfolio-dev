@@ -1,4 +1,5 @@
 'use client';
+
 import { useForm } from '@formspree/react';
 import clsx from 'clsx';
 import { Formik, Form, FastField, ErrorMessage } from 'formik';
@@ -38,6 +39,16 @@ const ContactForm = () => {
           if (state.errors) {
             state.errors.forEach((error) => {
               setFieldError(error.field || 'email', error.message);
+            });
+
+            state.errors.getFormErrors().forEach((error) => {
+              setFieldError('email', error.message);
+            });
+
+            state.errors.getAllFieldErrors().forEach(([field, fieldErrors]) => {
+              fieldErrors.forEach((fieldError) => {
+                setFieldError(field, fieldError.message);
+              });
             });
           }
           setSubmitting(false);
