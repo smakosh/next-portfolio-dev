@@ -10,7 +10,7 @@
     "gen": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
-    "@formspree/react": "^2.4.4",
+    "@formspree/react": "^2.5.0",
     "clsx": "^1.2.1",
     "formik": "^2.4.2",
     "next": "^13.4.9",
