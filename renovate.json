@@ -1,0 +1,6 @@
+{
+  "extends": ["github>karlhorky/renovate-config:default.json5"],
+  "schedule": [
+    "on Thursday on the first day instance of January, March, May, July, September, November after 4pm"
+  ]
+}

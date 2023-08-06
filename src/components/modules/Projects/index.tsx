@@ -1,5 +1,5 @@
-import getRepos from 'lib/getRepos';
-import Repository from 'components/ui/Repository';
+import getRepos from '../../../lib/getRepos';
+import Repository from '../../ui/Repository';
 
 const Projects = async () => {
   const data = await getRepos();

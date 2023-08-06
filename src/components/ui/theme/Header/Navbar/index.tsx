@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import NavbarLinks from 'components/ui/theme/Header/NavbarLinks';
+import NavbarLinks from '../../../../../components/ui/theme/Header/NavbarLinks';
 
 const Navbar = () => (
   <div className="container flex items-center justify-between p-6">

@@ -1,7 +1,7 @@
 'use client';
 
 import Script from 'next/script';
-import config from 'data/config';
+import config from '../../data/config';
 
 const Scripts = () => (
   <>

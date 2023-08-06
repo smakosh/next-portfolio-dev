@@ -1,5 +1,5 @@
 import 'server-only';
-import { RepositoryEdge } from 'generated/graphql';
+import { RepositoryEdge } from '../generated/graphql';
 
 const getRepos = async (): Promise<RepositoryEdge[]> => {
   const res = await fetch('https://api.github.com/graphql', {

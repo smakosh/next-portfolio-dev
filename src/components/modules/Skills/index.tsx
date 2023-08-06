@@ -1,8 +1,12 @@
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Skills = () => (
-  <div className="bg-[url('/assets/illustrations/details.svg')] bg-contain bg-no-repeat bg-left-top" id="about">
+  <div
+    data-cy="skills"
+    className="bg-[url('/assets/illustrations/details.svg')] bg-contain bg-no-repeat bg-left-top"
+    id="about"
+  >
     <div className="container py-16 flex flex-col lg:flex-row justify-between items-center">
       <div className="flex-none lg:flex-1">
         <Image
