@@ -35,9 +35,15 @@ const ContactForm = () => {
         } catch (err) {
           alert('Something went wrong, please try again!');
         } finally {
-          if (state.errors.length) {
-            state.errors.forEach((error) => {
-              setFieldError(error.field || 'email', error.message);
+          if (state.errors) {
+            state.errors.getFormErrors().forEach((error) => {
+              setFieldError('email', error.message);
+            });
+
+            state.errors.getAllFieldErrors().forEach(([field, fieldErrors]) => {
+              fieldErrors.forEach((fieldError) => {
+                setFieldError(field, fieldError.message);
+              });
             });
           }
           setSubmitting(false);
