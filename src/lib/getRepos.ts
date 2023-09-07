@@ -35,7 +35,6 @@ const getRepos = async (): Promise<RepositoryEdge[]> => {
     headers: {
       Authorization: `bearer ${process.env.GITHUB_TOKEN}`,
     },
-    next: { revalidate: 10 },
   });
 
   if (!res.ok) {
