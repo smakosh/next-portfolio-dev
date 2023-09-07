@@ -1,7 +1,9 @@
 # A basic portfolio for developers
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsmakosh%2Fnext-portfolio-dev&env=GITHUB_TOKEN&envDescription=Get%20your%20GitHub%20token&envLink=https%3A%2F%2Fgithub.com%2Fsettings%2Ftokens%2Fnew%3Fscopes%3Dpublic_repo%26description%3Dportfolio-dev&project-name=my-portfolio-dev&repo-name=my-portfolio-dev&demo-title=Next%20Portfolio%20Dev&demo-description=A%20simple%20portfolio%20for%20developers&demo-url=https%3A%2F%2Fportfolio-next.smakosh.com%2F&demo-image=http%3A%2F%2Fportfolio-next.smakosh.com%2Fassets%2Fthumbnail%2Fthumbnail.png&integration-ids=oac_SOUPsixV2TP6CkvfaB91Jhri)
@@ -48,11 +50,11 @@ To Env variables section.
 ### Locally
 
 1. Create an account at [Formspree](https://formspree.io/?utm_source=smakosh)
-2. Install [Pnpm](https://pnpm.io/)
+2. Install [Bun](https://bun.sh/)
 3. Grab your Github token from [GitHub](https://github.com/settings/tokens/new?scopes=public_repo&description=portfolio-dev)
 4. Run `cp .env.development.local.template .env.development.local`
    > If you'd like to build the website locally, you will need to run `cp .env.development.local.template .env.development.local` as well and provide your env variables.
-5. Run `pnpm i && pnpm dev`
+5. Run `bun i && bun run dev`
 
    > You could run `vercel env pull` to get your env variables from Vercel.
 

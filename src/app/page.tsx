@@ -6,12 +6,13 @@ import AllProviders from 'components/AllProviders';
 import Footer from 'components/ui/theme/Footer';
 import Scripts from 'components/Scripts';
 
+export const revalidate = 3600;
+
 const HomePage = () => (
   <>
     <Scripts />
     <AllProviders>
       <Intro />
-      {/* @ts-expect-error Server Component */}
       <Projects />
       <Skills />
       <Contact />
