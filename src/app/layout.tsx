@@ -1,17 +1,17 @@
 import { ReactNode } from 'react';
 import config from 'data/config';
-import type { Metadata, Viewport } from 'next';
+import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
 import 'components/ui/globals.css';
 
 const { url, defaultDescription, defaultTitle, twitter } = config;
 
-export const viewport: Viewport = {
-  themeColor: '#6b63ff',
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 1,
-};
+// export const viewport: Viewport = {
+//   themeColor: '#6b63ff',
+//   width: 'device-width',
+//   initialScale: 1,
+//   maximumScale: 1,
+// };
 
 export const metadata: Metadata = {
   title: defaultTitle,
