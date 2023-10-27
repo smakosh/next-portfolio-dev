@@ -1,14 +1,22 @@
 import { ReactNode } from 'react';
 import config from 'data/config';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Roboto } from 'next/font/google';
 import 'components/ui/globals.css';
 
 const { url, defaultDescription, defaultTitle, twitter } = config;
 
+export const viewport: Viewport = {
+  themeColor: '#6b63ff',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export const metadata: Metadata = {
   title: defaultTitle,
   description: defaultDescription,
+  metadataBase: new URL(url),
   openGraph: {
     title: defaultTitle,
     description: defaultDescription,
@@ -16,7 +24,7 @@ export const metadata: Metadata = {
     siteName: defaultTitle,
     images: [
       {
-        url: `${url}/assets/thumbnail/thumbnail.png`,
+        url: '/assets/thumbnail/thumbnail.png',
         width: 800,
         height: 600,
       },
@@ -29,13 +37,13 @@ export const metadata: Metadata = {
     shortcut: '/assets/favicon/favicon.ico',
     apple: '/assets/favicon/apple-touch-icon.png',
   },
-  themeColor: '#6b63ff',
   twitter: {
     card: 'summary_large_image',
     creator: twitter,
     title: defaultTitle,
     description: defaultDescription,
     site: url,
+    images: '/assets/thumbnail/thumbnail.png',
   },
   manifest: '/assets/favicon/site.webmanifest',
 };

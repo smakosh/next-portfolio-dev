@@ -7,6 +7,7 @@ import Footer from 'components/ui/theme/Footer';
 import Scripts from 'components/Scripts';
 
 export const revalidate = 3600;
+export const runtime = 'edge';
 
 const HomePage = () => (
   <>
