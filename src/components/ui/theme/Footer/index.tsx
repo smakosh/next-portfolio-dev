@@ -32,7 +32,7 @@ const Footer = () => (
             aria-label={`follow me on ${name}`}
             className="mr-2 last:mr-0"
           >
-            <Image src={icon} alt={name} width={24} height={24} />
+            <Image src={icon} alt={name} className="w-6 h-6" width={24} height={24} />
           </a>
         ))}
       </div>

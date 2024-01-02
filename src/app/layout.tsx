@@ -1,17 +1,12 @@
 import { ReactNode } from 'react';
-import config from 'data/config';
 import type { Metadata } from 'next';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { Roboto } from 'next/font/google';
+import clsx from 'clsx';
+import config from 'data/config';
 import 'components/ui/globals.css';
 
 const { url, defaultDescription, defaultTitle, twitter } = config;
-
-// export const viewport: Viewport = {
-//   themeColor: '#6b63ff',
-//   width: 'device-width',
-//   initialScale: 1,
-//   maximumScale: 1,
-// };
 
 export const metadata: Metadata = {
   title: defaultTitle,
@@ -60,8 +55,11 @@ type RootLayoutProps = {
 };
 
 const RootLayout = ({ children }: RootLayoutProps) => (
-  <html lang="en" className={`${roboto.variable} font-sans scroll-smooth`}>
-    <body>{children}</body>
+  <html lang="en" suppressHydrationWarning>
+    <body className={clsx('bg-background min-h-screen font-sans antialiased scroll-smooth', roboto.variable)}>
+      {children}
+    </body>
+    <GoogleAnalytics gaId={config.googleAnalyticsID} />
   </html>
 );
 

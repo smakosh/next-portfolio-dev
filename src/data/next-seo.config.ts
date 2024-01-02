@@ -1,24 +1,26 @@
+import config from 'data/config';
+
 const seoConfig = {
-  title: 'John Doe',
-  description: 'I’m John and I’m a Backend & Devops engineer!',
+  title: config.defaultTitle,
+  description: config.defaultDescription,
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://portfolio-next.smakosh.com/',
-    siteName: 'Portfolio Next',
+    url: config.url,
+    siteName: `${config.defaultTitle} Portfolio`,
     images: [
       {
-        url: 'https://portfolio-next.smakosh.com/assets/thumbnail/thumbnail.png',
+        url: `${config.url}/assets/thumbnail/thumbnail.png`,
         width: 1200,
         height: 600,
-        alt: 'I’m John and I’m a Backend & Devops engineer!',
+        alt: config.defaultDescription,
         type: 'image/png',
       },
     ],
   },
   twitter: {
-    handle: '@smakosh',
-    site: '@smakosh',
+    handle: config.twitter,
+    site: config.twitter,
     cardType: 'summary_large_image',
   },
 };

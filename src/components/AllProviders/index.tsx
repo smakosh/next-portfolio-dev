@@ -7,6 +7,10 @@ type AllProvidersProps = {
   children: ReactNode;
 };
 
-const AllProviders = ({ children }: AllProvidersProps) => <ThemeProvider attribute="class">{children}</ThemeProvider>;
+const AllProviders = ({ children }: AllProvidersProps) => (
+  <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+    {children}
+  </ThemeProvider>
+);
 
 export default AllProviders;
