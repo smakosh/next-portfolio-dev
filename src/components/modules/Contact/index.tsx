@@ -10,6 +10,7 @@ const Contact = () => (
       <Image
         src="/assets/illustrations/contact.svg"
         alt="I’m John and I’m a Backend & Devops engineer!"
+        className="w-auto h-auto"
         width={498}
         height={313}
       />

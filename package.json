@@ -11,9 +11,10 @@
   },
   "dependencies": {
     "@formspree/react": "^2.5.1",
+    "@next/third-parties": "14.0.5-canary.34",
     "clsx": "^2.0.0",
     "formik": "^2.4.4",
-    "next": "^14.0.0",
+    "next": "^14.0.4",
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
