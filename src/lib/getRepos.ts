@@ -1,7 +1,14 @@
 import 'server-only';
 import { RepositoryEdge } from 'generated/graphql';
+import { unstable_noStore as noStore } from 'next/cache';
+
+function sleep(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
 const getRepos = async (): Promise<RepositoryEdge[]> => {
+  noStore();
+  await sleep(2000);
   const res = await fetch('https://api.github.com/graphql', {
     method: 'POST',
     body: JSON.stringify({

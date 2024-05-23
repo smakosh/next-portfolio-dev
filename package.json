@@ -12,14 +12,16 @@
   "dependencies": {
     "@formspree/react": "^2.5.1",
     "@next/third-parties": "14.0.5-canary.34",
+    "babel-plugin-react-compiler": "0.0.0-experimental-592953e-20240517",
     "clsx": "^2.0.0",
     "formik": "^2.4.4",
-    "next": "^14.0.4",
+    "next": "15.0.0-rc.0",
     "next-themes": "^0.2.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "19.0.0-rc-4c2e457c7c-20240522",
+    "react-dom": "19.0.0-rc-4c2e457c7c-20240522",
     "react-google-recaptcha": "^2.1.0",
     "server-only": "^0.0.1",
+    "tailwind-merge": "^2.3.0",
     "yup": "^1.2.0"
   },
   "devDependencies": {

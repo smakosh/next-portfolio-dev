@@ -5,9 +5,6 @@ import Contact from 'components/modules/Contact';
 import AllProviders from 'components/AllProviders';
 import Footer from 'components/ui/theme/Footer';
 
-export const revalidate = 3600;
-export const runtime = 'edge';
-
 const HomePage = () => (
   <>
     <AllProviders>

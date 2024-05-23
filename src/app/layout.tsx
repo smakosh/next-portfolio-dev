@@ -54,6 +54,8 @@ type RootLayoutProps = {
   children: ReactNode;
 };
 
+export const revalidate = 3600;
+
 const RootLayout = ({ children }: RootLayoutProps) => (
   <html lang="en" suppressHydrationWarning>
     <body className={clsx('bg-background min-h-screen font-sans antialiased scroll-smooth', roboto.variable)}>
