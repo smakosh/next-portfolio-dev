@@ -29,7 +29,7 @@ const Repos = async () => {
 
 const ReposSkeleton = () => (
   <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 col-span-1 md:col-span-2 lg:col-span-3">
-    {Array.from({ length: 10 }, (_, i) => 1 + i).map((item) => (
+    {Array.from({ length: 8 }, (_, i) => 1 + i).map((item) => (
       <Skeleton key={`repo-${item}`} className="h-[160px] w-full" />
     ))}
   </div>
