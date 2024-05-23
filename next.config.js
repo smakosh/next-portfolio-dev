@@ -5,6 +5,10 @@
  **/
 const nextConfig = {
   swcMinify: true,
+  experimental: {
+    reactCompiler: true,
+    ppr: true,
+  },
 };
 
 module.exports = nextConfig;
