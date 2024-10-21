@@ -2,9 +2,9 @@ import { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { Roboto } from 'next/font/google';
-import clsx from 'clsx';
 import config from 'data/config';
 import 'components/ui/globals.css';
+import { cn } from 'lib/utils';
 
 const { url, defaultDescription, defaultTitle, twitter } = config;
 
@@ -58,7 +58,7 @@ export const revalidate = 3600;
 
 const RootLayout = ({ children }: RootLayoutProps) => (
   <html lang="en" suppressHydrationWarning>
-    <body className={clsx('bg-background min-h-screen font-sans antialiased scroll-smooth', roboto.variable)}>
+    <body className={cn('bg-background min-h-screen font-sans antialiased scroll-smooth', roboto.variable)}>
       {children}
     </body>
     <GoogleAnalytics gaId={config.googleAnalyticsID} />

@@ -1,13 +1,9 @@
-// @ts-check
+import type { NextConfig } from 'next';
 
-/**
- * @type {import('next').NextConfig}
- **/
-const nextConfig = {
+const nextConfig: NextConfig = {
   swcMinify: true,
   experimental: {
     reactCompiler: true,
-    ppr: true,
   },
 };
 

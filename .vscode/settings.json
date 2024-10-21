@@ -6,8 +6,8 @@
   "typescript.suggest.autoImports": true,
   "typescript.suggest.paths": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
+		"source.fixAll.eslint": "explicit"
+	},
   "editor.detectIndentation": false,
   "editor.insertSpaces": false,
   "typescript.tsdk": "node_modules/.pnpm/typescript@4.8.4/node_modules/typescript/lib",
