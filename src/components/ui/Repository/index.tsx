@@ -4,7 +4,7 @@ import { Repository as RepositoryType } from 'generated/graphql';
 
 const Repository = ({ name, description, stargazers, forkCount, languages, url }: RepositoryType) => (
   <a
-    className="bg-white shadow-md dark:bg-zinc-900 rounded-sm p-4 h-full overflow-hidden flex flex-col justify-between"
+    className="bg-white shadow-md dark:bg-zinc-900 rounded-xs p-4 h-full overflow-hidden flex flex-col justify-between"
     href={url}
     target="_blank"
     rel="noreferrer"
