@@ -2,8 +2,8 @@ import clsx from 'clsx';
 import NavbarLinks from 'components/ui/theme/Header/NavbarLinks';
 
 type SideBarProps = {
-	sidebar?: boolean;
-	toggle: () => void;
+  sidebar?: boolean;
+  toggle: () => void;
 };
 
 const Sidebar = ({ sidebar, toggle }: SideBarProps) => (
