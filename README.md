@@ -1,9 +1,7 @@
 # A basic portfolio for developers
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
-
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsmakosh%2Fnext-portfolio-dev&env=GITHUB_TOKEN,NEXT_PUBLIC_PORTFOLIO_URL,NEXT_PUBLIC_PORTFOLIO_RECAPTCHA_KEY&envDescription=Get%20your%20GitHub%20token&envLink=https%3A%2F%2Fgithub.com%2Fsettings%2Ftokens%2Fnew%3Fscopes%3Dpublic_repo%26description%3Dportfolio-dev&demo-title=Next%20Portfolio%20Dev&demo-description=A%20simple%20portfolio%20for%20developers&demo-url=https%3A%2F%2Fportfolio-next.smakosh.com%2F&demo-image=https%3A%2F%2Fportfolio-next.smakosh.com%2Fassets%2Fthumbnail%2Fthumbnail.png&integration-ids=oac_SOUPsixV2TP6CkvfaB91Jhri)
@@ -98,6 +96,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
       <td align="center" valign="top" width="14.28%"><a href="https://upleveled.io"><img src="https://avatars.githubusercontent.com/u/1935696?v=4?s=100" width="100px;" alt="Karl Horky"/><br /><sub><b>Karl Horky</b></sub></a><br /><a href="https://github.com/smakosh/next-portfolio-dev/commits?author=karlhorky" title="Code">💻</a> <a href="https://github.com/smakosh/next-portfolio-dev/commits?author=karlhorky" title="Documentation">📖</a> <a href="#security-karlhorky" title="Security">🛡️</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://mwk.vercel.app"><img src="https://avatars.githubusercontent.com/u/70536218?v=4?s=100" width="100px;" alt="Moutawakkil Mohammed"/><br /><sub><b>Moutawakkil Mohammed</b></sub></a><br /><a href="https://github.com/smakosh/next-portfolio-dev/commits?author=mohammedmoutawakkil" title="Code">💻</a> <a href="https://github.com/smakosh/next-portfolio-dev/issues?q=author%3Amohammedmoutawakkil" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/bharathkalyans"><img src="https://avatars.githubusercontent.com/u/49526472?v=4?s=100" width="100px;" alt="Bharath Kalyan S"/><br /><sub><b>Bharath Kalyan S</b></sub></a><br /><a href="https://github.com/smakosh/next-portfolio-dev/issues?q=author%3Abharathkalyans" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://mohcinedev.netlify.app"><img src="https://avatars.githubusercontent.com/u/62650926?v=4?s=100" width="100px;" alt="MohcineDev"/><br /><sub><b>MohcineDev</b></sub></a><br /><a href="https://github.com/smakosh/next-portfolio-dev/commits?author=MohcineDev" title="Code">💻</a> <a href="https://github.com/smakosh/next-portfolio-dev/issues?q=author%3AMohcineDev" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>
