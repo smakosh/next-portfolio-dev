@@ -54,6 +54,16 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "MohcineDev",
+      "name": "MohcineDev",
+      "avatar_url": "https://avatars.githubusercontent.com/u/62650926?v=4",
+      "profile": "https://mohcinedev.netlify.app",
+      "contributions": [
+        "code",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
