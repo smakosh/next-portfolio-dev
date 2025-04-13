@@ -1,9 +1,9 @@
 const config = {
-  defaultTitle: 'John Doe',
+  defaultTitle: 'Gaurav Raut',
   url: process.env.NEXT_PUBLIC_PORTFOLIO_URL!,
-  defaultDescription: 'I’m John Doe and I’m a Software Engineer!',
+  defaultDescription: 'Perception is the Lens Through Which Meaning Emerges',
   googleAnalyticsID: 'G-PE8QW0ZGTZ',
-  twitter: '@smakosh',
+  twitter: '@gauraut',
 };
 
 export default config;
