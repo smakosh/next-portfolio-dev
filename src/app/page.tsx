@@ -17,9 +17,12 @@ export default function HomePage() {
 			<section className="relative h-[60vh] overflow-hidden font-mono">
 				{/* Background */}
 				<div
-					className="absolute inset-0 bg-cover bg-center"
-					style={{ backgroundImage: "url('/images/hero-bg.png')" }}
-				/>
+          className="absolute inset-0 bg-cover"
+          style={{
+            backgroundImage: "url('/images/hero-bg.png')",
+            backgroundPosition: 'center 15%',  // Shift background down 20%, adjust as needed
+          }}
+        />
 				{/* Dark Overlay */}
 				<div className="absolute inset-0 bg-black opacity-70" />
 
