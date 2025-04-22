@@ -11,7 +11,7 @@ const { url, defaultDescription, defaultTitle, twitter } = config;
 export const metadata: Metadata = {
   title: defaultTitle,
   description: defaultDescription,
-  metadataBase: new URL(url),
+  metadataBase: new URL(url || "https://www.gauravraut.com"),
   openGraph: {
     title: defaultTitle,
     description: defaultDescription,

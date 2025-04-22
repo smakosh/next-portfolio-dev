@@ -15,11 +15,13 @@
     "babel-plugin-react-compiler": "0.0.0-experimental-592953e-20240517",
     "clsx": "^2.0.0",
     "formik": "^2.4.4",
+    "framer-motion": "^12.7.4",
     "next": "15.1.6",
     "next-themes": "^0.2.1",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-google-recaptcha": "^2.1.0",
+    "react-simple-typewriter": "^5.0.1",
     "server-only": "^0.0.1",
     "tailwind-merge": "^2.3.0",
     "yup": "^1.2.0"
