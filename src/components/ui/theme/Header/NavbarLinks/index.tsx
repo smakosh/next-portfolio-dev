@@ -3,8 +3,8 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import clsx from 'clsx';
 import ToggleTheme from 'components/ui/theme/Header/ToggleTheme';
+import { cn } from 'lib/utils';
 
 type NavbarLinksProps = {
   desktop?: boolean;
@@ -20,7 +20,7 @@ const NavbarLinks = ({ desktop }: NavbarLinksProps) => {
 
   return (
     <div
-      className={clsx({
+      className={cn({
         'items-center hidden lg:flex': desktop,
         'p-12 flex flex-col': !desktop,
       })}

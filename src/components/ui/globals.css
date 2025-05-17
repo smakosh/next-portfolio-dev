@@ -8,7 +8,7 @@
   --color-brand-accent: #0074d9;
   --color-brand-accent-dark: #001f3f;
 
-  --font-sans: var(--font-roboto);
+  --font-display: var(--font-roboto), sans-serif;
 }
 
 @utility container {
@@ -51,7 +51,7 @@
 }
 
 .button-secondary {
-  @apply cursor-pointer py-3 px-10 border-none text-white disabled:bg-slate-500 rounded-[3px] bg-brand-secondary;
+  @apply cursor-pointer py-3 px-10 border-none text-white disabled:bg-slate-500 rounded-[3px] bg-brand-accent-dark;
 }
 
 .input {
