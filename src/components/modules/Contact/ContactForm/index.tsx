@@ -1,126 +1,126 @@
 'use client';
 
-import { useForm } from '@formspree/react';
-import clsx from 'clsx';
-import { Formik, Form, FastField, ErrorMessage } from 'formik';
-import * as Yup from 'yup';
+import { useForm as useFormspree } from '@formspree/react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+
 import Recaptcha from 'react-google-recaptcha';
+import * as z from 'zod';
+import { cn } from 'lib/utils';
+
+const formSchema = z.object({
+  name: z.string().min(1, 'Full name field is required'),
+  email: z.string().email('Invalid email').min(1, 'Email field is required'),
+  message: z.string().min(1, 'Message field is required'),
+  recaptcha:
+    process.env.NODE_ENV !== 'development' ? z.string().min(1, 'Robots are not welcome yet!') : z.string().optional(),
+});
+
+type ContactFormData = z.infer<typeof formSchema>;
 
 const ContactForm = () => {
-  const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORM as string);
+  const [state, formspreeSubmit] = useFormspree(process.env.NEXT_PUBLIC_FORM as string);
+
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    formState: { errors, isSubmitting },
+    reset,
+  } = useForm<ContactFormData>({
+    // @ts-ignore:
+    resolver: zodResolver(formSchema),
+  });
+
+  const onSubmit = async (data: ContactFormData) => {
+    try {
+      await formspreeSubmit(data);
+
+      if (!state.errors) {
+        setTimeout(() => reset(), 4000);
+      }
+    } catch (err) {
+      alert('Something went wrong, please try again!');
+    }
+
+    if (state.errors) {
+      state.errors.getFormErrors().forEach((error) => {
+        alert(error.message);
+      });
+
+      state.errors.getAllFieldErrors().forEach(([field, fieldErrors]) => {
+        fieldErrors.forEach((fieldError) => {
+          alert(`${field}: ${fieldError.message}`);
+        });
+      });
+    }
+  };
 
   return (
-    <Formik
-      initialValues={{
-        name: '',
-        email: '',
-        message: '',
-        recaptcha: '',
-      }}
-      validationSchema={Yup.object().shape({
-        name: Yup.string().required('Full name field is required'),
-        email: Yup.string().email('Invalid email').required('Email field is required'),
-        message: Yup.string().required('Message field is required'),
-        recaptcha:
-          process.env.NODE_ENV !== 'development' ? Yup.string().required('Robots are not welcome yet!') : Yup.string(),
-      })}
-      onSubmit={async ({ name, email, message }, { setSubmitting, resetForm, setFieldError }) => {
-        try {
-          await handleSubmit({
-            name,
-            email,
-            message,
-          });
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <div className="relative mb-4">
+        <input
+          type="text"
+          aria-label="name"
+          placeholder="Full name*"
+          className={cn('input', {
+            'input-error': errors.name,
+          })}
+          {...register('name')}
+        />
+        {errors.name && <span className="text-red-600 block mt-1">{errors.name.message}</span>}
+      </div>
 
-          setTimeout(() => resetForm(), 4000);
-        } catch (err) {
-          alert('Something went wrong, please try again!');
-        } finally {
-          if (state.errors) {
-            state.errors.getFormErrors().forEach((error) => {
-              setFieldError('email', error.message);
-            });
+      <div className="relative mb-4">
+        <input
+          type="email"
+          aria-label="email"
+          placeholder="Email*"
+          className={cn('input', {
+            'input-error': errors.email,
+          })}
+          {...register('email')}
+        />
+        {errors.email && <span className="text-red-600 block mt-1">{errors.email.message}</span>}
+      </div>
 
-            state.errors.getAllFieldErrors().forEach(([field, fieldErrors]) => {
-              fieldErrors.forEach((fieldError) => {
-                setFieldError(field, fieldError.message);
-              });
-            });
-          }
-          setSubmitting(false);
-        }
-      }}
-    >
-      {({ values, touched, errors, setFieldValue, isSubmitting }) => (
-        <Form>
-          <div className="relative mb-4">
-            <FastField
-              type="text"
-              name="name"
-              component="input"
-              aria-label="name"
-              placeholder="Full name*"
-              className={clsx('input', {
-                'input-error': touched.name && errors.name,
-              })}
-            />
-            <ErrorMessage className="text-red-600 block mt-1" component="span" name="name" />
-          </div>
-          <div className="relative mb-4">
-            <FastField
-              id="email"
-              aria-label="email"
-              component="input"
-              type="email"
-              name="email"
-              placeholder="Email*"
-              className={clsx('input', {
-                'input-error': touched.email && errors.email,
-              })}
-            />
-            <ErrorMessage className="text-red-600 block mt-1" component="span" name="email" />
-          </div>
-          <div className="relative mb-4">
-            <FastField
-              component="textarea"
-              aria-label="message"
-              id="message"
-              rows="8"
-              type="text"
-              name="message"
-              placeholder="Message*"
-              className={clsx('input', {
-                'input-error': touched.message && errors.message,
-              })}
-            />
-            <ErrorMessage className="text-red-600 block mt-1" component="span" name="message" />
-          </div>
-          {values.name && values.email && values.message && process.env.NODE_ENV !== 'development' && (
-            <div className="relative mb-4">
-              <FastField
-                component={Recaptcha}
-                sitekey={process.env.NEXT_PUBLIC_PORTFOLIO_RECAPTCHA_KEY}
-                name="recaptcha"
-                onChange={(value: string) => setFieldValue('recaptcha', value)}
-              />
-              <ErrorMessage className="text-red-600 block mt-1" component="span" name="recaptcha" />
-            </div>
-          )}
-          {state.succeeded && (
-            <div className="relative mb-4">
-              <div className="text-center">
-                <h4 className="font-normal">Your message has been successfully sent, I will get back to you ASAP!</h4>
-              </div>
-            </div>
-          )}
-          <div className="text-left">
-            <button type="submit" className="button button-secondary" disabled={isSubmitting}>
-              Submit
-            </button>
-          </div>
-        </Form>
+      <div className="relative mb-4">
+        <textarea
+          rows={8}
+          aria-label="message"
+          placeholder="Message*"
+          className={cn('input', {
+            'input-error': errors.message,
+          })}
+          {...register('message')}
+        />
+        {errors.message && <span className="text-red-600 block mt-1">{errors.message.message}</span>}
+      </div>
+
+      {process.env.NODE_ENV !== 'development' && (
+        <div className="relative mb-4">
+          <Recaptcha
+            sitekey={process.env.NEXT_PUBLIC_PORTFOLIO_RECAPTCHA_KEY!}
+            onChange={(value) => setValue('recaptcha', value || '')}
+          />
+          {errors.recaptcha && <span className="text-red-600 block mt-1">{errors.recaptcha.message}</span>}
+        </div>
       )}
-    </Formik>
+
+      {state.succeeded && (
+        <div className="relative mb-4">
+          <div className="text-center">
+            <h4 className="font-normal">Your message has been successfully sent, I will get back to you ASAP!</h4>
+          </div>
+        </div>
+      )}
+
+      <div className="text-left">
+        <button type="submit" className="button button-secondary" disabled={isSubmitting}>
+          Submit
+        </button>
+      </div>
+    </form>
   );
 };
 

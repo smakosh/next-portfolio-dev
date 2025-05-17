@@ -1,7 +1,7 @@
-import clsx from 'clsx';
+import { cn } from 'lib/utils';
 
 const Fork = ({ className }: { className?: string }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className={clsx('w-4 h-4', className)}>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className={cn('w-4 h-4', className)}>
     <path
       fill="currentColor"
       fillRule="evenodd"
