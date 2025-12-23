@@ -15,7 +15,7 @@
     "@next/third-parties": "15.1.6",
     "babel-plugin-react-compiler": "0.0.0-experimental-592953e-20240517",
     "clsx": "^2.0.0",
-    "next": "15.3.2",
+    "next": "15.3.8",
     "next-themes": "^0.2.1",
     "react": "19.1.0",
     "react-dom": "19.1.0",
