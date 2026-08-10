@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useSyncExternalStore } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import ToggleTheme from 'components/ui/theme/Header/ToggleTheme';
@@ -10,13 +10,15 @@ type NavbarLinksProps = {
   desktop?: boolean;
 };
 
-const NavbarLinks = ({ desktop }: NavbarLinksProps) => {
-  const [hasMounted, setHasMounted] = useState(false);
-  const pathname = usePathname();
+const emptySubscribe = () => () => {};
 
-  useEffect(() => {
-    setHasMounted(true);
-  }, []);
+const NavbarLinks = ({ desktop }: NavbarLinksProps) => {
+  const hasMounted = useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false,
+  );
+  const pathname = usePathname();
 
   return (
     <div
