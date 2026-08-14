@@ -36,6 +36,7 @@ const getRepos = async (): Promise<RepositoryEdge[]> => {
     }),
     headers: {
       Authorization: `bearer ${process.env.GITHUB_TOKEN}`,
+      'User-Agent': 'next-portfolio-dev',
     },
   });
 
