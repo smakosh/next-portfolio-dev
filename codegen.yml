@@ -1,7 +1,9 @@
 overwrite: true
-schema: "src/generated/github-schema-loader.js"
+schema: "node_modules/@octokit/graphql-schema/schema.graphql"
 generates:
   src/generated/graphql.ts:
     plugins:
       - "typescript"
       - "typescript-operations"
+    config:
+      defaultScalarType: string

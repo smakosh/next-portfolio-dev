@@ -8,7 +8,6 @@ const config = [
       'node_modules/**',
       'types/**',
       'src/generated/graphql.ts',
-      'src/generated/github-schema-loader.js',
     ],
   },
   ...nextCoreWebVitals,
